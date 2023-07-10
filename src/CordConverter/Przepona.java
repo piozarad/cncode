@@ -93,6 +93,7 @@ public class Przepona extends JFrame implements ActionListener{
 	float bRotation;
 	float safeRetraction;
 	String advancePoint;
+	String base;
 	
 
 	
@@ -138,6 +139,7 @@ public class Przepona extends JFrame implements ActionListener{
 		this.sterowanie=edytor.getControls();
 		this.toolnumber=edytor.getToolBar().getToolNumber();
 		this.bRotation = edytor.getToolBar().getRotation();
+		this.base= edytor.getToolBar().getBase();
 		
 		buttonPanel = new JPanel();
 		buttonPanel.setBorder(BorderFactory.createLineBorder(Color.black));
@@ -1068,7 +1070,7 @@ public class Przepona extends JFrame implements ActionListener{
 		System.out.printf(Locale.CANADA,"N%d T%d M6%n", n=n+5, toolNumber);
 		
 
-		sterowanie.przygotowanieUkladuINarzedzia(n, toolNumber, safeRetraction,b);
+		sterowanie.przygotowanieUkladuINarzedzia(n, toolNumber, safeRetraction,b,base);
 		
 		System.out.printf(Locale.CANADA,"N%d S%d M3 %n", n+=5, sprindleSpeed);
 		System.out.printf(Locale.CANADA,"N%d M8%n", n+=5);

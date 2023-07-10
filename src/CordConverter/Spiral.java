@@ -274,6 +274,7 @@ public class Spiral extends JFrame implements ActionListener
 		{
 			int toolNumber = this.parent.getToolBar().getToolNumber();
 			float rotationB = this.parent.getToolBar().getRotation();
+			String base = this.parent.getToolBar().getBase();
 			float rightX = x-toolDiameter/2 +holeDiameter/2;
 			float i = (rightX - x)/2;
 					
@@ -288,7 +289,7 @@ public class Spiral extends JFrame implements ActionListener
 			
 			
 			//przygotowanie bazy i korekcji narzedzia
-			sterowanie.przygotowanieUkladuINarzedzia(5, toolNumber, safeRetraction,rotationB);
+			sterowanie.przygotowanieUkladuINarzedzia(5, toolNumber, safeRetraction,rotationB,base);
 				
 			System.out.println("N16 G0 X" + x + " Y"+ y + " S" + sp_speed + " M3");
 			System.out.println("N18 G1 Z"+ start + " F10000. M8");
@@ -346,6 +347,7 @@ public class Spiral extends JFrame implements ActionListener
 		else{
 			float rotationB = this.parent.getToolBar().getRotation();
 			int toolNumber = this.parent.getToolBar().getToolNumber();
+			String base = this.parent.getToolBar().getBase();
 			float leftX = x -(toolDiameter/2 + holeDiameter/2);
 			float i = toolDiameter/2 + holeDiameter/2;
 					
@@ -356,7 +358,7 @@ public class Spiral extends JFrame implements ActionListener
 			System.out.printf(Locale.CANADA,"(T%d GLOWICA FI%.1f)%n",toolNumber,toolDiameter);
 			
 			//przygotowanie bazy i korekcji narzedzia
-			sterowanie.przygotowanieUkladuINarzedzia(5, toolNumber, safeRetraction,rotationB);		
+			sterowanie.przygotowanieUkladuINarzedzia(5, toolNumber, safeRetraction,rotationB,base);		
 			
 			System.out.println("N10 G0 X" + (leftX-10 -1 ) + " Y"+ y + " S" + sp_speed + " M3");
 			System.out.println("N15 G1 Z"+ start + " F10000. M8");
@@ -529,6 +531,7 @@ public class Spiral extends JFrame implements ActionListener
 			int toolNumber = this.parent.getToolBar().getToolNumber();
 			float rotationB = this.parent.getToolBar().getRotation();
 			float rightX = x-toolDiameter/2 +holeDiameter/2;
+			String base = this.parent.getToolBar().getBase();
 			
 			PrintStream printStream = new PrintStream(parent.txt);
 			System.setOut(printStream);	
@@ -538,7 +541,7 @@ public class Spiral extends JFrame implements ActionListener
 			System.out.printf(Locale.CANADA,"(T%d GLOWICA FI%.1f)%n",toolNumber,toolDiameter);
 		
 			//przygotowanie bazy i korekcji narzedzia
-			sterowanie.przygotowanieUkladuINarzedzia(5, toolNumber, safeRetraction,rotationB);
+			sterowanie.przygotowanieUkladuINarzedzia(5, toolNumber, safeRetraction,rotationB,base);
 			int n = 25;
 			
 			if(sterowanie.isType(ControlTypes.FANUC) || sterowanie.isType(ControlTypes.HITACHI))

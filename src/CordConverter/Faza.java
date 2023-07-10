@@ -87,6 +87,7 @@ public class Faza extends JFrame implements ActionListener {
 	private int toolNumber;
 	private float safeRetraction;
 	private float rotation;
+	private String base;
 	
 	private static final Dimension DEFDIM = new Dimension(75,20);
 	
@@ -98,7 +99,7 @@ public class Faza extends JFrame implements ActionListener {
 		this.safeRetraction=Wind.options.getSafeRetraction();
 		this.toolNumber = parent.getToolBar().getToolNumber();
 		this.rotation = parent.getToolBar().getRotation();
-		
+		this.base = parent.getToolBar().getBase();
 		
 		setTitle("Fazowanie otworu");
 		setSize(new Dimension(280,300));
@@ -396,7 +397,7 @@ public class Faza extends JFrame implements ActionListener {
 		System.out.printf(Locale.CANADA,"(T%d FAZOWNIK POMIAR NA SREDNICY FI%.1f)%n", toolNumber,srednicaNarzedzia);
 
 		//przygotowanie baz o korekcji
-		sterowanie.przygotowanieUkladuINarzedzia(5, toolNumber, safeRetraction,this.rotation);
+		sterowanie.przygotowanieUkladuINarzedzia(5, toolNumber, safeRetraction,this.rotation,base);
 		
 		System.out.printf(Locale.CANADA,"N35 S%d M3%n",obroty);
 		System.out.printf(Locale.CANADA,"N40 G0 X%.3f Y%.3f M8%n",wspolrzednaX,wspolrzednaY);

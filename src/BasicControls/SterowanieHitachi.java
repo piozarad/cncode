@@ -57,9 +57,9 @@ public class SterowanieHitachi implements Sterowanie {
 	}
 
 	@Override
-	public void przygotowanieUkladuINarzedzia(int block, int toolNumber, float safeRetraction,float bRotation) {
+	public void przygotowanieUkladuINarzedzia(int block, int toolNumber, float safeRetraction,float bRotation, String base) {
 		System.out.printf(Locale.CANADA,"N%d T%d  M6%n",block,toolNumber);
-		System.out.printf(Locale.CANADA,"N%d G90 G54 G0%n",block+5);
+		System.out.printf(Locale.CANADA,"N%d G90 %s G0%n",block+5, base);
 		System.out.printf(Locale.CANADA,"N%d G43 H%d G0 Z%.1f%n",block+10,toolNumber ,safeRetraction);
 		System.out.printf(Locale.CANADA,"N%d G0 B%.1f%n",block+15 ,bRotation );
 		

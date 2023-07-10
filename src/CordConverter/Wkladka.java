@@ -88,6 +88,8 @@ public class Wkladka extends JFrame implements ActionListener {
 	
 	private float safeRetract;
 	private int toolNumber;
+	private String base;
+	private float rotationB;
 	
 	
 	private final Edytor parent;
@@ -96,11 +98,16 @@ public class Wkladka extends JFrame implements ActionListener {
 	{
 		this.parent=parent;
 		setSize(540,400);
-		setTitle("Rozfrezowanie okr¹g³ej wk³¹dki");
+		setTitle("Rozfrezowanie okraglej wkladki");
 		setLocationRelativeTo(null);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		setVisible(true);
+		
+		
+		this.toolNumber = this.parent.getToolBar().getToolNumber();
+		this.rotationB = this.parent.getToolBar().getRotation();
+		this.base = this.parent.getToolBar().getBase();
 		
 		
 		GridBagLayout layout = new GridBagLayout();
@@ -608,14 +615,14 @@ public class Wkladka extends JFrame implements ActionListener {
 		System.setOut(ps);
 		System.setErr(ps);
 		
-		this.toolNumber = this.parent.getToolBar().getToolNumber();
-		float rotationB = this.parent.getToolBar().getRotation();
+		
+		
 		int n =55;
 		
 		System.out.printf(Locale.CANADA,"(T%d FREZ FI%.2f)%n", toolNumber,toolDiameter);
 
 		//	przygotowanie baz i korekcji
-		parent.getControls().przygotowanieUkladuINarzedzia(5, toolNumber, safeRetract,rotationB);
+		parent.getControls().przygotowanieUkladuINarzedzia(5, toolNumber, safeRetract,rotationB,base);
 		
 		System.out.printf(Locale.CANADA,"N30 S%d M3%n",speed);
 		System.out.printf(Locale.CANADA,"N35 G0 X%.3f Y%.3f M8%n",x-3,y);

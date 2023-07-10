@@ -61,9 +61,9 @@ public class SterowanieFanuc implements Sterowanie{
 	}
 
 	@Override
-	public void przygotowanieUkladuINarzedzia(int block, int toolNumber, float safeRetraction,float bRotation) {
+	public void przygotowanieUkladuINarzedzia(int block, int toolNumber, float safeRetraction,float bRotation, String base) {
 		System.out.printf(Locale.CANADA,"N%d T%d  M6%n",block,toolNumber);
-		System.out.printf(Locale.CANADA,"N%d G90 G54 G0%n",block+5);
+		System.out.printf(Locale.CANADA,"N%d G90 %s G0%n",block+5, base);
 		System.out.printf(Locale.CANADA,"N%d G43 H%d G0 Z%.1f%n",block+10,toolNumber ,safeRetraction);
 		System.out.printf(Locale.CANADA,"N%d G0 B%.1f%n",block+15 ,bRotation );
 		
@@ -102,14 +102,14 @@ public class SterowanieFanuc implements Sterowanie{
 		gCodeMap.put("G43","(Fanuc) Korekcja d³ugoœci narzêdzia w kierunku Z+");
 		gCodeMap.put("G44","(Fanuc) Korekcja d³ugoœci narzêdzia w kierunku Z-");
 		gCodeMap.put("G49","(Fanuc) Odwo³anie korekcji d³ugoœciowej narzêdzia");
-		gCodeMap.put("G50","(Fanuc) Wy³¹czenie skalowania");
-		gCodeMap.put("G51","(Fanuc) W³¹czenie skalowania");
+		gCodeMap.put("G50","(Fanuc) Wy³aczenie skalowania");
+		gCodeMap.put("G51","(Fanuc) W³aczenie skalowania");
 		gCodeMap.put("G50.1","(Fanuc) Lustrzane odbicie");
 		gCodeMap.put("G51.1","(Fanuc) Lustrzane odbicie - wy³¹czenie");
 		gCodeMap.put("G58", "Ustawienie uk³adu wspó³rzêdnych 58");
 		gCodeMap.put("G59", "Ustawienie uk³adu wspó³rzêdnych 59");
-		gCodeMap.put("G52","(Fanuc) Ustawienie lokalnego uk³adu wspó³rzêdnych");
-		gCodeMap.put("G54.1","(Fanuc) U¿ycie dodatkowych ukladow wspolrzednych");
+		gCodeMap.put("G53","(Fanuc) Uzycie ukladu wspolrzednych maszyny");
+		gCodeMap.put("G54.1","(Fanuc) Uzycie dodatkowych ukladow wspolrzednych");
 		gCodeMap.put("G61","(Fanuc) Tryb dok³adnego zatrzymania (grupa G61 G62 G63 G64)");
 		gCodeMap.put("G62","(Fanuc) Tryb Zmniejszenia posuwu w naro¿ach (grupa G61 G62 G63 G64)");
 		gCodeMap.put("G63","(Fanuc) Tryb wykonywania gwintów (grupa G61 G62 G63 G64)");

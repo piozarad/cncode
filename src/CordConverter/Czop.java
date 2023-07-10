@@ -361,6 +361,7 @@ import DrawFunction.DrawTool;
 			
 				float rotationB = this.parent.getToolBar().getRotation();
 				int toolNumber = this.parent.getToolBar().getToolNumber();
+				String base = this.parent.getToolBar().getBase();
 				float leftX = x -(toolDiameter/2 + holeDiameter/2);
 				float i = toolDiameter/2 + holeDiameter/2;
 						
@@ -374,7 +375,7 @@ import DrawFunction.DrawTool;
 
 
 				//przygotowanie bazy i korekcji narzedzia
-				sterowanie.przygotowanieUkladuINarzedzia(5, toolNumber, safeRetraction,rotationB);
+				sterowanie.przygotowanieUkladuINarzedzia(5, toolNumber, safeRetraction,rotationB,base);
 				
 				
 				
@@ -454,6 +455,7 @@ import DrawFunction.DrawTool;
 				int toolNumber = this.parent.getToolBar().getToolNumber();
 				float leftX = x -(toolDiameter/2 + holeDiameter/2);
 				float i = toolDiameter/2 + holeDiameter/2;
+				String base = this.parent.getToolBar().getBase();
 						
 				PrintStream printStream = new PrintStream(parent.txt);
 				System.setOut(printStream);	
@@ -465,7 +467,7 @@ import DrawFunction.DrawTool;
 
 
 				//przygotowanie bazy i korekcji narzedzia
-				sterowanie.przygotowanieUkladuINarzedzia(5, toolNumber, safeRetraction,rotationB);
+				sterowanie.przygotowanieUkladuINarzedzia(5, toolNumber, safeRetraction,rotationB,base);
 				
 				
 				

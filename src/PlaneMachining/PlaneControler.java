@@ -54,11 +54,13 @@ public class PlaneControler {
 		System.setOut(pr);
 		System.setErr(pr);
 		int safeRetraction = Wind.options.getSafeRetraction();
+		String base = parent.getToolBar().getBase();
+		float angle = this.parent.getToolBar().getRotation();
 		Sterowanie sterowanie = parent.getControls();
 		List<Point> localCsPointList = model.toolpathInLocalCS();
 		
 		System.out.printf(Locale.CANADA,"N%d (T%d GLOWICA FI%.2f)%n" , blockNumber+=5, toolNumber , model.getToolDiameter());
-		sterowanie.przygotowanieUkladuINarzedzia(15, toolNumber, safeRetraction,this.parent.getToolBar().getRotation());
+		sterowanie.przygotowanieUkladuINarzedzia(15, toolNumber, safeRetraction,angle,base);
 		System.out.printf(Locale.CANADA,"N%d S%d M3%n" , blockNumber+=5,model.getSprindleSpeed()); 
 		System.out.printf(Locale.CANADA,"N%d %s%n" , blockNumber+=5,model.getToolpath().get(0)); 
 		System.out.printf(Locale.CANADA,"N%d G1 Z%.2f F%d%n" , blockNumber+=5,initialZ+20,this.model.getFeed());
@@ -160,7 +162,7 @@ public class PlaneControler {
 			}
 			else
 			{
-				JOptionPane.showMessageDialog(this.view, "Zle zdefiniowana baza w osi x", "B³¹d", JOptionPane.NO_OPTION);
+				JOptionPane.showMessageDialog(this.view, "Zle zdefiniowana baza w osi x", "Blad", JOptionPane.NO_OPTION);
 				return false;
 			}
 		}
@@ -177,7 +179,7 @@ public class PlaneControler {
 			}
 			else
 			{
-				JOptionPane.showMessageDialog(this.view, "Zle zdefiniowana baza w osi y", "B³¹d", JOptionPane.NO_OPTION);
+				JOptionPane.showMessageDialog(this.view, "Zle zdefiniowana baza w osi y", "Blad", JOptionPane.NO_OPTION);
 				return false;
 			}
 		}
@@ -198,7 +200,7 @@ public class PlaneControler {
 			}
 			else 
 			{
-				JOptionPane.showMessageDialog(this.view, "le zdefiniowany promieñ na krawêdziach œcie¿ki", "B³¹d", JOptionPane.NO_OPTION);
+				JOptionPane.showMessageDialog(this.view, "Zle zdefiniowany promien na krawedziach œciezki", "Blad", JOptionPane.NO_OPTION);
 				return false;
 			}
 		}
@@ -213,7 +215,7 @@ public class PlaneControler {
 			}
 			else
 			{
-				JOptionPane.showMessageDialog(this.view, "Zle zdefiniowana g³êbokoœæ wybrania", "B³¹d", JOptionPane.NO_OPTION);
+				JOptionPane.showMessageDialog(this.view, "Zle zdefiniowana glebokosc wybrania", "Blad", JOptionPane.NO_OPTION);
 				return false;
 			}
 		}
@@ -227,7 +229,7 @@ public class PlaneControler {
 			}
 			else
 			{
-				JOptionPane.showMessageDialog(this.view, "Zle zdefiniowana odleg³oœæ od przeszkody", "B³¹d", JOptionPane.NO_OPTION);
+				JOptionPane.showMessageDialog(this.view, "Zle zdefiniowana odleglosc od przeszkody", "Blad", JOptionPane.NO_OPTION);
 				return false;
 			}
 		}
@@ -240,7 +242,7 @@ public class PlaneControler {
 			}
 			else
 			{
-				JOptionPane.showMessageDialog(this.view, "Zle zdefiniowana g³êbokoœæ skrawania", "B³¹d", JOptionPane.NO_OPTION);
+				JOptionPane.showMessageDialog(this.view, "Zle zdefiniowana glebokosc skrawania", "Blad", JOptionPane.NO_OPTION);
 				return false;
 			}
 			}
@@ -254,7 +256,7 @@ public class PlaneControler {
 			}
 			else
 			{
-				if(showDialog)JOptionPane.showMessageDialog(this.view, "Zle zdefiniowana prêdkoœæ obrotowa wrzeciona", "B³¹d", JOptionPane.NO_OPTION); 
+				if(showDialog)JOptionPane.showMessageDialog(this.view, "Zle zdefiniowana predkosc obrotowa wrzeciona", "Blad", JOptionPane.NO_OPTION); 
 				return false;
 			}
 		}
@@ -267,7 +269,7 @@ public class PlaneControler {
 			}
 			else
 			{
-				JOptionPane.showMessageDialog(this.view, "Zle zdefiniowany posuw", "B³¹d", JOptionPane.NO_OPTION);
+				JOptionPane.showMessageDialog(this.view, "Zle zdefiniowany posuw", "Blad", JOptionPane.NO_OPTION);
 				return false;
 			}
 		}
@@ -282,7 +284,7 @@ public class PlaneControler {
 			}
 			else
 			{
-				JOptionPane.showMessageDialog(this.view, "Zle zdefiniowana Œrednica narzêdzia", "B³¹d", JOptionPane.NO_OPTION);
+				JOptionPane.showMessageDialog(this.view, "Zle zdefiniowana srednica narzedzia", "Blad", JOptionPane.NO_OPTION);
 				return false;
 			}
 		}
@@ -298,7 +300,7 @@ public class PlaneControler {
 			}
 			else
 			{
-				JOptionPane.showMessageDialog(this.view, "Zle zdefiniowana wspó³rzêdna Z obrobionej na gotowo p³yty", "B³¹d", JOptionPane.NO_OPTION);
+				JOptionPane.showMessageDialog(this.view, "Zle zdefiniowana wspolrzedna Z obrobionej na gotowo plyty", "Blad", JOptionPane.NO_OPTION);
 				
 				return false;
 			}
@@ -314,7 +316,7 @@ public class PlaneControler {
 			}
 			else
 			{
-				JOptionPane.showMessageDialog(this.view, "Zle zdefiniowana wartoœæ przejœcia wykañczaj¹cego", "B³¹d", JOptionPane.NO_OPTION);
+				JOptionPane.showMessageDialog(this.view, "Zle zdefiniowana wartosc przejscia wykanczajacego", "Blad", JOptionPane.NO_OPTION);
 				return false;
 			}
 		}
@@ -328,7 +330,7 @@ public class PlaneControler {
 			}
 			else
 			{
-				JOptionPane.showMessageDialog(this.view, "Zle zdefiniowana wysokoœæ p³yty", "B³¹d", JOptionPane.NO_OPTION);
+				JOptionPane.showMessageDialog(this.view, "Zle zdefiniowana wysokosc plyty", "Blad", JOptionPane.NO_OPTION);
 				
 				return false;
 			}
@@ -343,7 +345,7 @@ public class PlaneControler {
 			}
 			else
 			{
-				JOptionPane.showMessageDialog(this.view, "Zle zdefiniowana szerokoœæ p³yty", "B³¹d", JOptionPane.NO_OPTION);
+				JOptionPane.showMessageDialog(this.view, "Zle zdefiniowana szerokoœsc plyty", "Blad", JOptionPane.NO_OPTION);
 				return false;
 			}
 		}
@@ -357,7 +359,7 @@ public class PlaneControler {
 				if(model.getAe()>100) {
 					model.setAe(100f);
 					view.setAeTextField("100");
-					JOptionPane.showMessageDialog(view, "Szerokoœæ skrawania wiêksza od œrednicy g³owicy. Ustawiono ae na 100% podanej œrednicy", "Ostrze¿enie", JOptionPane.NO_OPTION);
+					JOptionPane.showMessageDialog(view, "Szerokosc skrawania wiêksza od srednicy glowicy. Ustawiono ae na 100% podanej srednicy", "Ostrze¿enie", JOptionPane.NO_OPTION);
 					return false;
 				}
 				if(model.getAe()<1)
@@ -371,7 +373,7 @@ public class PlaneControler {
 			}
 			else
 				{
-					JOptionPane.showMessageDialog(this.view, "Zle zdefiniowana szerokoœæ skrawania", "B³¹d", JOptionPane.NO_OPTION);
+					JOptionPane.showMessageDialog(this.view, "Zle zdefiniowana szerokosc skrawania", "Blad", JOptionPane.NO_OPTION);
 					view.setAeTextField("60");
 					return false;
 				}

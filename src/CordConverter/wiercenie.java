@@ -90,6 +90,7 @@ public class wiercenie extends JFrame {
 	
 	int toolNumber;
 	float rotationB;
+	String base;
 	
 	boolean wiecejOtworow = false;
 	
@@ -105,6 +106,7 @@ public class wiercenie extends JFrame {
 		this.sterowanie=parent.getControls();
 		this. toolNumber = parent.getToolBar().getToolNumber();
 		this. rotationB = parent.getToolBar().getRotation();
+		this.base = parent.getToolBar().getBase();
 		setSize(350,500);
 		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		setTitle("Generuj kod wiercenia");
@@ -471,7 +473,7 @@ public class wiercenie extends JFrame {
 		else
 		System.out.printf("(T%d WIERTLO)%n",toolNumber);
 		
-		sterowanie.przygotowanieUkladuINarzedzia(5, toolNumber, Wind.options.getSafeRetraction(), rotationB);
+		sterowanie.przygotowanieUkladuINarzedzia(5, toolNumber, Wind.options.getSafeRetraction(), rotationB,base);
 		
 		System.out.printf(Locale.CANADA,"N%d S%d M3%n",n+=5,S);
 		System.out.printf(Locale.CANADA,"N%d G0 X%.3f Y%.3f M8%n",n+=5,x,y);
@@ -599,7 +601,7 @@ public class wiercenie extends JFrame {
 		
 		int n=0;
 
-		sterowanie.przygotowanieUkladuINarzedzia(5, toolNumber, Wind.options.getSafeRetraction(), rotationB);		
+		sterowanie.przygotowanieUkladuINarzedzia(5, toolNumber, Wind.options.getSafeRetraction(), rotationB,base);		
 		
 		System.out.printf(Locale.CANADA,"N%d S%d M3%n",n+=5,S);
 		System.out.printf(Locale.CANADA,"N%d G0 X%.3f Y%.3f M8%n",n+=5,x,y);
@@ -668,7 +670,7 @@ public class wiercenie extends JFrame {
 			
 			System.out.printf("(T%d WIERTLO )%n",toolNumber);	
 			
-			sterowanie.przygotowanieUkladuINarzedzia(5, toolNumber, Wind.options.getSafeRetraction(), rotationB);
+			sterowanie.przygotowanieUkladuINarzedzia(5, toolNumber, Wind.options.getSafeRetraction(), rotationB,base);
 			
 			
 			System.out.printf(Locale.CANADA,"N%d S%d M3%n",n+=5,S);

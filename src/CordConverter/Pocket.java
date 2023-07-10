@@ -769,7 +769,7 @@ public class Pocket extends JFrame implements ActionListener{
 				
 				System.out.printf(Locale.CANADA,"(T%d GLOWICA FI%.2f )%n", toolNumber,toolsize);
 				
-				sterowanie.przygotowanieUkladuINarzedzia(15, this.toolNumber, safeRetraction,this.parent.getToolBar().getRotation());
+				sterowanie.przygotowanieUkladuINarzedzia(15, this.toolNumber, safeRetraction,this.parent.getToolBar().getRotation(),this.parent.getToolBar().getBase());
 				
 				System.out.printf(Locale.CANADA,"N15 S%d M3%n",speed);
 				

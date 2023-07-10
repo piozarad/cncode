@@ -9,7 +9,7 @@ public interface Sterowanie {
 
 
 
-public void przygotowanieUkladuINarzedzia(int block, int toolNumber, float safeRetraction, float bRotation);
+public void przygotowanieUkladuINarzedzia(int block, int toolNumber, float safeRetraction, float bRotation, String base);
 	
 public String getDwellTimeFormat();
 

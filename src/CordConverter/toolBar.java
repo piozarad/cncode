@@ -1,5 +1,6 @@
 package CordConverter;
 
+import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
@@ -22,8 +23,12 @@ public class toolBar extends JToolBar{
 	JTextField rotationTxt;
 	JButton cofnij;
 	JButton dalej;
+	JLabel baseLabel;
+	JTextField basetxt;
 	
 	JLabel sterowanie;
+	
+	private static final Dimension dim = new Dimension(50,25);
 	
 	public toolBar()
 	{
@@ -53,7 +58,7 @@ public class toolBar extends JToolBar{
 		
 	
 		border.gridx=2;
-		bRotation = new JLabel("K¹t obrotu sto³u B");
+		bRotation = new JLabel("Kat obrotu stolu B");
 		add(bRotation,border);
 		
 		border.gridx=3;
@@ -61,12 +66,22 @@ public class toolBar extends JToolBar{
 		border.anchor=GridBagConstraints.WEST;
 		border.weightx=0;
 		rotationTxt = new JTextField("0.000  ");
+		rotationTxt.setMinimumSize(dim);
 		rotationTxt.setSize(250, 25);
 		add(rotationTxt,border);
 		
+		border.gridx=4;
+		baseLabel = new JLabel("Baza");
+		add(baseLabel, border);
+		
+		border.gridx=5;
+		basetxt = new JTextField("G54");
+		basetxt.setMinimumSize(dim);
+		add(basetxt,border);
+		
 		JSeparator separator1 = new JSeparator(SwingConstants.VERTICAL);
 		border.fill=GridBagConstraints.VERTICAL;
-		border.gridx=4;
+		border.gridx=6;
 		border.weighty=0.5;
 		add(separator1,border);
 		
@@ -76,7 +91,7 @@ public class toolBar extends JToolBar{
 		cofnij.setToolTipText("Cofnij");
 
 		cofnij.setEnabled(false);
-		border.gridx=5;
+		border.gridx=7;
 		border.fill=GridBagConstraints.NONE;
 		border.weightx=0;
 		border.insets= new Insets(5,1,5,0);
@@ -86,7 +101,7 @@ public class toolBar extends JToolBar{
 		dalej.setToolTipText("Dalej");
 
 		dalej.setEnabled(false);
-		border.gridx=6;
+		border.gridx=8;
 		border.fill=GridBagConstraints.HORIZONTAL;
 		border.weightx=0;
 		add(dalej,border);
@@ -95,11 +110,12 @@ public class toolBar extends JToolBar{
 		
 		JSeparator separator2 = new JSeparator(SwingConstants.VERTICAL);
 		border.fill=GridBagConstraints.BOTH;
-		border.gridx=7;
+		border.gridx=9;
 		border.weighty=0.5;
 		border.weightx=0.5;
 		add(separator2,border);
 	
+		
 		
 		
 	}
@@ -111,6 +127,11 @@ public int getToolNumber()
 {
 	return Integer.parseInt(this.toolNumberSpinner.getValue().toString());
 	
+}
+
+public String getBase()
+{
+	return this.basetxt.getText();
 }
 
 

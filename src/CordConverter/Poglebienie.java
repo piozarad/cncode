@@ -83,6 +83,7 @@ public class Poglebienie extends JFrame implements ActionListener{
 	
 	int toolNumber;
 	float rotationB;
+	String base;
 	
 	Sterowanie sterowanie;
 	
@@ -103,6 +104,7 @@ public class Poglebienie extends JFrame implements ActionListener{
 		
 		this.toolNumber = parent.getToolBar().getToolNumber();
 		this.rotationB = parent.getToolBar().getRotation();
+		this.base = parent.getToolBar().getBase();
 		
 		this.addWindowListener(new java.awt.event.WindowAdapter() 
 		{
@@ -570,7 +572,7 @@ public class Poglebienie extends JFrame implements ActionListener{
 		System.out.printf(Locale.CANADA,"(T%d FREZ FI%.2f RMAX=%.2f)%n", toolNumber,t, najazd);
 		
 		
-		sterowanie.przygotowanieUkladuINarzedzia(5, toolNumber, Wind.options.getSafeRetraction(), rotationB);
+		sterowanie.przygotowanieUkladuINarzedzia(5, toolNumber, Wind.options.getSafeRetraction(), rotationB,base);
 		
 		System.out.printf(Locale.CANADA,"N35 S%d M3%n",speed);
 		System.out.printf(Locale.CANADA,"N40 G0 X%.3f Y%.3f M8%n",X,Y);
