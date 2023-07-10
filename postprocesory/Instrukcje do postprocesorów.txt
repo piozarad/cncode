@@ -1,0 +1,24 @@
+	**Instrukcja do postprocesor�w**
+
+ -Plik do odczytu przez program musi mie� rozszerzenie .nc Inne pliki nie b�d� brane pod uwag�.
+ -Pierwsza linia w pliku musu zawiera� nazw� postprocesora w formacie %Nazwa
+ -Ka�da linia zaczynaj�ca si� od znaku * jest traktowana jako komentarz i nie jest interpretowana przez program
+ -W przypadku b��dnego odczytu/nie rozpoznania komendy przez program wyst�pi b�ad oraz przekazana zostanie informacja 
+ o linijce kt�ra nie mog�a zosta� prawid�owo odczytana
+
+	 **operatory**
+-Prawid�owe instrukcje wymienione ponizej zostaly pokazane w srodku ' ' w przypadku wlasciwego pliku znaki te nale�y pomin��
+-Dodanie: operator +	 np 'G54+G90'  Dodaje 'G90' kiedy w linii znajduje si� kod 'G54' 
+-Kasowanie: operator /	 np '/G98'  Kasuje z ka�dej linii kod 'G98' 
+-Kasowanie warunkowe: operator /	 np 'G81/G98'  Kasuje z linii 'G98' kiedy w linii znajduje si� kod 'G81' 
+-Kasowanie ca�ej linii: operator KL>	 np 'KL>G30'  Kasuje ca�� linie kodu w kt�rym znajduje si� 'G30'
+-Zamiana: operator =>	 np 'M130=>M60' Zamienia w linii 'M130' na 'M60' 
+-Zamiana warunkowa: operator ? =>	 np 'G4?X=>P' Kiedy linia kodu zawiera 'G4' zamienia w niej 'X' na 'P' 
+-Dopisz ponizej: operator v+	np 'S%l v+ G4X2' Po napotkaniu linii z kodem obrot�w wrzeciona (%l oznacza dowoln� warto�� liczbow�) dodaje poni�ej nows linie z kodem 'G4 X2'
+-Dodaj wy�ej: operator ^+	 np 'G81^+G71 Z500' Po napotkaniu linii z kodem 'G81' dodaje powy�ej kod 'G71 Z500' 
+-Wyodr�bnij funkcje: operator <>	 np '<>M5' u�yty w linii 'N100 M5 M1' zwraca 3 bloki : 
+	N100  
+	M5  
+	M1  
+-Znak %t jest czytany jako number aktualnego narzedzia np. 'HA=>D%t' Zamienia korektor HA na D1 (jezeli wcze�niej zostalo wywo�ane narz�dzie T1 i komenda M6)'
+-Znak %l (ma�a litera L) jest czytany jako dowolny number. Mo�na go wykorzysta� gdy znany jest typ kodu ale nie jest znany numer. Np. /D%l kasuje korektor D o dowolnym numerze w kodzie - D1, D2 ..itd

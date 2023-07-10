@@ -1,0 +1,1082 @@
+lip 23, 2021 8:21:48 PM CordConverter.Log writeInfoLog
+INFO: LN 1: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :%Fanuc-Okuma
+
+lip 23, 2021 8:21:48 PM CordConverter.Log writeInfoLog
+INFO: LN 2: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 23, 2021 8:21:48 PM CordConverter.Log writeInfoLog
+INFO: LN 3: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 23, 2021 8:21:48 PM CordConverter.Log writeInfoLog
+INFO: LN 4: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 23, 2021 8:21:48 PM CordConverter.Log writeInfoLog
+INFO: LN 5: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 23, 2021 8:21:48 PM CordConverter.Log writeInfoLog
+INFO: LN 6: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 23, 2021 8:21:48 PM CordConverter.Log writeInfoLog
+INFO: LN 7: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 23, 2021 8:21:48 PM CordConverter.Log writeInfoLog
+INFO: LN 8: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 23, 2021 8:21:48 PM CordConverter.Log writeInfoLog
+INFO: LN 9: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 23, 2021 8:21:48 PM CordConverter.Log writeInfoLog
+INFO: LN 10: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 23, 2021 8:21:48 PM CordConverter.Log writeInfoLog
+INFO: LN 11: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 23, 2021 8:21:48 PM CordConverter.Log writeInfoLog
+INFO: LN 12: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 23, 2021 8:21:48 PM CordConverter.Log writeInfoLog
+INFO: LN 13: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 23, 2021 8:21:48 PM CordConverter.Log writeInfoLog
+INFO: LN 14: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 23, 2021 8:21:48 PM CordConverter.Log writeInfoLog
+INFO: LN 15: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 23, 2021 8:21:48 PM CordConverter.Log writeInfoLog
+INFO: LN 16: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 23, 2021 8:21:48 PM CordConverter.Log writeInfoLog
+INFO: LN 17: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+kwi 01, 2022 11:24:12 AM CordConverter.Log writeErrorLog
+SEVERE:  LN 1: Exception occured:Index 26 out of bounds for length 26 Class invoked: InterpreterListener
+TFN:Index out of bounds
+
+kwi 12, 2022 9:13:24 PM CordConverter.Log writeInfoLog
+INFO: LN 1: Class invoked: Spiral
+:Spiral inner - wygenerowano
+
+kwi 12, 2022 9:14:34 PM CordConverter.Log writeErrorLog
+SEVERE:  LN 2: Exception occured:Index 51 out of bounds for length 51 Class invoked: InterpreterListener
+TFN:Index out of bounds
+
+kwi 12, 2022 9:15:33 PM CordConverter.Log writeInfoLog
+INFO: LN 3: Class invoked: Spiral
+:Spiral inner - wygenerowano
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 4: Class invoked: class CordConverter.Edytor
+:Character count difference First:(T1 GLOWICA FI10.0) Second:(T1 GLOWICA FI10.0) 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 5: Class invoked: class CordConverter.Edytor
+:Character count difference First:N5 T1  M6 Second:N5  T1 M6 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 6: Class invoked: class CordConverter.Edytor
+:Character count difference First:N10 G90 G54 G0 Second:N10 G90 G54 G0 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 7: Class invoked: class CordConverter.Edytor
+:Character count difference First:N15 G43 H1 G0 Z400.0 Second:N15 G43 G0 H1 Z400.0 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 8: Class invoked: class CordConverter.Edytor
+:Character count difference First:N20 G0 B0.0 Second:N20 G0 B0.0 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 9: Class invoked: class CordConverter.Edytor
+:Character count difference First:N10 G0 X-21.0 Y0.0 S5000 M3 Second:N10 G0 X-21.0 Y0.0 S5000 M3 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 10: Class invoked: class CordConverter.Edytor
+:Character count difference First:N15 G1 Z10.0 F10000. M8 Second:N15 G1 Z10.0 M8 F10000.0 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 11: Class invoked: class CordConverter.Edytor
+:Character count difference First:N30 G3 X-15.000 Y0.000 I2.5 J0. F1000.0  Second:N30 G3 X-15.0 Y0.0 I2.5 J0.0 F1000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 12: Class invoked: class CordConverter.Edytor
+:Character count difference First:N35 G2 X15.00 Y0.00 I15.00 J0.  Second:N35 G2 X15.0 Y0.0 I15.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 13: Class invoked: class CordConverter.Edytor
+:Character count difference First:N40 G2 X-15.00 Y0.00 I-15.00 J0.  Second:N40 G2 X-15.0 Y0.0 I-15.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 14: Class invoked: class CordConverter.Edytor
+:Character count difference First:N45 G3 X-20.00 Y0.00 I-2.50 J0.  Second:N45 G3 X-20.0 Y0.0 I-2.5 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 15: Class invoked: class CordConverter.Edytor
+:Character count difference First:N50 G1 Z7.000  Second:N50 G1 Z7.0 
+ COUNT:3
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 16: Class invoked: class CordConverter.Edytor
+:Character count difference First:N55 G3 X-15.000 Y0.000 I2.5 J0. F1000.0  Second:N55 G3 X-15.0 Y0.0 I2.5 J0.0 F1000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 17: Class invoked: class CordConverter.Edytor
+:Character count difference First:N60 G2 X15.00 Y0.00 I15.00 J0.  Second:N60 G2 X15.0 Y0.0 I15.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 18: Class invoked: class CordConverter.Edytor
+:Character count difference First:N65 G2 X-15.00 Y0.00 I-15.00 J0.  Second:N65 G2 X-15.0 Y0.0 I-15.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 19: Class invoked: class CordConverter.Edytor
+:Character count difference First:N70 G3 X-20.00 Y0.00 I-2.50 J0.  Second:N70 G3 X-20.0 Y0.0 I-2.5 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 20: Class invoked: class CordConverter.Edytor
+:Character count difference First:N75 G1 Z4.000  Second:N75 G1 Z4.0 
+ COUNT:3
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 21: Class invoked: class CordConverter.Edytor
+:Character count difference First:N80 G3 X-15.000 Y0.000 I2.5 J0. F1000.0  Second:N80 G3 X-15.0 Y0.0 I2.5 J0.0 F1000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 22: Class invoked: class CordConverter.Edytor
+:Character count difference First:N85 G2 X15.00 Y0.00 I15.00 J0.  Second:N85 G2 X15.0 Y0.0 I15.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 23: Class invoked: class CordConverter.Edytor
+:Character count difference First:N90 G2 X-15.00 Y0.00 I-15.00 J0.  Second:N90 G2 X-15.0 Y0.0 I-15.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 24: Class invoked: class CordConverter.Edytor
+:Character count difference First:N95 G3 X-20.00 Y0.00 I-2.50 J0.  Second:N95 G3 X-20.0 Y0.0 I-2.5 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 25: Class invoked: class CordConverter.Edytor
+:Character count difference First:N100 G1 Z1.000  Second:N100 G1 Z1.0 
+ COUNT:3
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 26: Class invoked: class CordConverter.Edytor
+:Character count difference First:N105 G3 X-15.000 Y0.000 I2.5 J0. F1000.0  Second:N105 G3 X-15.0 Y0.0 I2.5 J0.0 F1000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 27: Class invoked: class CordConverter.Edytor
+:Character count difference First:N110 G2 X15.00 Y0.00 I15.00 J0.  Second:N110 G2 X15.0 Y0.0 I15.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 28: Class invoked: class CordConverter.Edytor
+:Character count difference First:N115 G2 X-15.00 Y0.00 I-15.00 J0.  Second:N115 G2 X-15.0 Y0.0 I-15.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 29: Class invoked: class CordConverter.Edytor
+:Character count difference First:(T1 GLOWICA FI20.0) Second:(T1 GLOWICA FI20.0) 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 30: Class invoked: class CordConverter.Edytor
+:Character count difference First:N5 T1  M6 Second:N5  T1 M6 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 31: Class invoked: class CordConverter.Edytor
+:Character count difference First:N10 G90 G54 G0 Second:N10 G90 G54 G0 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 32: Class invoked: class CordConverter.Edytor
+:Character count difference First:N15 G43 H1 G0 Z400.0 Second:N15 G43 G0 H1 Z400.0 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 33: Class invoked: class CordConverter.Edytor
+:Character count difference First:N20 G0 B0.0 Second:N20 G0 B0.0 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 34: Class invoked: class CordConverter.Edytor
+:Character count difference First:N10 G0 X-26.0 Y10.0 S5000 M3 Second:N10 G0 X-26.0 Y10.0 S5000 M3 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 35: Class invoked: class CordConverter.Edytor
+:Character count difference First:N15 G1 Z10.0 F10000. M8 Second:N15 G1 Z10.0 M8 F10000.0 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 36: Class invoked: class CordConverter.Edytor
+:Character count difference First:N20 G1 G41 D1 X-25.0 F2000. Second:N20 G1 G41 D1 X-25.0 F2000.0 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 37: Class invoked: class CordConverter.Edytor
+:Character count difference First:N30 G3 X-20.000 Y10.000 I2.5 J0. F2000.0  Second:N30 G3 X-20.0 Y10.0 I2.5 J0.0 F2000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 38: Class invoked: class CordConverter.Edytor
+:Character count difference First:N35 G2 X20.00 Y10.00 I30.00 J0.  Second:N35 G2 X20.0 Y10.0 I30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 39: Class invoked: class CordConverter.Edytor
+:Character count difference First:N40 G2 X-20.00 Y10.00 I-30.00 J0.  Second:N40 G2 X-20.0 Y10.0 I-30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 40: Class invoked: class CordConverter.Edytor
+:Character count difference First:N45 G3 X-25.00 Y10.00 I-2.50 J0.  Second:N45 G3 X-25.0 Y10.0 I-2.5 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 41: Class invoked: class CordConverter.Edytor
+:Character count difference First:N50 G1 Z5.000  Second:N50 G1 Z5.0 
+ COUNT:3
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 42: Class invoked: class CordConverter.Edytor
+:Character count difference First:N55 G3 X-20.000 Y10.000 I2.5 J0. F2000.0  Second:N55 G3 X-20.0 Y10.0 I2.5 J0.0 F2000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 43: Class invoked: class CordConverter.Edytor
+:Character count difference First:N60 G2 X20.00 Y10.00 I30.00 J0.  Second:N60 G2 X20.0 Y10.0 I30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 44: Class invoked: class CordConverter.Edytor
+:Character count difference First:N65 G2 X-20.00 Y10.00 I-30.00 J0.  Second:N65 G2 X-20.0 Y10.0 I-30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 45: Class invoked: class CordConverter.Edytor
+:Character count difference First:N70 G3 X-25.00 Y10.00 I-2.50 J0.  Second:N70 G3 X-25.0 Y10.0 I-2.5 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 46: Class invoked: class CordConverter.Edytor
+:Character count difference First:N75 G1 Z0.000  Second:N75 G1 Z0.0 
+ COUNT:3
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 47: Class invoked: class CordConverter.Edytor
+:Character count difference First:N80 G3 X-20.000 Y10.000 I2.5 J0. F2000.0  Second:N80 G3 X-20.0 Y10.0 I2.5 J0.0 F2000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 48: Class invoked: class CordConverter.Edytor
+:Character count difference First:N85 G2 X20.00 Y10.00 I30.00 J0.  Second:N85 G2 X20.0 Y10.0 I30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 49: Class invoked: class CordConverter.Edytor
+:Character count difference First:N90 G2 X-20.00 Y10.00 I-30.00 J0.  Second:N90 G2 X-20.0 Y10.0 I-30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 50: Class invoked: class CordConverter.Edytor
+:Character count difference First:N95 G3 X-25.00 Y10.00 I-2.50 J0.  Second:N95 G3 X-25.0 Y10.0 I-2.5 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 51: Class invoked: class CordConverter.Edytor
+:Character count difference First:N100 G1 Z-5.000  Second:N100 G1 Z-5.0 
+ COUNT:3
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 52: Class invoked: class CordConverter.Edytor
+:Character count difference First:N105 G3 X-20.000 Y10.000 I2.5 J0. F2000.0  Second:N105 G3 X-20.0 Y10.0 I2.5 J0.0 F2000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 53: Class invoked: class CordConverter.Edytor
+:Character count difference First:N110 G2 X20.00 Y10.00 I30.00 J0.  Second:N110 G2 X20.0 Y10.0 I30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 54: Class invoked: class CordConverter.Edytor
+:Character count difference First:N115 G2 X-20.00 Y10.00 I-30.00 J0.  Second:N115 G2 X-20.0 Y10.0 I-30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 55: Class invoked: class CordConverter.Edytor
+:Character count difference First:N120 G3 X-25.00 Y10.00 I-2.50 J0.  Second:N120 G3 X-25.0 Y10.0 I-2.5 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 56: Class invoked: class CordConverter.Edytor
+:Character count difference First:N125 G1 Z-10.000  Second:N125 G1 Z-10.0 
+ COUNT:3
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 57: Class invoked: class CordConverter.Edytor
+:Character count difference First:N130 G3 X-20.000 Y10.000 I2.5 J0. F2000.0  Second:N130 G3 X-20.0 Y10.0 I2.5 J0.0 F2000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 58: Class invoked: class CordConverter.Edytor
+:Character count difference First:N135 G2 X20.00 Y10.00 I30.00 J0.  Second:N135 G2 X20.0 Y10.0 I30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 59: Class invoked: class CordConverter.Edytor
+:Character count difference First:N140 G2 X-20.00 Y10.00 I-30.00 J0.  Second:N140 G2 X-20.0 Y10.0 I-30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 60: Class invoked: class CordConverter.Edytor
+:Character count difference First:N145 G3 X-25.00 Y10.00 I-2.50 J0.  Second:N145 G3 X-25.0 Y10.0 I-2.5 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 61: Class invoked: class CordConverter.Edytor
+:Character count difference First:N150 G1 Z-10.000  Second:N150 G1 Z-10.0 
+ COUNT:3
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 62: Class invoked: class CordConverter.Edytor
+:Character count difference First:N155 G3 X-20.000  Y10.000 I2.5 J0. F2000.0  Second:N155 G3 X-20.0 Y10.0 I2.5 J0.0 F2000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 63: Class invoked: class CordConverter.Edytor
+:Character count difference First:N160 G2 X20.00 Y10.00 I30.00 J0.  Second:N160 G2 X20.0 Y10.0 I30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 64: Class invoked: class CordConverter.Edytor
+:Character count difference First:N165 G2 X-20.00 Y10.00 I-30.00 J0.  Second:N165 G2 X-20.0 Y10.0 I-30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 65: Class invoked: class CordConverter.Edytor
+:Character count difference First:N170 G3 X-25.00 Y10.00 I-2.50 J0.  Second:N170 G3 X-25.0 Y10.0 I-2.5 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 66: Class invoked: class CordConverter.Edytor
+:Character count difference First:N175 G1 G40 X-27.000 Y9.000 Second:N175 G1 G40 X-27.0 Y9.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 67: Class invoked: class CordConverter.Edytor
+:Character count difference First:N180 G0 Z400.0 M9 Second:N180 G0 Z400.0 M9 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 68: Class invoked: class CordConverter.Edytor
+:Character count difference First:N185 M5 Second:N185 M5 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 69: Class invoked: class CordConverter.Edytor
+:Character count difference First:N190 M1 Second:N190 M1 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 70: Class invoked: class CordConverter.Edytor
+:Character count difference First:(T1 GLOWICA FI10.0) Second:(T1 GLOWICA FI10.0) 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 71: Class invoked: class CordConverter.Edytor
+:Character count difference First:N5 T1  M6 Second:N5  T1 M6 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 72: Class invoked: class CordConverter.Edytor
+:Character count difference First:N10 G90 G54 G0 Second:N10 G90 G54 G0 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 73: Class invoked: class CordConverter.Edytor
+:Character count difference First:N15 G43 H1 G0 Z400.0 Second:N15 G43 G0 H1 Z400.0 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 74: Class invoked: class CordConverter.Edytor
+:Character count difference First:N20 G0 B0.0 Second:N20 G0 B0.0 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 75: Class invoked: class CordConverter.Edytor
+:Character count difference First:N10 G0 X-21.0 Y0.0 S5000 M3 Second:N10 G0 X-21.0 Y0.0 S5000 M3 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 76: Class invoked: class CordConverter.Edytor
+:Character count difference First:N15 G1 Z10.0 F10000. M8 Second:N15 G1 Z10.0 M8 F10000.0 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 77: Class invoked: class CordConverter.Edytor
+:Character count difference First:N30 G3 X-15.000 Y0.000 I2.5 J0. F1000.0  Second:N30 G3 X-15.0 Y0.0 I2.5 J0.0 F1000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 78: Class invoked: class CordConverter.Edytor
+:Character count difference First:N35 G2 X15.00 Y0.00 I15.00 J0.  Second:N35 G2 X15.0 Y0.0 I15.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 79: Class invoked: class CordConverter.Edytor
+:Character count difference First:N40 G2 X-15.00 Y0.00 I-15.00 J0.  Second:N40 G2 X-15.0 Y0.0 I-15.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 80: Class invoked: class CordConverter.Edytor
+:Character count difference First:N45 G3 X-20.00 Y0.00 I-2.50 J0.  Second:N45 G3 X-20.0 Y0.0 I-2.5 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 81: Class invoked: class CordConverter.Edytor
+:Character count difference First:N50 G1 Z7.000  Second:N50 G1 Z7.0 
+ COUNT:3
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 82: Class invoked: class CordConverter.Edytor
+:Character count difference First:N55 G3 X-15.000 Y0.000 I2.5 J0. F1000.0  Second:N55 G3 X-15.0 Y0.0 I2.5 J0.0 F1000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 83: Class invoked: class CordConverter.Edytor
+:Character count difference First:N60 G2 X15.00 Y0.00 I15.00 J0.  Second:N60 G2 X15.0 Y0.0 I15.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 84: Class invoked: class CordConverter.Edytor
+:Character count difference First:N65 G2 X-15.00 Y0.00 I-15.00 J0.  Second:N65 G2 X-15.0 Y0.0 I-15.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 85: Class invoked: class CordConverter.Edytor
+:Character count difference First:N70 G3 X-20.00 Y0.00 I-2.50 J0.  Second:N70 G3 X-20.0 Y0.0 I-2.5 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 86: Class invoked: class CordConverter.Edytor
+:Character count difference First:N75 G1 Z4.000  Second:N75 G1 Z4.0 
+ COUNT:3
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 87: Class invoked: class CordConverter.Edytor
+:Character count difference First:N80 G3 X-15.000 Y0.000 I2.5 J0. F1000.0  Second:N80 G3 X-15.0 Y0.0 I2.5 J0.0 F1000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 88: Class invoked: class CordConverter.Edytor
+:Character count difference First:N85 G2 X15.00 Y0.00 I15.00 J0.  Second:N85 G2 X15.0 Y0.0 I15.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 89: Class invoked: class CordConverter.Edytor
+:Character count difference First:N90 G2 X-15.00 Y0.00 I-15.00 J0.  Second:N90 G2 X-15.0 Y0.0 I-15.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 90: Class invoked: class CordConverter.Edytor
+:Character count difference First:N95 G3 X-20.00 Y0.00 I-2.50 J0.  Second:N95 G3 X-20.0 Y0.0 I-2.5 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 91: Class invoked: class CordConverter.Edytor
+:Character count difference First:N100 G1 Z1.000  Second:N100 G1 Z1.0 
+ COUNT:3
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 92: Class invoked: class CordConverter.Edytor
+:Character count difference First:N105 G3 X-15.000 Y0.000 I2.5 J0. F1000.0  Second:N105 G3 X-15.0 Y0.0 I2.5 J0.0 F1000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 93: Class invoked: class CordConverter.Edytor
+:Character count difference First:N110 G2 X15.00 Y0.00 I15.00 J0.  Second:N110 G2 X15.0 Y0.0 I15.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 94: Class invoked: class CordConverter.Edytor
+:Character count difference First:N115 G2 X-15.00 Y0.00 I-15.00 J0.  Second:N115 G2 X-15.0 Y0.0 I-15.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 95: Class invoked: class CordConverter.Edytor
+:Character count difference First:(T1 GLOWICA FI20.0) Second:(T1 GLOWICA FI20.0) 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 96: Class invoked: class CordConverter.Edytor
+:Character count difference First:N5 T1  M6 Second:N5  T1 M6 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 97: Class invoked: class CordConverter.Edytor
+:Character count difference First:N10 G90 G54 G0 Second:N10 G90 G54 G0 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 98: Class invoked: class CordConverter.Edytor
+:Character count difference First:N15 G43 H1 G0 Z400.0 Second:N15 G43 G0 H1 Z400.0 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 99: Class invoked: class CordConverter.Edytor
+:Character count difference First:N20 G0 B0.0 Second:N20 G0 B0.0 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 100: Class invoked: class CordConverter.Edytor
+:Character count difference First:N10 G0 X-26.0 Y10.0 S5000 M3 Second:N10 G0 X-26.0 Y10.0 S5000 M3 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 101: Class invoked: class CordConverter.Edytor
+:Character count difference First:N15 G1 Z10.0 F10000. M8 Second:N15 G1 Z10.0 M8 F10000.0 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 102: Class invoked: class CordConverter.Edytor
+:Character count difference First:N20 G1 G41 D1 X-25.0 F2000. Second:N20 G1 G41 D1 X-25.0 F2000.0 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 103: Class invoked: class CordConverter.Edytor
+:Character count difference First:N30 G3 X-20.000 Y10.000 I2.5 J0. F2000.0  Second:N30 G3 X-20.0 Y10.0 I2.5 J0.0 F2000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 104: Class invoked: class CordConverter.Edytor
+:Character count difference First:N35 G2 X20.00 Y10.00 I30.00 J0.  Second:N35 G2 X20.0 Y10.0 I30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 105: Class invoked: class CordConverter.Edytor
+:Character count difference First:N40 G2 X-20.00 Y10.00 I-30.00 J0.  Second:N40 G2 X-20.0 Y10.0 I-30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 106: Class invoked: class CordConverter.Edytor
+:Character count difference First:N45 G3 X-25.00 Y10.00 I-2.50 J0.  Second:N45 G3 X-25.0 Y10.0 I-2.5 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 107: Class invoked: class CordConverter.Edytor
+:Character count difference First:N50 G1 Z5.000  Second:N50 G1 Z5.0 
+ COUNT:3
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 108: Class invoked: class CordConverter.Edytor
+:Character count difference First:N55 G3 X-20.000 Y10.000 I2.5 J0. F2000.0  Second:N55 G3 X-20.0 Y10.0 I2.5 J0.0 F2000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 109: Class invoked: class CordConverter.Edytor
+:Character count difference First:N60 G2 X20.00 Y10.00 I30.00 J0.  Second:N60 G2 X20.0 Y10.0 I30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 110: Class invoked: class CordConverter.Edytor
+:Character count difference First:N65 G2 X-20.00 Y10.00 I-30.00 J0.  Second:N65 G2 X-20.0 Y10.0 I-30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 111: Class invoked: class CordConverter.Edytor
+:Character count difference First:N70 G3 X-25.00 Y10.00 I-2.50 J0.  Second:N70 G3 X-25.0 Y10.0 I-2.5 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 112: Class invoked: class CordConverter.Edytor
+:Character count difference First:N75 G1 Z0.000  Second:N75 G1 Z0.0 
+ COUNT:3
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 113: Class invoked: class CordConverter.Edytor
+:Character count difference First:N80 G3 X-20.000 Y10.000 I2.5 J0. F2000.0  Second:N80 G3 X-20.0 Y10.0 I2.5 J0.0 F2000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 114: Class invoked: class CordConverter.Edytor
+:Character count difference First:N85 G2 X20.00 Y10.00 I30.00 J0.  Second:N85 G2 X20.0 Y10.0 I30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 115: Class invoked: class CordConverter.Edytor
+:Character count difference First:N90 G2 X-20.00 Y10.00 I-30.00 J0.  Second:N90 G2 X-20.0 Y10.0 I-30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 116: Class invoked: class CordConverter.Edytor
+:Character count difference First:N95 G3 X-25.00 Y10.00 I-2.50 J0.  Second:N95 G3 X-25.0 Y10.0 I-2.5 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 117: Class invoked: class CordConverter.Edytor
+:Character count difference First:N100 G1 Z-5.000  Second:N100 G1 Z-5.0 
+ COUNT:3
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 118: Class invoked: class CordConverter.Edytor
+:Character count difference First:N105 G3 X-20.000 Y10.000 I2.5 J0. F2000.0  Second:N105 G3 X-20.0 Y10.0 I2.5 J0.0 F2000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 119: Class invoked: class CordConverter.Edytor
+:Character count difference First:N110 G2 X20.00 Y10.00 I30.00 J0.  Second:N110 G2 X20.0 Y10.0 I30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 120: Class invoked: class CordConverter.Edytor
+:Character count difference First:N115 G2 X-20.00 Y10.00 I-30.00 J0.  Second:N115 G2 X-20.0 Y10.0 I-30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 121: Class invoked: class CordConverter.Edytor
+:Character count difference First:N120 G3 X-25.00 Y10.00 I-2.50 J0.  Second:N120 G3 X-25.0 Y10.0 I-2.5 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 122: Class invoked: class CordConverter.Edytor
+:Character count difference First:N125 G1 Z-10.000  Second:N125 G1 Z-10.0 
+ COUNT:3
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 123: Class invoked: class CordConverter.Edytor
+:Character count difference First:N130 G3 X-20.000 Y10.000 I2.5 J0. F2000.0  Second:N130 G3 X-20.0 Y10.0 I2.5 J0.0 F2000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 124: Class invoked: class CordConverter.Edytor
+:Character count difference First:N135 G2 X20.00 Y10.00 I30.00 J0.  Second:N135 G2 X20.0 Y10.0 I30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 125: Class invoked: class CordConverter.Edytor
+:Character count difference First:N140 G2 X-20.00 Y10.00 I-30.00 J0.  Second:N140 G2 X-20.0 Y10.0 I-30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 126: Class invoked: class CordConverter.Edytor
+:Character count difference First:N145 G3 X-25.00 Y10.00 I-2.50 J0.  Second:N145 G3 X-25.0 Y10.0 I-2.5 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 127: Class invoked: class CordConverter.Edytor
+:Character count difference First:N150 G1 Z-10.000  Second:N150 G1 Z-10.0 
+ COUNT:3
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 128: Class invoked: class CordConverter.Edytor
+:Character count difference First:N155 G3 X-20.000  Y10.000 I2.5 J0. F2000.0  Second:N155 G3 X-20.0 Y10.0 I2.5 J0.0 F2000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 129: Class invoked: class CordConverter.Edytor
+:Character count difference First:N160 G2 X20.00 Y10.00 I30.00 J0.  Second:N160 G2 X20.0 Y10.0 I30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 130: Class invoked: class CordConverter.Edytor
+:Character count difference First:N165 G2 X-20.00 Y10.00 I-30.00 J0.  Second:N165 G2 X-20.0 Y10.0 I-30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 131: Class invoked: class CordConverter.Edytor
+:Character count difference First:N170 G3 X-25.00 Y10.00 I-2.50 J0.  Second:N170 G3 X-25.0 Y10.0 I-2.5 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 132: Class invoked: class CordConverter.Edytor
+:Character count difference First:N175 G1 G40 X-27.000 Y9.000 Second:N175 G1 G40 X-27.0 Y9.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 133: Class invoked: class CordConverter.Edytor
+:Character count difference First:N180 G0 Z400.0 M9 Second:N180 G0 Z400.0 M9 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 134: Class invoked: class CordConverter.Edytor
+:Character count difference First:N185 M5 Second:N185 M5 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 135: Class invoked: class CordConverter.Edytor
+:Character count difference First:N190 M1 Second:N190 M1 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 136: Class invoked: class CordConverter.Edytor
+:Character count difference First:(T1 GLOWICA FI10.0) Second:(T1 GLOWICA FI10.0) 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 137: Class invoked: class CordConverter.Edytor
+:Character count difference First:N5 T1  M6 Second:N5  T1 M6 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 138: Class invoked: class CordConverter.Edytor
+:Character count difference First:N10 G90 G54 G0 Second:N10 G90 G54 G0 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 139: Class invoked: class CordConverter.Edytor
+:Character count difference First:N15 G43 H1 G0 Z400.0 Second:N15 G43 G0 H1 Z400.0 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 140: Class invoked: class CordConverter.Edytor
+:Character count difference First:N20 G0 B0.0 Second:N20 G0 B0.0 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 141: Class invoked: class CordConverter.Edytor
+:Character count difference First:N10 G0 X-21.0 Y0.0 S5000 M3 Second:N10 G0 X-21.0 Y0.0 S5000 M3 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 142: Class invoked: class CordConverter.Edytor
+:Character count difference First:N15 G1 Z10.0 F10000. M8 Second:N15 G1 Z10.0 M8 F10000.0 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 143: Class invoked: class CordConverter.Edytor
+:Character count difference First:N30 G3 X-15.000 Y0.000 I2.5 J0. F1000.0  Second:N30 G3 X-15.0 Y0.0 I2.5 J0.0 F1000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 144: Class invoked: class CordConverter.Edytor
+:Character count difference First:N35 G2 X15.00 Y0.00 I15.00 J0.  Second:N35 G2 X15.0 Y0.0 I15.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 145: Class invoked: class CordConverter.Edytor
+:Character count difference First:N40 G2 X-15.00 Y0.00 I-15.00 J0.  Second:N40 G2 X-15.0 Y0.0 I-15.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 146: Class invoked: class CordConverter.Edytor
+:Character count difference First:N45 G3 X-20.00 Y0.00 I-2.50 J0.  Second:N45 G3 X-20.0 Y0.0 I-2.5 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 147: Class invoked: class CordConverter.Edytor
+:Character count difference First:N50 G1 Z7.000  Second:N50 G1 Z7.0 
+ COUNT:3
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 148: Class invoked: class CordConverter.Edytor
+:Character count difference First:N55 G3 X-15.000 Y0.000 I2.5 J0. F1000.0  Second:N55 G3 X-15.0 Y0.0 I2.5 J0.0 F1000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 149: Class invoked: class CordConverter.Edytor
+:Character count difference First:N60 G2 X15.00 Y0.00 I15.00 J0.  Second:N60 G2 X15.0 Y0.0 I15.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 150: Class invoked: class CordConverter.Edytor
+:Character count difference First:N65 G2 X-15.00 Y0.00 I-15.00 J0.  Second:N65 G2 X-15.0 Y0.0 I-15.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 151: Class invoked: class CordConverter.Edytor
+:Character count difference First:N70 G3 X-20.00 Y0.00 I-2.50 J0.  Second:N70 G3 X-20.0 Y0.0 I-2.5 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 152: Class invoked: class CordConverter.Edytor
+:Character count difference First:N75 G1 Z4.000  Second:N75 G1 Z4.0 
+ COUNT:3
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 153: Class invoked: class CordConverter.Edytor
+:Character count difference First:N80 G3 X-15.000 Y0.000 I2.5 J0. F1000.0  Second:N80 G3 X-15.0 Y0.0 I2.5 J0.0 F1000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 154: Class invoked: class CordConverter.Edytor
+:Character count difference First:N85 G2 X15.00 Y0.00 I15.00 J0.  Second:N85 G2 X15.0 Y0.0 I15.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 155: Class invoked: class CordConverter.Edytor
+:Character count difference First:N90 G2 X-15.00 Y0.00 I-15.00 J0.  Second:N90 G2 X-15.0 Y0.0 I-15.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 156: Class invoked: class CordConverter.Edytor
+:Character count difference First:N95 G3 X-20.00 Y0.00 I-2.50 J0.  Second:N95 G3 X-20.0 Y0.0 I-2.5 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 157: Class invoked: class CordConverter.Edytor
+:Character count difference First:N100 G1 Z1.000  Second:N100 G1 Z1.0 
+ COUNT:3
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 158: Class invoked: class CordConverter.Edytor
+:Character count difference First:N105 G3 X-15.000 Y0.000 I2.5 J0. F1000.0  Second:N105 G3 X-15.0 Y0.0 I2.5 J0.0 F1000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 159: Class invoked: class CordConverter.Edytor
+:Character count difference First:N110 G2 X15.00 Y0.00 I15.00 J0.  Second:N110 G2 X15.0 Y0.0 I15.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 160: Class invoked: class CordConverter.Edytor
+:Character count difference First:N115 G2 X-15.00 Y0.00 I-15.00 J0.  Second:N115 G2 X-15.0 Y0.0 I-15.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 161: Class invoked: class CordConverter.Edytor
+:Character count difference First:(T1 GLOWICA FI20.0) Second:(T1 GLOWICA FI20.0) 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 162: Class invoked: class CordConverter.Edytor
+:Character count difference First:N5 T1  M6 Second:N5  T1 M6 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 163: Class invoked: class CordConverter.Edytor
+:Character count difference First:N10 G90 G54 G0 Second:N10 G90 G54 G0 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 164: Class invoked: class CordConverter.Edytor
+:Character count difference First:N15 G43 H1 G0 Z400.0 Second:N15 G43 G0 H1 Z400.0 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 165: Class invoked: class CordConverter.Edytor
+:Character count difference First:N20 G0 B0.0 Second:N20 G0 B0.0 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 166: Class invoked: class CordConverter.Edytor
+:Character count difference First:N10 G0 X-26.0 Y10.0 S5000 M3 Second:N10 G0 X-26.0 Y10.0 S5000 M3 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 167: Class invoked: class CordConverter.Edytor
+:Character count difference First:N15 G1 Z10.0 F10000. M8 Second:N15 G1 Z10.0 M8 F10000.0 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 168: Class invoked: class CordConverter.Edytor
+:Character count difference First:N20 G1 G41 D1 X-25.0 F2000. Second:N20 G1 G41 D1 X-25.0 F2000.0 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 169: Class invoked: class CordConverter.Edytor
+:Character count difference First:N30 G3 X-20.000 Y10.000 I2.5 J0. F2000.0  Second:N30 G3 X-20.0 Y10.0 I2.5 J0.0 F2000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 170: Class invoked: class CordConverter.Edytor
+:Character count difference First:N35 G2 X20.00 Y10.00 I30.00 J0.  Second:N35 G2 X20.0 Y10.0 I30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 171: Class invoked: class CordConverter.Edytor
+:Character count difference First:N40 G2 X-20.00 Y10.00 I-30.00 J0.  Second:N40 G2 X-20.0 Y10.0 I-30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 172: Class invoked: class CordConverter.Edytor
+:Character count difference First:N45 G3 X-25.00 Y10.00 I-2.50 J0.  Second:N45 G3 X-25.0 Y10.0 I-2.5 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 173: Class invoked: class CordConverter.Edytor
+:Character count difference First:N50 G1 Z5.000  Second:N50 G1 Z5.0 
+ COUNT:3
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 174: Class invoked: class CordConverter.Edytor
+:Character count difference First:N55 G3 X-20.000 Y10.000 I2.5 J0. F2000.0  Second:N55 G3 X-20.0 Y10.0 I2.5 J0.0 F2000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 175: Class invoked: class CordConverter.Edytor
+:Character count difference First:N60 G2 X20.00 Y10.00 I30.00 J0.  Second:N60 G2 X20.0 Y10.0 I30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 176: Class invoked: class CordConverter.Edytor
+:Character count difference First:N65 G2 X-20.00 Y10.00 I-30.00 J0.  Second:N65 G2 X-20.0 Y10.0 I-30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 177: Class invoked: class CordConverter.Edytor
+:Character count difference First:N70 G3 X-25.00 Y10.00 I-2.50 J0.  Second:N70 G3 X-25.0 Y10.0 I-2.5 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 178: Class invoked: class CordConverter.Edytor
+:Character count difference First:N75 G1 Z0.000  Second:N75 G1 Z0.0 
+ COUNT:3
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 179: Class invoked: class CordConverter.Edytor
+:Character count difference First:N80 G3 X-20.000 Y10.000 I2.5 J0. F2000.0  Second:N80 G3 X-20.0 Y10.0 I2.5 J0.0 F2000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 180: Class invoked: class CordConverter.Edytor
+:Character count difference First:N85 G2 X20.00 Y10.00 I30.00 J0.  Second:N85 G2 X20.0 Y10.0 I30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 181: Class invoked: class CordConverter.Edytor
+:Character count difference First:N90 G2 X-20.00 Y10.00 I-30.00 J0.  Second:N90 G2 X-20.0 Y10.0 I-30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 182: Class invoked: class CordConverter.Edytor
+:Character count difference First:N95 G3 X-25.00 Y10.00 I-2.50 J0.  Second:N95 G3 X-25.0 Y10.0 I-2.5 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 183: Class invoked: class CordConverter.Edytor
+:Character count difference First:N100 G1 Z-5.000  Second:N100 G1 Z-5.0 
+ COUNT:3
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 184: Class invoked: class CordConverter.Edytor
+:Character count difference First:N105 G3 X-20.000 Y10.000 I2.5 J0. F2000.0  Second:N105 G3 X-20.0 Y10.0 I2.5 J0.0 F2000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 185: Class invoked: class CordConverter.Edytor
+:Character count difference First:N110 G2 X20.00 Y10.00 I30.00 J0.  Second:N110 G2 X20.0 Y10.0 I30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 186: Class invoked: class CordConverter.Edytor
+:Character count difference First:N115 G2 X-20.00 Y10.00 I-30.00 J0.  Second:N115 G2 X-20.0 Y10.0 I-30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 187: Class invoked: class CordConverter.Edytor
+:Character count difference First:N120 G3 X-25.00 Y10.00 I-2.50 J0.  Second:N120 G3 X-25.0 Y10.0 I-2.5 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 188: Class invoked: class CordConverter.Edytor
+:Character count difference First:N125 G1 Z-10.000  Second:N125 G1 Z-10.0 
+ COUNT:3
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 189: Class invoked: class CordConverter.Edytor
+:Character count difference First:N130 G3 X-20.000 Y10.000 I2.5 J0. F2000.0  Second:N130 G3 X-20.0 Y10.0 I2.5 J0.0 F2000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 190: Class invoked: class CordConverter.Edytor
+:Character count difference First:N135 G2 X20.00 Y10.00 I30.00 J0.  Second:N135 G2 X20.0 Y10.0 I30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 191: Class invoked: class CordConverter.Edytor
+:Character count difference First:N140 G2 X-20.00 Y10.00 I-30.00 J0.  Second:N140 G2 X-20.0 Y10.0 I-30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 192: Class invoked: class CordConverter.Edytor
+:Character count difference First:N145 G3 X-25.00 Y10.00 I-2.50 J0.  Second:N145 G3 X-25.0 Y10.0 I-2.5 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 193: Class invoked: class CordConverter.Edytor
+:Character count difference First:N150 G1 Z-10.000  Second:N150 G1 Z-10.0 
+ COUNT:3
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 194: Class invoked: class CordConverter.Edytor
+:Character count difference First:N155 G3 X-20.000  Y10.000 I2.5 J0. F2000.0  Second:N155 G3 X-20.0 Y10.0 I2.5 J0.0 F2000.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 195: Class invoked: class CordConverter.Edytor
+:Character count difference First:N160 G2 X20.00 Y10.00 I30.00 J0.  Second:N160 G2 X20.0 Y10.0 I30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 196: Class invoked: class CordConverter.Edytor
+:Character count difference First:N165 G2 X-20.00 Y10.00 I-30.00 J0.  Second:N165 G2 X-20.0 Y10.0 I-30.0 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 197: Class invoked: class CordConverter.Edytor
+:Character count difference First:N170 G3 X-25.00 Y10.00 I-2.50 J0.  Second:N170 G3 X-25.0 Y10.0 I-2.5 J0.0 
+ COUNT:4
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 198: Class invoked: class CordConverter.Edytor
+:Character count difference First:N175 G1 G40 X-27.000 Y9.000 Second:N175 G1 G40 X-27.0 Y9.0 
+ COUNT:5
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 199: Class invoked: class CordConverter.Edytor
+:Character count difference First:N180 G0 Z400.0 M9 Second:N180 G0 Z400.0 M9 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 200: Class invoked: class CordConverter.Edytor
+:Character count difference First:N185 M5 Second:N185 M5 
+ COUNT:1
+
+kwi 12, 2022 9:16:17 PM CordConverter.Log writeInfoLog
+INFO: LN 201: Class invoked: class CordConverter.Edytor
+:Character count difference First:N190 M1 Second:N190 M1 
+ COUNT:1
+
+kwi 12, 2022 9:16:33 PM CordConverter.Log writeInfoLog
+INFO: LN 202: Class invoked: Spiral
+:Spiral outer - wygenerowano
+
+kwi 12, 2022 9:16:51 PM CordConverter.Log writeInfoLog
+INFO: LN 203: Class invoked: Spiral
+:Spiral inner - wygenerowano
+

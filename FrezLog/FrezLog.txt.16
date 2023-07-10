@@ -1,0 +1,108 @@
+lip 22, 2021 10:50:34 PM CordConverter.Log writeInfoLog
+INFO: LN 1: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :%Fanuc-Okuma
+
+lip 22, 2021 10:50:34 PM CordConverter.Log writeInfoLog
+INFO: LN 2: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:50:34 PM CordConverter.Log writeInfoLog
+INFO: LN 3: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:50:34 PM CordConverter.Log writeInfoLog
+INFO: LN 4: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:50:34 PM CordConverter.Log writeInfoLog
+INFO: LN 5: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:50:34 PM CordConverter.Log writeInfoLog
+INFO: LN 6: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:50:34 PM CordConverter.Log writeInfoLog
+INFO: LN 7: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:50:34 PM CordConverter.Log writeInfoLog
+INFO: LN 8: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:50:34 PM CordConverter.Log writeInfoLog
+INFO: LN 9: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:50:34 PM CordConverter.Log writeInfoLog
+INFO: LN 10: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:50:34 PM CordConverter.Log writeInfoLog
+INFO: LN 11: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:50:34 PM CordConverter.Log writeInfoLog
+INFO: LN 12: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:50:34 PM CordConverter.Log writeInfoLog
+INFO: LN 13: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:50:34 PM CordConverter.Log writeInfoLog
+INFO: LN 14: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:50:34 PM CordConverter.Log writeInfoLog
+INFO: LN 15: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:50:34 PM CordConverter.Log writeInfoLog
+INFO: LN 16: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:50:34 PM CordConverter.Log writeInfoLog
+INFO: LN 17: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+sie 17, 2021 9:27:14 PM CordConverter.Log writeInfoLog
+INFO: LN 1: Class invoked: Spiral
+:Spiral inner - wygenerowano
+
+sie 17, 2021 9:28:30 PM CordConverter.Log writeErrorLog
+SEVERE:  LN 2: Exception occured:Index 27 out of bounds for length 27 Class invoked: InterpreterListener
+TFN:Index out of bounds
+
+sie 17, 2021 9:28:39 PM CordConverter.Log writeErrorLog
+SEVERE:  LN 3: Exception occured:Index 27 out of bounds for length 27 Class invoked: InterpreterListener
+TFN:Index out of bounds
+
+sie 17, 2021 9:28:40 PM CordConverter.Log writeErrorLog
+SEVERE:  LN 4: Exception occured:Index 27 out of bounds for length 27 Class invoked: InterpreterListener
+TFN:Index out of bounds
+
+sie 17, 2021 9:28:46 PM CordConverter.Log writeErrorLog
+SEVERE:  LN 5: Exception occured:Index 27 out of bounds for length 27 Class invoked: InterpreterListener
+TFN:Index out of bounds
+
+sie 17, 2021 9:28:47 PM CordConverter.Log writeErrorLog
+SEVERE:  LN 6: Exception occured:Index 27 out of bounds for length 27 Class invoked: InterpreterListener
+TFN:Index out of bounds
+
+sie 19, 2021 9:05:18 PM CordConverter.Log writeErrorLog
+SEVERE:  LN 1: Exception occured:Index 26 out of bounds for length 26 Class invoked: InterpreterListener
+TFN:Index out of bounds
+
+sie 19, 2021 9:05:19 PM CordConverter.Log writeErrorLog
+SEVERE:  LN 2: Exception occured:Index 26 out of bounds for length 26 Class invoked: InterpreterListener
+TFN:Index out of bounds
+
+mar 22, 2022 10:14:08 PM CordConverter.Log writeErrorLog
+SEVERE:  LN 1: Exception occured:Index 22 out of bounds for length 22 Class invoked: InterpreterListener
+TFN:Index out of bounds
+
+mar 22, 2022 10:20:42 PM CordConverter.Log writeErrorLog
+SEVERE:  LN 1: Exception occured:Index 20 out of bounds for length 20 Class invoked: InterpreterListener
+TFN:Index out of bounds
+

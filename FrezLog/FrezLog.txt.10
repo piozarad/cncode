@@ -1,0 +1,167 @@
+mar 31, 2021 9:32:30 PM CordConverter.Log writeInfoLog
+INFO: LN 1: Class invoked: class CordConverter.Edytor
+:Character count difference First:N25 G3 X10.000 Y0.000 I4.500 J0. F5000.0 Second:N25 G3 X10.0 Y0.0 I4.5 J0.0 F5000.0 
+ COUNT:6
+
+mar 31, 2021 9:32:30 PM CordConverter.Log writeInfoLog
+INFO: LN 2: Class invoked: class CordConverter.Edytor
+:Character count difference First:N30 G3 X10.00 Y0.00 Z10.00 I-10.00 J0.  Second:N30 G3 X10.0 Y0.0 Z10.0 I-10.0 J0.0 
+ COUNT:4
+
+mar 31, 2021 9:32:30 PM CordConverter.Log writeInfoLog
+INFO: LN 3: Class invoked: class CordConverter.Edytor
+:Character count difference First:N35 G3 X10.00 Y0.00 Z9.00 I-10.00 J0.  Second:N35 G3 X10.0 Y0.0 Z9.0 I-10.0 J0.0 
+ COUNT:4
+
+mar 31, 2021 9:32:30 PM CordConverter.Log writeInfoLog
+INFO: LN 4: Class invoked: class CordConverter.Edytor
+:Character count difference First:N40 G3 X10.00 Y0.00 Z8.00 I-10.00 J0.  Second:N40 G3 X10.0 Y0.0 Z8.0 I-10.0 J0.0 
+ COUNT:4
+
+mar 31, 2021 9:32:30 PM CordConverter.Log writeInfoLog
+INFO: LN 5: Class invoked: class CordConverter.Edytor
+:Character count difference First:N45 G3 X10.00 Y0.00 Z7.00 I-10.00 J0.  Second:N45 G3 X10.0 Y0.0 Z7.0 I-10.0 J0.0 
+ COUNT:4
+
+mar 31, 2021 9:32:30 PM CordConverter.Log writeInfoLog
+INFO: LN 6: Class invoked: class CordConverter.Edytor
+:Character count difference First:N50 G3 X10.00 Y0.00 Z6.00 I-10.00 J0.  Second:N50 G3 X10.0 Y0.0 Z6.0 I-10.0 J0.0 
+ COUNT:4
+
+mar 31, 2021 9:32:30 PM CordConverter.Log writeInfoLog
+INFO: LN 7: Class invoked: class CordConverter.Edytor
+:Character count difference First:N55 G3 X10.00 Y0.00 Z5.00 I-10.00 J0.  Second:N55 G3 X10.0 Y0.0 Z5.0 I-10.0 J0.0 
+ COUNT:4
+
+mar 31, 2021 9:32:30 PM CordConverter.Log writeInfoLog
+INFO: LN 8: Class invoked: class CordConverter.Edytor
+:Character count difference First:N60 G3 X10.00 Y0.00 Z4.00 I-10.00 J0.  Second:N60 G3 X10.0 Y0.0 Z4.0 I-10.0 J0.0 
+ COUNT:4
+
+mar 31, 2021 9:32:30 PM CordConverter.Log writeInfoLog
+INFO: LN 9: Class invoked: class CordConverter.Edytor
+:Character count difference First:N65 G3 X10.00 Y0.00 Z3.00 I-10.00 J0.  Second:N65 G3 X10.0 Y0.0 Z3.0 I-10.0 J0.0 
+ COUNT:4
+
+mar 31, 2021 9:32:30 PM CordConverter.Log writeInfoLog
+INFO: LN 10: Class invoked: class CordConverter.Edytor
+:Character count difference First:N70 G3 X10.00 Y0.00 Z2.00 I-10.00 J0.  Second:N70 G3 X10.0 Y0.0 Z2.0 I-10.0 J0.0 
+ COUNT:4
+
+mar 31, 2021 9:32:30 PM CordConverter.Log writeInfoLog
+INFO: LN 11: Class invoked: class CordConverter.Edytor
+:Character count difference First:N75 G3 X10.00 Y0.00 Z1.00 I-10.00 J0.  Second:N75 G3 X10.0 Y0.0 Z1.0 I-10.0 J0.0 
+ COUNT:4
+
+mar 31, 2021 9:32:30 PM CordConverter.Log writeInfoLog
+INFO: LN 12: Class invoked: class CordConverter.Edytor
+:Character count difference First:N80 G3 X10.00 Y0.00 Z0.00 I-10.00 J0.  Second:N80 G3 X10.0 Y0.0 Z0.0 I-10.0 J0.0 
+ COUNT:4
+
+mar 31, 2021 9:32:30 PM CordConverter.Log writeInfoLog
+INFO: LN 13: Class invoked: class CordConverter.Edytor
+:Character count difference First:N80 G3 X10.00 Y0.00 Z0.00 I-10.00 J0.  Second:N80 G3 X10.0 Y0.0 Z0.0 I-10.0 J0.0 
+ COUNT:4
+
+mar 31, 2021 9:32:30 PM CordConverter.Log writeInfoLog
+INFO: LN 14: Class invoked: class CordConverter.Edytor
+:Character count difference First:N80 G3 X10.00 Y0.00 I-10.00 J0.  Second:N80 G3 X10.0 Y0.0 I-10.0 J0.0 
+ COUNT:3
+
+mar 31, 2021 9:32:30 PM CordConverter.Log writeInfoLog
+INFO: LN 15: Class invoked: class CordConverter.Edytor
+:Character count difference First:N85 G3 X0.000 Y0.000 I-5.000 J0.  Second:N85 G3 X0.0 Y0.0 I-5.0 J0.0 
+ COUNT:6
+
+lip 22, 2021 10:41:15 PM CordConverter.Log writeInfoLog
+INFO: LN 1: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :%Fanuc-Okuma
+
+lip 22, 2021 10:41:15 PM CordConverter.Log writeInfoLog
+INFO: LN 2: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:41:15 PM CordConverter.Log writeInfoLog
+INFO: LN 3: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:41:15 PM CordConverter.Log writeInfoLog
+INFO: LN 4: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:41:15 PM CordConverter.Log writeInfoLog
+INFO: LN 5: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:41:15 PM CordConverter.Log writeInfoLog
+INFO: LN 6: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:41:15 PM CordConverter.Log writeInfoLog
+INFO: LN 7: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:41:15 PM CordConverter.Log writeInfoLog
+INFO: LN 8: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:41:15 PM CordConverter.Log writeInfoLog
+INFO: LN 9: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:41:15 PM CordConverter.Log writeInfoLog
+INFO: LN 10: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:41:15 PM CordConverter.Log writeInfoLog
+INFO: LN 11: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:41:15 PM CordConverter.Log writeInfoLog
+INFO: LN 12: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:41:15 PM CordConverter.Log writeInfoLog
+INFO: LN 13: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:41:15 PM CordConverter.Log writeInfoLog
+INFO: LN 14: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:41:15 PM CordConverter.Log writeInfoLog
+INFO: LN 15: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:41:15 PM CordConverter.Log writeInfoLog
+INFO: LN 16: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:41:15 PM CordConverter.Log writeInfoLog
+INFO: LN 17: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+sie 18, 2021 9:04:07 PM CordConverter.Log writeInfoLog
+INFO: LN 1: Class invoked: Spiral
+:Spiral inner - wygenerowano
+
+sie 18, 2021 9:04:53 PM CordConverter.Log writeErrorLog
+SEVERE:  LN 2: Exception occured:Index 27 out of bounds for length 27 Class invoked: InterpreterListener
+TFN:Index out of bounds
+
+sie 19, 2021 8:45:29 PM CordConverter.Log writeInfoLog
+INFO: LN 1: Class invoked: Spiral
+:Spiral inner - wygenerowano
+
+sie 19, 2021 8:45:31 PM CordConverter.Log writeErrorLog
+SEVERE:  LN 2: Exception occured:Index 27 out of bounds for length 27 Class invoked: InterpreterListener
+TFN:Index out of bounds
+
+sie 19, 2021 8:45:45 PM CordConverter.Log writeErrorLog
+SEVERE:  LN 3: Exception occured:Index 29 out of bounds for length 29 Class invoked: InterpreterListener
+TFN:Index out of bounds
+
+kwi 13, 2022 11:33:01 PM CordConverter.Log writeErrorLog
+SEVERE:  LN 1: Exception occured:Index 18 out of bounds for length 18 Class invoked: InterpreterListener
+TFN:Index out of bounds
+

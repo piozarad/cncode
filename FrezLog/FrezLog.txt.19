@@ -1,0 +1,108 @@
+lip 22, 2021 10:53:50 PM CordConverter.Log writeInfoLog
+INFO: LN 1: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :%Fanuc-Okuma
+
+lip 22, 2021 10:53:50 PM CordConverter.Log writeInfoLog
+INFO: LN 2: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:53:50 PM CordConverter.Log writeInfoLog
+INFO: LN 3: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:53:50 PM CordConverter.Log writeInfoLog
+INFO: LN 4: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:53:50 PM CordConverter.Log writeInfoLog
+INFO: LN 5: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:53:50 PM CordConverter.Log writeInfoLog
+INFO: LN 6: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:53:50 PM CordConverter.Log writeInfoLog
+INFO: LN 7: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:53:50 PM CordConverter.Log writeInfoLog
+INFO: LN 8: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:53:50 PM CordConverter.Log writeInfoLog
+INFO: LN 9: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:53:50 PM CordConverter.Log writeInfoLog
+INFO: LN 10: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:53:50 PM CordConverter.Log writeInfoLog
+INFO: LN 11: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:53:50 PM CordConverter.Log writeInfoLog
+INFO: LN 12: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:53:50 PM CordConverter.Log writeInfoLog
+INFO: LN 13: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:53:50 PM CordConverter.Log writeInfoLog
+INFO: LN 14: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:53:50 PM CordConverter.Log writeInfoLog
+INFO: LN 15: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:53:50 PM CordConverter.Log writeInfoLog
+INFO: LN 16: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+lip 22, 2021 10:53:50 PM CordConverter.Log writeInfoLog
+INFO: LN 17: Class invoked: InstructionDatabase
+:Nie rozpoznano polecenia przy czytaniu pliku :
+
+sie 17, 2021 9:38:50 PM CordConverter.Log writeInfoLog
+INFO: LN 1: Class invoked: Spiral
+:Spiral inner - wygenerowano
+
+sie 19, 2021 9:13:20 PM CordConverter.Log writeInfoLog
+INFO: LN 1: Class invoked: Spiral
+:Spiral inner - wygenerowano
+
+sie 19, 2021 9:13:28 PM CordConverter.Log writeErrorLog
+SEVERE:  LN 2: Exception occured:Index 27 out of bounds for length 27 Class invoked: InterpreterListener
+TFN:Index out of bounds
+
+lut 07, 2022 11:06:50 PM CordConverter.Log writeErrorLog
+SEVERE:  LN 1: Exception occured:Index 82 out of bounds for length 82 Class invoked: InterpreterListener
+TFN:Index out of bounds
+
+mar 22, 2022 10:38:44 PM CordConverter.Log writeErrorLog
+SEVERE:  LN 1: Exception occured:Index 46 out of bounds for length 46 Class invoked: InterpreterListener
+TFN:Index out of bounds
+
+kwi 06, 2022 11:03:21 PM CordConverter.Log writeInfoLog
+INFO: LN 1: Class invoked: Poglebienie
+:poglebienie - wykonano
+
+kwi 06, 2022 11:03:21 PM CordConverter.Log writeErrorLog
+SEVERE:  LN 2: Exception occured:Index 21 out of bounds for length 21 Class invoked: InterpreterListener
+TFN:Index out of bounds
+
+kwi 06, 2022 11:03:24 PM CordConverter.Log writeErrorLog
+SEVERE:  LN 3: Exception occured:Index 21 out of bounds for length 21 Class invoked: InterpreterListener
+TFN:Index out of bounds
+
+kwi 06, 2022 11:03:43 PM CordConverter.Log writeInfoLog
+INFO: LN 4: Class invoked: Poglebienie
+:poglebienie - wykonano
+
+kwi 19, 2022 9:15:28 PM CordConverter.Log writeInfoLog
+INFO: LN 1: Class invoked: Pocket
+:Pocket - wykonano
+
