@@ -5,15 +5,15 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import BasicInstructionReadFromFile.InstructionDatabase;
-import basicInstruction.Add;
-import basicInstruction.AddToNextLine;
-import basicInstruction.AddToUpperLine;
-import basicInstruction.ChangeTo;
-import basicInstruction.Delete;
-import basicInstruction.Instruction;
-import basicInstruction.InstructionFactory;
-import basicInstruction.Marks;
+import instruction.Add;
+import instruction.AddToNextLine;
+import instruction.AddToUpperLine;
+import instruction.ChangeTo;
+import instruction.Delete;
+import instruction.Instruction;
+import instruction.InstructionFactory;
+import instruction.Marks;
+import instructionReadFromFile.InstructionDatabase;
 
 public class InstructionTests {
 

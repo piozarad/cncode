@@ -98,7 +98,7 @@ public class Wkladka extends JFrame implements ActionListener {
 	{
 		this.parent=parent;
 		setSize(540,400);
-		setTitle("Rozfrezowanie okraglej wkladki");
+		setTitle("Rozfrezowanie okrag³ej wkladki");
 		setLocationRelativeTo(null);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);

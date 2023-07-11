@@ -58,7 +58,7 @@ public class toolBar extends JToolBar{
 		
 	
 		border.gridx=2;
-		bRotation = new JLabel("Kat obrotu stolu B");
+		bRotation = new JLabel("Kat obrotu sto³u B");
 		add(bRotation,border);
 		
 		border.gridx=3;

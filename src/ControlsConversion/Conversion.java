@@ -2,7 +2,7 @@ package ControlsConversion;
 
 import java.util.List;
 
-import basicInstruction.Instruction;
+import instruction.Instruction;
 
 public interface Conversion {
 	

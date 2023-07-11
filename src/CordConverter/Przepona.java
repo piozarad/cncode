@@ -139,7 +139,7 @@ public class Przepona extends JFrame implements ActionListener{
 		this.sterowanie=edytor.getControls();
 		this.toolnumber=edytor.getToolBar().getToolNumber();
 		this.bRotation = edytor.getToolBar().getRotation();
-		this.base= edytor.getToolBar().getBase();
+		this.base= edytor.getToolBar().getBase();;
 		
 		buttonPanel = new JPanel();
 		buttonPanel.setBorder(BorderFactory.createLineBorder(Color.black));

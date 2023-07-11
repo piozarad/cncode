@@ -33,9 +33,10 @@ import BasicControls.Sterowanie;
 import BasicControls.SterowanieFanuc;
 import BasicControls.SterowanieOkuma;
 import BasicControls.SterowanieSinumeric;
-import BasicInstructionReadFromFile.ReadFromFile;
-import BasicInstructionReadFromFile.ReadInstructionsGui;
 import ErrorWindow.ErrorProgressWindow;
+import instructionReadFromFile.ReadFromFile;
+import instructionReadFromFile.ReadInstructionsGui;
+import toolNumerator.ToolNumeratorView;
 
 
 public class Wind extends JFrame implements ActionListener {
@@ -90,6 +91,7 @@ public class Wind extends JFrame implements ActionListener {
 	private JRadioButtonMenuItem okuma;
 	private JMenuItem wykryjSterowanie;
 	private JMenuItem czasCykluMenu;
+	private JMenuItem toolNumerateItem;
 
 
 	static final Dimension CALC = new Dimension(500, 700);
@@ -108,6 +110,7 @@ public class Wind extends JFrame implements ActionListener {
 		public OptionsPanel optionPanel = null;
 		public Wyszukaj w=null;
 		private ErrorProgressWindow errorWindow;
+		private ToolNumeratorView toolNumerate;
 		
 
 		
@@ -185,7 +188,6 @@ public class Wind extends JFrame implements ActionListener {
 		//separator
 		edycja.add(new JSeparator(SwingConstants.HORIZONTAL));
 		
-		
 		//cofnij
 		eCofnij= new JMenuItem("Cofnij");
 		eCofnij.addActionListener(this);
@@ -198,7 +200,6 @@ public class Wind extends JFrame implements ActionListener {
 		eDalej.addActionListener(this);
 		edycja.add(eDalej);
 		
-		
 		// wyszukaj
 		edycja.add(new JSeparator(SwingConstants.HORIZONTAL));
 		wyszukaj = new JMenuItem("Wyszukaj");
@@ -207,10 +208,8 @@ public class Wind extends JFrame implements ActionListener {
 		wyszukaj.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_F,ActionEvent.CTRL_MASK));
 		edycja.add(wyszukaj);
 		
-
 		
 		mb.add(edycja);
-		
 		
 		opcje = new JMenu("Opcje");
 		sterowanieMenuItem = new JMenu("Sterowanie");
@@ -267,6 +266,11 @@ public class Wind extends JFrame implements ActionListener {
 		wykryjSterowanie.addActionListener(this);
 		
 		
+		toolNumerateItem = new JMenuItem("Numeruj Narzedzia");
+		toolNumerateItem.setMnemonic(KeyEvent.VK_N);
+		toolNumerateItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N,ActionEvent.CTRL_MASK));
+		toolNumerateItem.addActionListener(this);
+		
 		//Narzedzia - dodaj
 		dodaj = new JMenu("Dodaj");
 		obrotStolu = new JMenuItem("Obroty palet");
@@ -280,6 +284,7 @@ public class Wind extends JFrame implements ActionListener {
 		narzedzia.add(konwertuj);
 		narzedzia.add(sprawdzPoprawnosc);
 		narzedzia.add(czasCykluMenu);
+		narzedzia.add(toolNumerateItem);
 		narzedzia.add(dodaj);
 	
 		mb.add(narzedzia);
@@ -526,6 +531,14 @@ public class Wind extends JFrame implements ActionListener {
 
 			 JOptionPane.showMessageDialog(this, s);
 		 }
+		
+		 else if(e.getSource() == toolNumerateItem)
+		 {
+			 if(this.toolNumerate==null)
+					this.toolNumerate = new ToolNumeratorView(panel);
+				else toolNumerate.setVisible(true);
+		 }
+		
 		 else if(e.getSource() == norma)
 		 {
 			 if(this.n==null)
@@ -659,7 +672,7 @@ public class Wind extends JFrame implements ActionListener {
 
 		else if (e.getSource() == oProgramie) {
 
-			JOptionPane.showMessageDialog(this, "Wersja 2.0.12 14.02.23");
+			JOptionPane.showMessageDialog(this, "v2.0.14 12.07.23");
 		} 
 		else 
 		{
