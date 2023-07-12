@@ -1,10 +1,15 @@
 package toolNumerator;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -22,11 +27,12 @@ public class ToolNumeratorView extends JFrame {
 	private JButton add;
 	private JButton remove;
 	private JLabel info;
-	private JButton aply;
+	private JButton apply;
 	private JButton cancel;
 	
 	private GridBagLayout layout;
 	
+	private static final Dimension BUTTON_DIMENSION= new Dimension(100,25);
 	
 	public ToolNumeratorView(Edytor parent)
 	{
@@ -46,8 +52,19 @@ public class ToolNumeratorView extends JFrame {
 		setTitle("Definicja numerow narzedzi");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-		setLocation(200,200);
+		setLocation(400,200);
 		setLayout(layout);
+		
+		
+		//exit on close
+		this.addWindowListener(new java.awt.event.WindowAdapter() 
+		{
+			@Override
+			public void windowClosing(WindowEvent e)
+			{
+				cancel.doClick();
+			}		
+		});
 		
 		
 		constraints.weightx=0;
@@ -71,12 +88,14 @@ public class ToolNumeratorView extends JFrame {
 		constraints.gridwidth=1;
 		constraints.gridheight=1;
 		add= new JButton(">>");
-		add.setMinimumSize(new Dimension(50,25));
+		add.setToolTipText("Dodaj narzedzie do listy");
+		add.setMinimumSize(BUTTON_DIMENSION);
 		add(add,constraints);
 		
 		constraints.gridy=2;
 		remove = new JButton("<<");
-		remove.setMinimumSize(new Dimension(50,25));
+		remove.setToolTipText("Usun narzedzie z listy");
+		remove.setMinimumSize(BUTTON_DIMENSION);
 		add(remove,constraints);
 		
 		constraints.gridx=2;
@@ -84,9 +103,33 @@ public class ToolNumeratorView extends JFrame {
 		constraints.gridwidth=1;
 		constraints.gridheight=3;
 		toolNumbersList = new JList<>();
+		toolNumbersList.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.BLACK),"Narzedzia"));
+		//toolNumbersList.setBackground(Color.CYAN);
 		toolNumbersList.setMinimumSize(new Dimension(50,200));
-		
 		add(toolNumbersList,constraints);
+		
+		constraints.gridx=1;
+		constraints.gridy=4;
+		apply = new JButton("Ok");
+		apply.setMinimumSize(BUTTON_DIMENSION);
+		add(apply,constraints);
+		
+		
+		constraints.gridx=2;
+		constraints.gridy=4;
+		cancel = new JButton("Cofnij");
+		cancel.setMinimumSize(BUTTON_DIMENSION);
+		cancel.addActionListener(new ActionListener()
+				{
+
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ToolNumeratorView.this.setVisible(false);
+						
+					}
+			
+				});
+		add(cancel,constraints);
 		
 		
 		pack();
