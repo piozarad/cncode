@@ -10,18 +10,20 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 import javax.swing.BorderFactory;
+import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-import javax.swing.SpringLayout.Constraints;
 
 import CordConverter.Edytor;
 
 public class ToolNumeratorView extends JFrame {
 	
 	private Edytor parent;
+	DefaultListModel<Integer> model;
 	private JList<Integer> toolNumbersList;
 	private JTextField txt;
 	private JButton add;
@@ -83,13 +85,36 @@ public class ToolNumeratorView extends JFrame {
 		txt.setMinimumSize(new Dimension(25,25));
 		add(txt,constraints);
 		
-		
 		constraints.gridx=1;
 		constraints.gridwidth=1;
 		constraints.gridheight=1;
 		add= new JButton(">>");
 		add.setToolTipText("Dodaj narzedzie do listy");
 		add.setMinimumSize(BUTTON_DIMENSION);
+		add.addActionListener(new ActionListener()
+				{
+
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						try
+						{
+							int i = Integer.parseInt(ToolNumeratorView.this.txt.getText());
+							model.addElement(i);
+							
+							
+						}
+						catch(NumberFormatException ex)
+						{
+							
+							JOptionPane.showMessageDialog(parent, "Wprowadzona wartosc musi byc liczba","Blad formatu danych",JOptionPane.ERROR_MESSAGE);
+						}
+						
+					}
+				
+			
+				}
+		);
+		
 		add(add,constraints);
 		
 		constraints.gridy=2;
@@ -102,7 +127,8 @@ public class ToolNumeratorView extends JFrame {
 		constraints.gridy=1;
 		constraints.gridwidth=1;
 		constraints.gridheight=3;
-		toolNumbersList = new JList<>();
+		model = new DefaultListModel<>();
+		toolNumbersList = new JList<Integer>(model);
 		toolNumbersList.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.BLACK),"Narzedzia"));
 		//toolNumbersList.setBackground(Color.CYAN);
 		toolNumbersList.setMinimumSize(new Dimension(50,200));
@@ -113,7 +139,6 @@ public class ToolNumeratorView extends JFrame {
 		apply = new JButton("Ok");
 		apply.setMinimumSize(BUTTON_DIMENSION);
 		add(apply,constraints);
-		
 		
 		constraints.gridx=2;
 		constraints.gridy=4;
