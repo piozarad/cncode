@@ -31,6 +31,8 @@ public class ToolNumeratorView extends JFrame {
 	private JLabel info;
 	private JButton apply;
 	private JButton cancel;
+	private JButton up;
+	private JButton down;
 	
 	private GridBagLayout layout;
 	
@@ -100,6 +102,7 @@ public class ToolNumeratorView extends JFrame {
 						{
 							int i = Integer.parseInt(ToolNumeratorView.this.txt.getText());
 							model.addElement(i);
+							txt.setText("");
 							
 							
 						}
@@ -121,27 +124,68 @@ public class ToolNumeratorView extends JFrame {
 		remove = new JButton("<<");
 		remove.setToolTipText("Usun narzedzie z listy");
 		remove.setMinimumSize(BUTTON_DIMENSION);
+		remove.addActionListener(e->{
+			if(!this.toolNumbersList.isSelectionEmpty()) {
+				this.model.remove(toolNumbersList.getSelectedIndex());
+			}
+		});
 		add(remove,constraints);
+		
+		
+		constraints.gridy=3;
+		up = new JButton("do gory");
+		up.setToolTipText("Przesun zaznaczene pole do gory");
+		up.setMinimumSize(BUTTON_DIMENSION);
+		up.addActionListener(e->
+		{
+			if(model.getSize()>1 && toolNumbersList.getSelectedIndex()>0) 
+			{
+				int number = toolNumbersList.getSelectedValue();
+				int index = toolNumbersList.getSelectedIndex();
+				model.remove(index);
+				model.add(index-1, number);
+				toolNumbersList.setSelectedIndex(index-1);
+			}
+		}
+		);
+		add(up,constraints);
+		
+		constraints.gridy=4;
+		down = new JButton("w dol");
+		down.setMinimumSize(BUTTON_DIMENSION);
+		down.setToolTipText("Przesun zaznaczene pole w dol");
+		down.addActionListener(e->{
+			if(model.getSize()>1 && toolNumbersList.getSelectedIndex()<model.getSize()-1) 
+			{
+				int number = toolNumbersList.getSelectedValue();
+				int index = toolNumbersList.getSelectedIndex();
+				model.remove(index);
+				model.add(index+1, number);
+				toolNumbersList.setSelectedIndex(index+1);
+			}
+		});
+		add(down,constraints);
+		
 		
 		constraints.gridx=2;
 		constraints.gridy=1;
 		constraints.gridwidth=1;
-		constraints.gridheight=3;
+		constraints.gridheight=5;
 		model = new DefaultListModel<>();
-		toolNumbersList = new JList<Integer>(model);
+		toolNumbersList = new JList<>(model);
 		toolNumbersList.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.BLACK),"Narzedzia"));
 		//toolNumbersList.setBackground(Color.CYAN);
 		toolNumbersList.setMinimumSize(new Dimension(50,200));
 		add(toolNumbersList,constraints);
 		
 		constraints.gridx=1;
-		constraints.gridy=4;
+		constraints.gridy=6;
 		apply = new JButton("Ok");
 		apply.setMinimumSize(BUTTON_DIMENSION);
 		add(apply,constraints);
 		
 		constraints.gridx=2;
-		constraints.gridy=4;
+		constraints.gridy=6;
 		cancel = new JButton("Cofnij");
 		cancel.setMinimumSize(BUTTON_DIMENSION);
 		cancel.addActionListener(new ActionListener()
