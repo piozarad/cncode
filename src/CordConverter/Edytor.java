@@ -173,67 +173,6 @@ public class Edytor extends JPanel implements ActionListener {
 		border.gridy++;
 		add(funkcje,border);
 		
-//		wiercenie = new JButton("Wiercenie");
-//		wiercenie.setToolTipText("Generauje cykl dla nawiercania, wiercenia prostego, wytaczania itp");
-//		wiercenie.setPreferredSize(BUTTON_PREFFERED_SIZE);
-//
-//		border.fill = GridBagConstraints.HORIZONTAL;
-//		border.gridx=6;
-//		border.gridy=3;
-//		wiercenie.addActionListener(this);
-//		add(wiercenie,border);
-		
-//		generate = new JButton("Spirala");
-//		generate.setToolTipText("Generuj kod dla interpalacji spiralnej o podanych paramertach");
-//		generate.setPreferredSize(BUTTON_PREFFERED_SIZE);
-//		border.gridx = 6;
-//		border.gridy++;
-//		generate.addActionListener(this);
-//		add(generate, border);
-		
-		
-//		kieszen = new JButton("Kieszeñ");
-//		kieszen.setPreferredSize(BUTTON_PREFFERED_SIZE);
-//		kieszen.setToolTipText("Generuje kod dla kieszeni o podanych wymiarach");
-//		kieszen.addActionListener(this);
-//		border.gridx = 6;
-//		border.gridy=5;
-//		add(kieszen,border);
-//		
-//		poglebienie = new JButton("Poglebienie");
-//		poglebienie.setToolTipText("Generuje kod dla frezowanego poglebienia o przekroju ko³owym w 3 osiach");
-//		poglebienie.setPreferredSize(BUTTON_PREFFERED_SIZE);
-//		border.gridx=6;
-//		border.gridy=6;
-//		poglebienie.addActionListener(this);
-//		add(poglebienie,border);
-//		
-//		//przepona 
-//		przepona = new JButton("Przepona");
-//		przepona.setToolTipText("Cykl do rozfrezowania przepony. Przejscia w osi X,Y po prostok¹cie, zag³êbienie w osi Z");
-//		przepona.setPreferredSize(BUTTON_PREFFERED_SIZE);
-//		border.gridx=6;
-//		border.gridy=7;
-//		przepona.addActionListener(this);
-//		add(przepona,border);
-//		
-//		//faza
-//		faza = new JButton("Faza");
-//		faza.setToolTipText("Generuje kod fazowania krawêdzi dla narzêdzia o podanej geometrii");
-//		faza.setPreferredSize(BUTTON_PREFFERED_SIZE);
-//		border.gridx =6;
-//		border.gridy=8;
-//		faza.addActionListener(this);
-//		add(faza,border);
-//		
-//		//wkladka
-//		wkladka = new JButton("Wkladka");
-//		wkladka.setToolTipText("Generuje kod do rozfrezowania p³ytkiej okr¹g³ej wk³adki");
-//		wkladka.setPreferredSize(BUTTON_PREFFERED_SIZE);
-//		border.gridx = 6;
-//		border.gridy=9;
-//		wkladka.addActionListener(this);
-//		add(wkladka,border);
 		
 		//generuj
 		generuj = new JButton("Generuj");

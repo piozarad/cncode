@@ -113,7 +113,7 @@ public class ReadFromFile {
 			bw.append("\n -W przypadku b³êdnego odczytu/nie rozpoznania komendy przez program wyst¹pi b³ad oraz przekazana zostanie informacja "
 					+ "\n o linijce która nie mog³a zostaæ prawid³owo odczytana");
 			
-			//dotycz¹ce instrukcji
+			//dotyczace instrukcji
 			bw.append("\n\n\t **operatory**");
 			bw.append("\n-Prawid³owe instrukcje wymienione poni¿ej zosta³y pokazane w œrodku ' ' w przypadku prawid³owego pliku znaki te nale¿y pomin¹æ");
 			bw.append("\n-Dodanie: operator +	 np 'G54+G90'  Dodaje 'G90' kiedy w linii znajduje siê kod 'G54' ");

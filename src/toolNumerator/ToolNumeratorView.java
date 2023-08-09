@@ -8,6 +8,10 @@ import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
+import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 import javax.swing.BorderFactory;
 import javax.swing.DefaultListModel;
@@ -33,6 +37,7 @@ public class ToolNumeratorView extends JFrame {
 	private JButton cancel;
 	private JButton up;
 	private JButton down;
+
 	
 	private GridBagLayout layout;
 	
@@ -174,7 +179,6 @@ public class ToolNumeratorView extends JFrame {
 		model = new DefaultListModel<>();
 		toolNumbersList = new JList<>(model);
 		toolNumbersList.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.BLACK),"Narzedzia"));
-		//toolNumbersList.setBackground(Color.CYAN);
 		toolNumbersList.setMinimumSize(new Dimension(50,200));
 		add(toolNumbersList,constraints);
 		
@@ -182,22 +186,53 @@ public class ToolNumeratorView extends JFrame {
 		constraints.gridy=6;
 		apply = new JButton("Ok");
 		apply.setMinimumSize(BUTTON_DIMENSION);
+		apply.addActionListener(e->{
+			this.add.setEnabled(false);
+			this.remove.setEnabled(false);
+			
+			List<Integer> l = new ArrayList<>();
+			//get List
+			for(int j=0; j< model.getSize(); j++)
+			{
+				l.add(model.get(j));
+			}
+			
+			
+			int i=0;
+			List<String> functionList = new ArrayList<>();
+ 			for(String s: parent.getTextAsList())
+			{
+				if(i == model.getSize()) break;
+				if(s.matches("^.*T\\d+.*"))
+				{
+					s=s.replaceAll("T\\d++", "T" + l.get(i));
+					if(s.contains("M6")) i++; 
+					
+				}
+				functionList.add(s);
+			}
+			
+ 			
+ 			parent.txt.getTxtArea().setText("");
+ 			
+ 			//write
+ 			PrintStream stream = new PrintStream(parent.txt);
+ 			System.setOut(stream);
+ 			for(String s: functionList)
+ 			{
+ 				System.out.println(s);
+ 			}
+ 			
+			this.add.setEnabled(true);
+			this.remove.setEnabled(true);
+		});
 		add(apply,constraints);
 		
 		constraints.gridx=2;
 		constraints.gridy=6;
 		cancel = new JButton("Cofnij");
 		cancel.setMinimumSize(BUTTON_DIMENSION);
-		cancel.addActionListener(new ActionListener()
-				{
-
-					@Override
-					public void actionPerformed(ActionEvent e) {
-						ToolNumeratorView.this.setVisible(false);
-						
-					}
-			
-				});
+		cancel.addActionListener(e->ToolNumeratorView.this.setVisible(false));
 		add(cancel,constraints);
 		
 		

@@ -21517,3 +21517,78 @@ lip 11, 2023 8:48:19 PM CordConverter.Log writeInfoLog
 INFO: LN 1: Class invoked: CzasCyklu
 :Czas cyklu - wykonano
 
+sie 09, 2023 8:59:01 PM CordConverter.Log writeInfoLog
+INFO: LN 1: Class invoked: class CordConverter.Edytor
+:Character count difference First:T0 M6 Second: T0 M6 
+ COUNT:1
+
+sie 09, 2023 8:59:01 PM CordConverter.Log writeInfoLog
+INFO: LN 2: Class invoked: class CordConverter.Edytor
+:Character count difference First:T1 Second: T1 
+ COUNT:1
+
+sie 09, 2023 8:59:01 PM CordConverter.Log writeInfoLog
+INFO: LN 3: Class invoked: class CordConverter.Edytor
+:Character count difference First:T1 M6 Second: T1 M6 
+ COUNT:1
+
+sie 09, 2023 8:59:01 PM CordConverter.Log writeInfoLog
+INFO: LN 4: Class invoked: class CordConverter.Edytor
+:Character count difference First:T2  Second: T2 
+ COUNT:1
+
+sie 09, 2023 8:59:01 PM CordConverter.Log writeInfoLog
+INFO: LN 5: Class invoked: class CordConverter.Edytor
+:Character count difference First:T2 M6 Second: T2 M6 
+ COUNT:1
+
+sie 09, 2023 8:59:03 PM CordConverter.Log writeInfoLog
+INFO: LN 6: Class invoked: class CordConverter.Edytor
+:Character count difference First:T0 M6 Second: T0 M6 
+ COUNT:2
+
+sie 09, 2023 8:59:03 PM CordConverter.Log writeInfoLog
+INFO: LN 7: Class invoked: class CordConverter.Edytor
+:Character count difference First:T1 Second: T1 
+ COUNT:2
+
+sie 09, 2023 8:59:03 PM CordConverter.Log writeInfoLog
+INFO: LN 8: Class invoked: class CordConverter.Edytor
+:Character count difference First:T1 M6 Second: T1 M6 
+ COUNT:2
+
+sie 09, 2023 8:59:03 PM CordConverter.Log writeInfoLog
+INFO: LN 9: Class invoked: class CordConverter.Edytor
+:Character count difference First:T2  Second: T2 
+ COUNT:2
+
+sie 09, 2023 8:59:03 PM CordConverter.Log writeInfoLog
+INFO: LN 10: Class invoked: class CordConverter.Edytor
+:Character count difference First:T2 M6 Second: T2 M6 
+ COUNT:2
+
+sie 09, 2023 8:59:06 PM CordConverter.Log writeInfoLog
+INFO: LN 11: Class invoked: class CordConverter.Edytor
+:Character count difference First:T0 M6 Second: T0 M6 
+ COUNT:3
+
+sie 09, 2023 8:59:06 PM CordConverter.Log writeInfoLog
+INFO: LN 12: Class invoked: class CordConverter.Edytor
+:Character count difference First:T1 Second: T1 
+ COUNT:3
+
+sie 09, 2023 8:59:06 PM CordConverter.Log writeInfoLog
+INFO: LN 13: Class invoked: class CordConverter.Edytor
+:Character count difference First:T1 M6 Second: T1 M6 
+ COUNT:3
+
+sie 09, 2023 8:59:06 PM CordConverter.Log writeInfoLog
+INFO: LN 14: Class invoked: class CordConverter.Edytor
+:Character count difference First:T2  Second: T2 
+ COUNT:3
+
+sie 09, 2023 8:59:06 PM CordConverter.Log writeInfoLog
+INFO: LN 15: Class invoked: class CordConverter.Edytor
+:Character count difference First:T2 M6 Second: T2 M6 
+ COUNT:3
+
