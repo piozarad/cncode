@@ -22,6 +22,8 @@ import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
+import org.junit.platform.engine.support.descriptor.AbstractTestDescriptor;
+
 import CordConverter.Edytor;
 
 public class ToolNumeratorView extends JFrame {
@@ -187,23 +189,26 @@ public class ToolNumeratorView extends JFrame {
 		apply = new JButton("Ok");
 		apply.setMinimumSize(BUTTON_DIMENSION);
 		apply.addActionListener(e->{
-			this.add.setEnabled(false);
-			this.remove.setEnabled(false);
+			
 			
 			List<Integer> l = new ArrayList<>();
 			//get List
+			
 			for(int j=0; j< model.getSize(); j++)
 			{
 				l.add(model.get(j));
+				
 			}
+			
+			
 			
 			
 			int i=0;
 			List<String> functionList = new ArrayList<>();
  			for(String s: parent.getTextAsList())
 			{
-				if(i == model.getSize()) break;
-				if(s.matches("^.*T\\d+.*"))
+				
+				if(s.matches("^.*T\\d+.*") && i< l.size())
 				{
 					s=s.replaceAll("T\\d++", "T" + l.get(i));
 					if(s.contains("M6")) i++; 
@@ -212,19 +217,25 @@ public class ToolNumeratorView extends JFrame {
 				functionList.add(s);
 			}
 			
- 			
- 			parent.txt.getTxtArea().setText("");
+ 			System.out.println(functionList);
  			
  			//write
- 			PrintStream stream = new PrintStream(parent.txt);
- 			System.setOut(stream);
- 			for(String s: functionList)
- 			{
- 				System.out.println(s);
- 			}
  			
-			this.add.setEnabled(true);
-			this.remove.setEnabled(true);
+ 				PrintStream stream = new PrintStream(parent.txt);
+ 				System.setOut(stream);
+ 				parent.txt.getTxtArea().setText("");
+ 				for(String s: functionList)
+ 				{
+ 					System.out.print(s + "\n");
+ 				}
+ 				
+ 				
+ 				System.setOut(System.out);
+ 				stream.close();
+ 				model.clear();
+ 				this.setVisible(false);
+ 				
+			
 		});
 		add(apply,constraints);
 		
@@ -232,7 +243,7 @@ public class ToolNumeratorView extends JFrame {
 		constraints.gridy=6;
 		cancel = new JButton("Cofnij");
 		cancel.setMinimumSize(BUTTON_DIMENSION);
-		cancel.addActionListener(e->ToolNumeratorView.this.setVisible(false));
+		cancel.addActionListener(e->this.setVisible(false));
 		add(cancel,constraints);
 		
 		
