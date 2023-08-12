@@ -39,6 +39,7 @@ public class ToolNumeratorView extends JFrame {
 	private JButton cancel;
 	private JButton up;
 	private JButton down;
+	private JButton removeAll;
 
 	
 	private GridBagLayout layout;
@@ -173,11 +174,18 @@ public class ToolNumeratorView extends JFrame {
 		});
 		add(down,constraints);
 		
+		removeAll = new JButton("Czysc");
+		constraints.gridy=5;
+		removeAll.setMinimumSize(BUTTON_DIMENSION);
+		removeAll.setToolTipText("Usun wszytkie elementy z listy");
+		removeAll.addActionListener(e->model.clear());
+		add(removeAll,constraints);
+		
 		
 		constraints.gridx=2;
 		constraints.gridy=1;
 		constraints.gridwidth=1;
-		constraints.gridheight=5;
+		constraints.gridheight=6;
 		model = new DefaultListModel<>();
 		toolNumbersList = new JList<>(model);
 		toolNumbersList.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.BLACK),"Narzedzia"));
@@ -185,7 +193,7 @@ public class ToolNumeratorView extends JFrame {
 		add(toolNumbersList,constraints);
 		
 		constraints.gridx=1;
-		constraints.gridy=6;
+		constraints.gridy=7;
 		apply = new JButton("Ok");
 		apply.setMinimumSize(BUTTON_DIMENSION);
 		apply.addActionListener(e->{
@@ -240,7 +248,7 @@ public class ToolNumeratorView extends JFrame {
 		add(apply,constraints);
 		
 		constraints.gridx=2;
-		constraints.gridy=6;
+		constraints.gridy=7;
 		cancel = new JButton("Cofnij");
 		cancel.setMinimumSize(BUTTON_DIMENSION);
 		cancel.addActionListener(e->this.setVisible(false));
