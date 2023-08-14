@@ -303,3 +303,15 @@ sie 19, 2021 8:47:17 PM CordConverter.Log writeErrorLog
 SEVERE:  LN 1: Exception occured:Index 27 out of bounds for length 27 Class invoked: InterpreterListener
 TFN:Index out of bounds
 
+sie 14, 2023 11:00:03 PM CordConverter.Log writeErrorLog
+SEVERE:  LN 1: Exception occured:Index 4 out of bounds for length 4 Class invoked: InterpreterListener
+TFN:Index out of bounds
+
+sie 14, 2023 11:07:58 PM CordConverter.Log writeErrorLog
+SEVERE:  LN 1: Exception occured:Index 7 out of bounds for length 7 Class invoked: InterpreterListener
+TFN:Index out of bounds
+
+sie 14, 2023 11:10:13 PM CordConverter.Log writeErrorLog
+SEVERE:  LN 1: Exception occured:Index 7 out of bounds for length 7 Class invoked: InterpreterListener
+TFN:Index out of bounds
+

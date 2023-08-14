@@ -2,6 +2,7 @@ package toolNumerator;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
@@ -10,19 +11,18 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.io.PrintStream;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 import javax.swing.BorderFactory;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
 import javax.swing.JTextField;
-
-import org.junit.platform.engine.support.descriptor.AbstractTestDescriptor;
 
 import CordConverter.Edytor;
 
@@ -40,7 +40,11 @@ public class ToolNumeratorView extends JFrame {
 	private JButton up;
 	private JButton down;
 	private JButton removeAll;
+	private JButton options;
+	
 
+	private boolean h=true;
+	private boolean d=true;
 	
 	private GridBagLayout layout;
 	
@@ -181,19 +185,31 @@ public class ToolNumeratorView extends JFrame {
 		removeAll.addActionListener(e->model.clear());
 		add(removeAll,constraints);
 		
+		options = new JButton("Opcje");
+		constraints.gridy=6;
+		options.setMinimumSize(BUTTON_DIMENSION);
+		options.setToolTipText("Ustawienia numeracji korektorow");
+		options.addActionListener(e->{
+			new Options(this);
+			
+			
+		});
+		add(options,constraints);
+		
 		
 		constraints.gridx=2;
 		constraints.gridy=1;
 		constraints.gridwidth=1;
-		constraints.gridheight=6;
+		constraints.gridheight=7;
 		model = new DefaultListModel<>();
 		toolNumbersList = new JList<>(model);
 		toolNumbersList.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.BLACK),"Narzedzia"));
 		toolNumbersList.setMinimumSize(new Dimension(50,200));
-		add(toolNumbersList,constraints);
+		JScrollPane listScrollPane = new JScrollPane(toolNumbersList);
+		add(listScrollPane,constraints);
 		
 		constraints.gridx=1;
-		constraints.gridy=7;
+		constraints.gridy=8;
 		apply = new JButton("Ok");
 		apply.setMinimumSize(BUTTON_DIMENSION);
 		apply.addActionListener(e->{
@@ -207,21 +223,23 @@ public class ToolNumeratorView extends JFrame {
 				l.add(model.get(j));
 				
 			}
-			
-			
-			
+
 			
 			int i=0;
 			List<String> functionList = new ArrayList<>();
  			for(String s: parent.getTextAsList())
 			{
 				
-				if(s.matches("^.*T\\d+.*") && i< l.size())
+				if(s.matches("^.*[THD]\\d+.*") && i< l.size())
 				{
 					s=s.replaceAll("T\\d++", "T" + l.get(i));
 					if(s.contains("M6")) i++; 
 					
+					if(this.h) s=s.replaceAll("H\\d++", "H" + l.get((i-1)<0 ? 0 : i-1));
+					if(this.d) s=s.replaceAll("D\\d++", "D" + l.get((i-1)<0 ? 0 : i-1));
+					
 				}
+				
 				functionList.add(s);
 			}
 			
@@ -248,7 +266,7 @@ public class ToolNumeratorView extends JFrame {
 		add(apply,constraints);
 		
 		constraints.gridx=2;
-		constraints.gridy=7;
+		constraints.gridy=8;
 		cancel = new JButton("Cofnij");
 		cancel.setMinimumSize(BUTTON_DIMENSION);
 		cancel.addActionListener(e->this.setVisible(false));
@@ -258,6 +276,52 @@ public class ToolNumeratorView extends JFrame {
 		pack();
 	}
 	
+	
+	
+	
+	class Options extends JFrame
+	{
+		ToolNumeratorView parent;
+		JLabel dLabel;
+		JLabel hLabel;
+		JCheckBox d;
+		JCheckBox h;
+		JButton ok;
+		Options(ToolNumeratorView parent)
+		{
+			this.parent=parent;
+			setSize(150,150);
+			setVisible(true);
+			setLocation(600,350);
+			setResizable(false);
+			FlowLayout optionsLayout = new FlowLayout();
+			setLayout(optionsLayout);
+			
+			dLabel = new JLabel("Korektor D");
+			add(dLabel);
+			
+			d = new JCheckBox();
+			d.setSelected(parent.d);
+			add(d);
+			
+			
+			
+			hLabel = new JLabel("Korektor H");
+			add(hLabel);
+			
+			h= new JCheckBox();
+			h.setSelected(parent.h);
+			add(h);
+			
+			ok = new JButton("OK");
+			ok.addActionListener(e->{
+				parent.h=h.isSelected();
+				parent.d=d.isSelected();
+				Options.this.dispose();
+			});
+			add(ok);
+		}
+	}
 	
 	
 }
