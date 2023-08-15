@@ -230,7 +230,7 @@ public class ToolNumeratorView extends JFrame {
  			for(String s: parent.getTextAsList())
 			{
 				
-				if(s.matches("^.*[THD]\\d+.*") && i< l.size())
+				if(s.matches("^[^\\(]*[TDH]\\d+[^\\)]*$") && i< l.size())
 				{
 					s=s.replaceAll("T\\d++", "T" + l.get(i));
 					if(s.contains("M6")) i++; 
