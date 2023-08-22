@@ -974,3 +974,7 @@ lip 22, 2021 10:43:34 PM CordConverter.Log writeInfoLog
 INFO: LN 17: Class invoked: InstructionDatabase
 :Nie rozpoznano polecenia przy czytaniu pliku :
 
+sie 22, 2023 10:45:03 PM CordConverter.Log writeInfoLog
+INFO: LN 1: Class invoked: Przepona
+:przepona - wykonano
+

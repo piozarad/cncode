@@ -21592,3 +21592,23 @@ INFO: LN 15: Class invoked: class CordConverter.Edytor
 :Character count difference First:T2 M6 Second: T2 M6 
  COUNT:3
 
+sie 22, 2023 9:40:04 PM CordConverter.Log writeInfoLog
+INFO: LN 1: Class invoked: Poglebienie
+:poglebienie - wykonano
+
+sie 22, 2023 9:41:12 PM CordConverter.Log writeInfoLog
+INFO: LN 2: Class invoked: Poglebienie
+:poglebienie - wykonano
+
+sie 22, 2023 9:42:18 PM CordConverter.Log writeInfoLog
+INFO: LN 3: Class invoked: Pocket
+:Pocket - wykonano
+
+sie 22, 2023 9:47:06 PM CordConverter.Log writeInfoLog
+INFO: LN 1: Class invoked: Poglebienie
+:poglebienie - wykonano
+
+sie 22, 2023 9:48:03 PM CordConverter.Log writeInfoLog
+INFO: LN 1: Class invoked: Poglebienie
+:poglebienie - wykonano
+

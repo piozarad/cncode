@@ -783,7 +783,7 @@ public class Function {
 	 * @param diameter srednica narziedzia potzebna do obliczenia predkosci skrawania
 	 * @return zwraca wartosci obliczonej predkosci wrzeciona, 0 jesli format tekstu w ramce nie zawieral polecenia obliczen "vc=_liczba" lub -1 jesli wystapil blad
 	 */
-	static int covertVcToN(JTextField t, Float diameter)
+	public static int covertVcToN(JTextField t, Float diameter)
 	{
 		
 		if(diameter==null)
@@ -821,7 +821,7 @@ public class Function {
 	 */
 	
 	
-	static int covertFnToVf(JTextField t, Integer obroty)
+	public static int covertFnToVf(JTextField t, Integer obroty)
 	{
 		if(obroty==null)
 			return -1;

@@ -307,3 +307,7 @@ lut 03, 2022 8:51:16 PM CordConverter.Log writeErrorLog
 SEVERE:  LN 1: Exception occured:Index 31 out of bounds for length 31 Class invoked: InterpreterListener
 TFN:Index out of bounds
 
+sie 22, 2023 10:56:13 PM CordConverter.Log writeInfoLog
+INFO: LN 1: Class invoked: Przepona
+:przepona - wykonano
+

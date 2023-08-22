@@ -315,3 +315,11 @@ sie 14, 2023 11:10:13 PM CordConverter.Log writeErrorLog
 SEVERE:  LN 1: Exception occured:Index 7 out of bounds for length 7 Class invoked: InterpreterListener
 TFN:Index out of bounds
 
+sie 15, 2023 9:46:06 AM CordConverter.Log writeErrorLog
+SEVERE:  LN 1: Exception occured:Index 10 out of bounds for length 10 Class invoked: InterpreterListener
+TFN:Index out of bounds
+
+sie 22, 2023 10:35:46 PM CordConverter.Log writeInfoLog
+INFO: LN 1: Class invoked: Pocket
+:Pocket - wykonano
+

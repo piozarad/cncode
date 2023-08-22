@@ -29,6 +29,14 @@ import BasicControls.SterowanieFanuc;
 import BasicControls.SterowanieOkuma;
 import BasicControls.SterowanieSinumeric;
 import PlaneMachining.PlaneView;
+import cncCodeGeneratingFunctions.Pocket;
+import cncCodeGeneratingFunctions.Poglebienie;
+import cncCodeGeneratingFunctions.Przepona;
+import cncCodeGeneratingFunctions.Spiral;
+import cncCodeGeneratingFunctions.Wkladka;
+import cncCodeGeneratingFunctions.Czop;
+import cncCodeGeneratingFunctions.Drilling;
+import cncCodeGeneratingFunctions.Faza;
 
 
 public class Edytor extends JPanel implements ActionListener {
@@ -63,7 +71,7 @@ public class Edytor extends JPanel implements ActionListener {
 	public Spiral spiral =null;
 	public Przesun p = null;
 	public Poglebienie pogl = null;
-	public wiercenie w = null;
+	public Drilling w = null;
 	public Zamien z =  null;
 	public Pocket poc =null;
 	public Przepona przep =null;

@@ -19,6 +19,12 @@ import javax.swing.JOptionPane;
 import PlaneMachining.PlaneControler;
 import PlaneMachining.PlaneModel;
 import PlaneMachining.PlaneView;
+import cncCodeGeneratingFunctions.Pocket;
+import cncCodeGeneratingFunctions.Poglebienie;
+import cncCodeGeneratingFunctions.Przepona;
+import cncCodeGeneratingFunctions.Czop;
+import cncCodeGeneratingFunctions.Drilling;
+import cncCodeGeneratingFunctions.Faza;
 
 public class GenerateGCodePanel extends JDialog{
 
@@ -126,7 +132,7 @@ public class GenerateGCodePanel extends JDialog{
 		otworyButton.addActionListener(e->
 		{
 			if(parent.w==null)
-				parent.w=new wiercenie(parent);
+				parent.w=new Drilling(parent);
 			else parent.w.setVisible(true);
 			GenerateGCodePanel.this.setVisible(false);
 		});
