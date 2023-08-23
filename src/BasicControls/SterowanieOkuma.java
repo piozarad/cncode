@@ -59,7 +59,7 @@ public class SterowanieOkuma implements Sterowanie {
 	@Override
 	public void przygotowanieUkladuINarzedzia(int block, int toolNumber, float safeRetraction,float bRotation, String base) {
 		System.out.printf(Locale.CANADA,"N%d T%d M6%n",block,toolNumber);
-		System.out.printf(Locale.CANADA,"N%d G90 G15 %s%n",block+5);
+		System.out.printf(Locale.CANADA,"N%d G90 G15 %s%n",block+5, base);
 		System.out.printf(Locale.CANADA,"N%d G56 DA HA%n",block+10 );
 		System.out.printf(Locale.CANADA,"N%d G0 Z%.3f%n",block+15,safeRetraction);
 		System.out.printf(Locale.CANADA,"N%d G0 B%.1f%n",block+20,bRotation);

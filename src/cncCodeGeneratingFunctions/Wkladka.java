@@ -640,7 +640,7 @@ public class Wkladka extends JFrame implements ActionListener {
 		System.out.printf(Locale.CANADA,"N50 G1 G41 D%d X%.3f Y%.3f F100. %n",toolNumber,x-1,y);
 		
 		else 
-			System.out.printf(Locale.CANADA,"N50 G1 G41 X%.3f Y%.3f F100. %n",x-1,y);
+			System.out.printf(Locale.CANADA,"N50 G1 G41 X%.3f Y%.3f F200. %n",x-1,y);
 		
 		float i = start;
 		while (i>end)
@@ -649,7 +649,7 @@ public class Wkladka extends JFrame implements ActionListener {
 			if(i<end) i=end;
 			
 			
-			System.out.printf(Locale.CANADA,"N%d G3 X%.3f Y%.3f I1. J0. Z%.3f F%.3f%n",n+=5,x-1,y,i,feed/4);		
+			System.out.printf(Locale.CANADA,"N%d G3 X%.3f Y%.3f I1. J0. Z%.3f %n",n+=5,x-1,y,i);		
 	
 		
 		}
