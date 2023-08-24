@@ -10,13 +10,12 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
+//import java.nio.file.Files;
+//import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.stream.Stream;
 
 import javax.swing.JOptionPane;
-import javax.swing.text.BadLocationException;
 
 import CordConverter.Edytor;
 import CordConverter.FunctionAnalyzeUtilities;
@@ -138,21 +137,22 @@ public class ReadFromFile {
 	
 	private Postprocesor readInstructionFromFile(File file)
 	{
-		Postprocesor newPostProcesor = new Postprocesor();
+	
 
+		Postprocesor newPostProcesor =   readFileOldWay(file);
 		
-		try (Stream<String> readFile=Files.lines(Path.of(file.getPath()))
-				.filter(element -> element.length()>0)
-				.filter(line -> !line.startsWith("*") && !line.startsWith("%") )){
-			
-			readFile.forEach(newPostProcesor::addInstruction);
-		}
-		
-		 catch (IOException e) {
-		
-			Wind.log.writeErrorLog("Error when reading Instrucitons from file", e, this.getClass().getSimpleName());
-			
-		}
+//		try (Stream<String> readFile=Files.lines(Path.of(file.getPath()))
+//				.filter(element -> element.length()>0)
+//				.filter(line -> !line.startsWith("*") && !line.startsWith("%") )){
+//			
+//			readFile.forEach(newPostProcesor::addInstruction);
+//		}
+//		
+//		 catch (IOException e) {
+//		
+//			Wind.log.writeErrorLog("Error when reading Instrucitons from file", e, this.getClass().getSimpleName());
+//			
+//		}
 		
 		
 		//try to get title
@@ -169,6 +169,35 @@ public class ReadFromFile {
 			
 		}
 
+		return newPostProcesor;
+	}
+	
+	private Postprocesor readFileOldWay(File file)
+	{
+		Postprocesor newPostProcesor = new Postprocesor();
+	
+		
+		try(BufferedReader reader = new BufferedReader(new FileReader(file)))
+		{
+			String line;
+			while((line=reader.readLine())!=null)
+			{
+				if(line.length()==0 || (line.startsWith("%") || line.startsWith("*"))) continue;
+				
+				newPostProcesor.addInstruction(line);
+			}
+	
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
 		return newPostProcesor;
 	}
 	
