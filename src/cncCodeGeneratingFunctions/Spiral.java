@@ -140,11 +140,11 @@ public class Spiral extends JFrame implements ActionListener
 		 srednicaOtworuLabel = new JLabel("Srednica otworu ");
 		 zWejsciaLabel= new JLabel("Z poczatkowe ");
 		 zDnaLabel = new JLabel("Z dna otworu ");
-		 krokLabel = new JLabel("Krok");
+		 krokLabel = new JLabel("Krok (ap)");
 		 posowLabel = new JLabel("Posuw");
-		 posowLabel.setToolTipText("Predkoœc posuwu Vf w mm/min. Mozna podac posow na zab i liczbe zebow w celu obliczenia predkosci posuwu wg schematu fn=wartosc z=wartosc");
+		 posowLabel.setToolTipText("Predkosc posuwu Vf w mm/min. Mozna podac posow na zab i liczbe zebow w celu obliczenia predkosci posuwu wg schematu fn=wartosc z=wartosc");
 		 obrotyLabel = new JLabel("Obroty");
-		 obrotyLabel.setToolTipText("Predkoœc obrotowa wrzeciona. Mozna podac predkosc skrawania w celu obliczenia obrotow wg formatu: Vc=wartosc");
+		 obrotyLabel.setToolTipText("Predkosc obrotowa wrzeciona. Mozna podac predkosc skrawania w celu obliczenia obrotow wg formatu: Vc=wartosc");
 		 rodzajLabel = new JLabel("Metoda");
 		 rodzajLabel.setToolTipText("Sposob generowania œciezki dla tej operacji");
 		 macroLabel = new JLabel("Generuj jako makro");
@@ -464,7 +464,7 @@ public class Spiral extends JFrame implements ActionListener
 				if(holeDiameter<toolDiameter )
 					JOptionPane.showMessageDialog(this, "Srednica narzedzia musi byc mniejsza od otworu!", "Blad", JOptionPane.NO_OPTION);
 				else if(start<bottom)
-					JOptionPane.showMessageDialog(this, "Wspolrzedna dna otworu musi byc mniejsza od wspolrzednej Z pocz¹tkowej spirali", "Blad", JOptionPane.NO_OPTION);
+					JOptionPane.showMessageDialog(this, "Wspolrzedna dna otworu musi byc mniejsza od wspolrzednej Z poczatkowej spirali", "Blad", JOptionPane.NO_OPTION);
 				else if(spSpeed>10000)
 				{
 					JOptionPane.showMessageDialog(this, "Nie za wysokie te obroty?", "Bum", JOptionPane.NO_OPTION);

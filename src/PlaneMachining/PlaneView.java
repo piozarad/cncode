@@ -125,8 +125,8 @@ public class PlaneView extends JFrame {
 	private boolean isToolPathGenerated = false;
 	
 	
-	private static final String[] METHOD = {"Do ¶rodka"};
-	private static final String[] BASE = {"X w osi Y w osi p³yty"};
+	private static final String[] METHOD = {"Do srodka"};
+	private static final String[] BASE = {"X w osi Y w osi plyty"};
 	private static final String[] PUNKTY_STARTU = {"lewy","prawy","góra","dó³"};
 	
 	
@@ -198,7 +198,7 @@ public class PlaneView extends JFrame {
 		
 		//x0 y0
 		startingPointsLabel = new JLabel("Punkty startu:");
-		startingPointsLabel.setToolTipText("Ustal pocz±tkowe ustawienie narzêdzia i stronê od jakiej ma wej¶æ w materia³");
+		startingPointsLabel.setToolTipText("Ustal poczatkowe ustawienie narzedzia i stronê od jakiej ma wejsc w material");
 		punktyStartuPanel.add(startingPointsLabel,border);
 		
 		//x1
@@ -216,7 +216,7 @@ public class PlaneView extends JFrame {
 		//x1 y0
 		border.gridx=1;
 		upperObstacleButton = new JToggleButton("^");
-		upperObstacleButton.setToolTipText("Przeszkoda od góry p³yty");
+		upperObstacleButton.setToolTipText("Przeszkoda od gory plyty");
 		upperObstacleButton.setPreferredSize(DEFAULT_BUTTON_SIZE);
 		upperObstacleButton.addActionListener(n->{
 			if(this.upperObstacleButton.isSelected() )
@@ -322,7 +322,7 @@ public class PlaneView extends JFrame {
 		border.gridx=0;
 		border.gridy=4;
 		distanceLabel = new JLabel("Odleg³¶æ od p³yty");
-		distanceLabel.setToolTipText("Odsuwa obrókê o podan± odleg³o¶æ od zaznaczonych przeszkód");
+		distanceLabel.setToolTipText("Odsuwa obroke o podana odleglosc od zaznaczonych przeszkod");
 		przeszkodyPanel.add(distanceLabel,border);
 		
 		border.gridx=1;
@@ -364,7 +364,7 @@ public class PlaneView extends JFrame {
 		
 		border.gridy++;
 		baseLabel = new JLabel("Punkt bazowy");
-		baseLabel.setToolTipText("Okre¶la umiejscowienie ¶rodka ukladu wspó³rzêdnych");
+		baseLabel.setToolTipText("Okresla umiejscowienie srodka ukladu wspolrzêdnych");
 		bazyPanel.add(baseLabel,border);
 		
 		//X1
@@ -442,16 +442,16 @@ public class PlaneView extends JFrame {
 		//x0
 		border.gridx=0;
 		border.gridy=0;
-		widthLabel = new JLabel("Szeroko¶c p³yty");
+		widthLabel = new JLabel("Szeroko¶c plyty");
 		geometriaPlytyPanel.add(widthLabel,border);
 	
 		border.gridy++;
-		heightLabel = new JLabel("Wysoko¶æ p³yty");
+		heightLabel = new JLabel("Wysokosc plyty");
 		geometriaPlytyPanel.add(heightLabel,border);
 
 		border.gridy++;
-		zBottomLabel = new JLabel("Wpó³rzêdna Z na gotowo");
-		zBottomLabel.setToolTipText("Wspo³rzêdna Z p³aszczyzny przefrezowanej");
+		zBottomLabel = new JLabel("Wpolrzêdna Z na gotowo");
+		zBottomLabel.setToolTipText("Wspolrzedna Z plaszczyzny przefrezowanej");
 		geometriaPlytyPanel.add(zBottomLabel,border);
 		
 		geometriaPanel.add(geometriaPlytyPanel,BorderLayout.SOUTH);
@@ -531,18 +531,18 @@ public class PlaneView extends JFrame {
 		
 		//x0
 		apLabel = new JLabel("ap");
-		apLabel.setToolTipText("G³êboko¶æ skrawania");
+		apLabel.setToolTipText("G³êbokosc skrawania");
 		naddatkiPanel.add(apLabel,border);
 		
 		border.gridy++;
 		aeLabel = new JLabel("ae");
-		aeLabel.setToolTipText("Szeroko¶æ skrawania jako %srednicy u¿ytego narzêdzia");
+		aeLabel.setToolTipText("Szerokosc skrawania jako % srednicy uzytego narzedzia");
 		naddatkiPanel.add(aeLabel,border);
 		
 		
 		border.gridy++;
-		zUpperLabel = new JLabel("Grub¶æ materia³u do zebrania");
-		zUpperLabel.setToolTipText("<html>Okre¶l grubo¶æ materia³u do wybrania w osi Z.<br>np. jeœli p³yta przed obróbk± ma 23mm grubo¶ci a wymagana jest 20mm wpisz 3mm</html>");
+		zUpperLabel = new JLabel("Grubosc materialu do zebrania");
+		zUpperLabel.setToolTipText("<html>Okresl grubosc materialu do wybrania w osi Z.<br>np. jeœli plyta przed obrobka ma 23mm grubosci a wymagana jest 20mm wpisz 3mm</html>");
 		naddatkiPanel.add(zUpperLabel,border);
 		
 		//x1
@@ -606,7 +606,7 @@ public class PlaneView extends JFrame {
 		border.gridx=0;
 		border.gridy=0;
 		
-		srednicaNarzedziaLabel = new JLabel("¦rednica narzêdzia");
+		srednicaNarzedziaLabel = new JLabel("Srednica narzedzia");
 		srednicaNarzedziaLabel.setToolTipText("Srednica wykorzystywanego narzêdzia w mm");
 		narzedziePanel.add(srednicaNarzedziaLabel,border);
 		
@@ -668,7 +668,7 @@ public class PlaneView extends JFrame {
 		
 		border.gridy++;
 		smoothenCheckBox = new JCheckBox("Wygladz przejscia",false);
-		smoothenCheckBox.setToolTipText("Zaokr±gla przej¶cia pod k¹tem 90stopni tak aby g³owica przechodzi³a p³ynnie po okrêgu z zadanym nizej promieniem");
+		smoothenCheckBox.setToolTipText("Zaokragla przejscia pod katem 90stopni tak aby glowica przechodzi³a plynnie po okrêgu z zadanym nizej promieniem");
 		smoothenCheckBox.addItemListener(n->{
 			if(n.getStateChange()==ItemEvent.SELECTED)
 			{
@@ -693,13 +693,13 @@ public class PlaneView extends JFrame {
 		
 		border.gridy++;
 		promienLabel = new JLabel("Promien R=");
-		promienLabel.setToolTipText("Promieñ zaokr±glenia œcie¿ki - max 50% œrednicy narzêdzia");
+		promienLabel.setToolTipText("Promien zaokraglenia œciezki - max 50% srednicy narzêdzia");
 		promienLabel.setEnabled(false);
 		methodPanel.add(promienLabel,border);
 
 		border.gridy++;
 		finishingPassCheckBox = new JCheckBox("Przej¶cie wykañczaj±ce",false);
-		finishingPassCheckBox.setToolTipText("Ustal g³êboko¶æ skrawania na ostanim przej¶ciu");
+		finishingPassCheckBox.setToolTipText("Ustal gleboko¶æ skrawania na ostanim przejsciu");
 		finishingPassCheckBox.addItemListener(n->{
 			if(n.getStateChange()==ItemEvent.SELECTED)
 			{
@@ -717,7 +717,7 @@ public class PlaneView extends JFrame {
 		border.gridy++;
 		finishingPassLabel = new JLabel("Glêbokoœæ d=");
 		finishingPassLabel.setEnabled(false);
-		finishingPassLabel.setToolTipText("Ustal g³êboko¶æ skrawania na ostanim przej¶ciu");
+		finishingPassLabel.setToolTipText("Ustal g³ebokosc skrawania na ostanim przejsciu");
 		methodPanel.add(finishingPassLabel,border);
 		
 		//x1
@@ -763,17 +763,17 @@ public class PlaneView extends JFrame {
 		
 		//x0
 		sprindleSpeedLabel = new JLabel("Obroty");
-		sprindleSpeedLabel.setToolTipText("Prêdko¶æ obrotowa wrzeciona 1/min");
+		sprindleSpeedLabel.setToolTipText("Predkosc obrotowa wrzeciona 1/min");
 		parametryPanel.add(sprindleSpeedLabel,border);
 
 		border.gridy++;
 		feedLabel = new JLabel("Posuw");
-		feedLabel.setToolTipText("Predko¶æ posuwu Vf w mm/min");
+		feedLabel.setToolTipText("Predkosc posuwu Vf w mm/min");
 		parametryPanel.add(feedLabel,border);
 
 		border.gridy++;
 		border.gridy++;
-		vcLabel = new JLabel("Predko¶æ skrawania Vc");
+		vcLabel = new JLabel("Predkosc skrawania Vc");
 		vcLabel.setEnabled(false);
 		parametryPanel.add(vcLabel,border);
 		
@@ -836,7 +836,7 @@ public class PlaneView extends JFrame {
 		
 		pane.add("Geometria",geometriaPanel);
 
-		pane.addTab("Narzêdzie",narzedziePanel);
+		pane.addTab("Narzedzie",narzedziePanel);
 		pane.addTab("Parametry skrawania", parametryPanel);
 		pane.addTab("Metoda", methodPanel);
 		pane.addTab("Przeszkody", przeszkodyPanel);
@@ -950,7 +950,7 @@ public class PlaneView extends JFrame {
 				Visual.this.showCordinate = !showCordinate;
 				PlaneView.this.repaint();
 			});
-			showCordinatesButton.setToolTipText("Poka¿ punkt zerowy uk³adu wspó³rzêdnych");
+			showCordinatesButton.setToolTipText("Pokaz punkt zerowy uk³adu wspolrzednych");
 			add(showCordinatesButton);
 			
 			//show dimenstions button
@@ -964,7 +964,7 @@ public class PlaneView extends JFrame {
 				Visual.this.rectangle.showDimensions(showDimensions);
 				PlaneView.this.repaint();
 			});
-			showDimensionsButton.setToolTipText("Poka¿ wymiary");
+			showDimensionsButton.setToolTipText("Pokaz wymiary");
 			add(showDimensionsButton);
 		}
 		
@@ -1113,7 +1113,7 @@ public class PlaneView extends JFrame {
 	{
 		if(this.directionsLocked>=3)
 		{
-			JOptionPane.showMessageDialog(this, "Zablokowano zbyt du¿o kierunków", "B³±d", JOptionPane.NO_OPTION);
+			JOptionPane.showMessageDialog(this, "Zablokowano zbyt duzo kierunkow", "B³±d", JOptionPane.NO_OPTION);
 			return false;
 		}
 		else return true;

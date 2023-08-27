@@ -1013,13 +1013,13 @@ public class Edytor extends JPanel implements ActionListener {
 			{
 				errors++;
 				result=false;
-				writeErrorMessage(" Najazd z korekcj¹ promieniow¹ nie mo¿e odbywaæ siê podczas ruchu po interpolacji G2/G3 (N" + activeBlock + ")");
+				writeErrorMessage(" Najazd z korekcja promieniowa nie mo¿e odbywaæ siê podczas ruchu po interpolacji G2/G3 (N" + activeBlock + ")");
 			}
 		}
 		}
 	}
 	
-		JOptionPane.showMessageDialog(this, "Analiza programu: \n" + ((errors>0)?("Wykryto b³êdy wymagaj¹ce poprawy - szczegó³y patrz log"):("")) + "\nB³êdy: "+ errors+ "\nOstrze¿enia:" + warnings, "Sprawdzanie popranoœci kodu", JOptionPane.OK_OPTION, UIManager.getIcon("OptionPane.warningIcon"));
+		JOptionPane.showMessageDialog(this, "Analiza programu: \n" + ((errors>0)?("Wykryto bledy wymagajace poprawy - szczegoly patrz log"):("")) + "\nB³êdy: "+ errors+ "\nOstrze¿enia:" + warnings, "Sprawdzanie popranoœci kodu", JOptionPane.OK_OPTION, UIManager.getIcon("OptionPane.warningIcon"));
 		return result;
 		
 	}
@@ -1042,14 +1042,14 @@ public class Edytor extends JPanel implements ActionListener {
 				if(input[i]!=null)
 					f.add(new Function(input[i],sterowanie));
 				
-				//log
-				if(FunctionAnalyzeUtilities.characterCountDifference(input[i], f.get(i).toString()) != 0)
-				{
-					Wind.log.writeInfoLog("Character count difference First:" + input[i]  + " Second:" + f.get(i).toString()+ " COUNT:" 
-				+FunctionAnalyzeUtilities.characterCountDifference(input[i], f.get(i).toString()), Edytor.class.toString());
+//				//log
+//				if(FunctionAnalyzeUtilities.characterCountDifference(input[i], f.get(i).toString()) != 0)
+//				{
+//					Wind.log.writeInfoLog("Character count difference First:" + input[i]  + " Second:" + f.get(i).toString()+ " COUNT:" 
+//				+FunctionAnalyzeUtilities.characterCountDifference(input[i], f.get(i).toString()), Edytor.class.toString());
 					
-				}
-					
+				//}
+				
 			}
 	
 	}
@@ -1232,116 +1232,6 @@ public class Edytor extends JPanel implements ActionListener {
 		this.txt.getTxtArea().moveCaretPosition(charEnd);
 	}
 
-	
-	public Sterowanie wykryjSterowanie()
-	{
-			final String WYKRYTO_OKUMA = "Wykryto sterowanie: Okuma";
-			final String WYKRYTO_FANUC = "Wykryto sterowanie: Fanuc";
-			final String WYKRYTO_SINUMERIC = "Wykryto sterowanie: Sinumeric";
-	
-		boolean name=false;
-		analyzeWithNoControls();
-		for(Function fu : this.f)
-		{
-			if(!fu.getD().equals("0") && (fu.getD().equals("A") || fu.getD().equals("B") || fu.getD().equals("C")))
-			{	
-				
-						this.writelog(WYKRYTO_OKUMA);
-						return new SterowanieOkuma();
-			}
-			
-			if(fu.getMFunctin()!=-1)
-			{
-				if(fu.getMFunctin()==51 || fu.getMFunctin()==52 || fu.getMFunctin()==53)
-				{
-					this.writelog(WYKRYTO_OKUMA);
-					return new SterowanieOkuma();
-				}
-				else if(fu.getMFunctin()==98 ||fu.getMFunctin()==99 || fu.getMFunctin()==130 || fu.getMFunctin()==127 || fu.getMFunctin()==128)
-				{
-					this.writelog(WYKRYTO_FANUC);
-					return new SterowanieFanuc();
-				}
-
-			}
-			
-			if(fu.getFunctionType()!=null)
-			{
-				for (int i : fu.getFunctionType())
-				{
-					if(i==15 && !fu.getH().equals("0"))
-					{
-						this.writelog(WYKRYTO_OKUMA);
-						return new SterowanieOkuma();
-						
-					}
-					else if(i==43)
-					{			
-						this.writelog(WYKRYTO_FANUC);
-						return new SterowanieFanuc();
-					}
-					else if(i>=81 && i<90)
-					{
-						if(fu.getMFunctin() >51 && fu.getMFunctin() <55)
-						{
-							this.writelog(WYKRYTO_OKUMA);
-							return new SterowanieOkuma();
-						}
-						
-						
-						if(fu.getRcycleParam().length>1)
-						{
-							this.writelog("Wykryto sterowanie: Sinemeric");
-							return new SterowanieSinumeric();
-						}
-					}
-		
-					else if(i==76)
-					{
-						if(fu.getQ()!=null)
-						{
-							this.writelog(WYKRYTO_FANUC);
-							return new SterowanieFanuc();
-						}
-						else 
-						{												
-							if(fu.getCircle()!=null) {
-								this.writelog(WYKRYTO_OKUMA);
-								return new SterowanieOkuma(); 
-							}
-						}
-					}
-					else if(i==71 || (i==56 && !fu.getH().equals("0")))
-					{	
-						this.writelog(WYKRYTO_OKUMA);
-						return new SterowanieOkuma(); 
-					}
-					
-					else if(i==54 && fu.getP()!=null)
-					{
-						this.writelog(WYKRYTO_FANUC);
-						return new SterowanieFanuc();
-					}				
-				}
-			}
-		
-		if(fu.getMacro()!=null)
-		{
-			if(fu.getMacro().length()>3 && fu.getMacro().substring(0,4).equals("%MPF"))
-			{
-				this.writelog(WYKRYTO_SINUMERIC);
-				return new SterowanieSinumeric(); 
-			}
-			else if(fu.getMacro().length()==1 && fu.getMacro().equals("%"))
-				name = true;
-			
-			else if(name && fu.getMacro().length()>3 && fu.getMacro().substring(0,1).equals("O"))	
-					return new SterowanieFanuc();
-		}	
-		}	
-		this.writelog(WYKRYTO_SINUMERIC);
-		return new SterowanieSinumeric();
-	}
 
 
 }

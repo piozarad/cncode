@@ -172,13 +172,13 @@ public class Poglebienie extends JFrame implements ActionListener{
 		//obroty
 		border.gridy++;
 		obrotyLabel = new JLabel("Obroty");
-		obrotyLabel.setToolTipText("Prêdkoœæ obrotowa wrzeciona. Mozna podac predkosc skrawania w celu obliczenia obrotow wg formatu: Vc=wartosc");
+		obrotyLabel.setToolTipText("Predkosc obrotowa wrzeciona. Mozna podac predkosc skrawania w celu obliczenia obrotow wg formatu: Vc=wartosc");
 		add(obrotyLabel,border);
 		
 		//posow
 		border.gridy++;
 		posuwLabel = new JLabel("Posuw");
-		posuwLabel.setToolTipText("Prêdkoœæ posuwu Vf w mm/min. Mo¿na podac posow na zab i liczbe zebow w celu obliczenia predkosci posuwu wg schematu fn=wartosc z=wartosc");
+		posuwLabel.setToolTipText("Predkosc posuwu Vf w mm/min. Mo¿na podac posow na zab i liczbe zebow w celu obliczenia predkosci posuwu wg schematu fn=wartosc z=wartosc");
 		add(posuwLabel,border);
 		
 		//PodzielPrzejscia
@@ -194,7 +194,7 @@ public class Poglebienie extends JFrame implements ActionListener{
 		add(iloscPrzejscLabel,border);
 		
 		border.gridy++;
-		dodajPrzejscieNaGotowoLabel = new JLabel("Dodaj przejscie wykañczaj±ce");
+		dodajPrzejscieNaGotowoLabel = new JLabel("Dodaj przejscie wykanczaj±ce");
 		dodajPrzejscieNaGotowoLabel.setToolTipText("Ustawnia naddatek na ostatnim przejsciu ap=0.5mm");
 		dodajPrzejscieNaGotowoLabel.setEnabled(false);
 		add(dodajPrzejscieNaGotowoLabel,border);
@@ -435,7 +435,7 @@ public class Poglebienie extends JFrame implements ActionListener{
 	
 		if(srednicaOtworu<=1)
 		{
-			JOptionPane.showMessageDialog(this, "Nieprawid³owa œrednica narzêdzia");
+			JOptionPane.showMessageDialog(this, "Nieprawid³owa srednica narzêdzia");
 			return false;
 		}
 		
@@ -545,7 +545,7 @@ public class Poglebienie extends JFrame implements ActionListener{
 			g.drawLine(60, 95, 56, 99);
 			
 			//ruch narzêdzia
-			g.drawString("Œcie¿ka narzêdzia", 10, 195);
+			g.drawString("Scie¿ka narzêdzia", 10, 195);
 			g.drawLine(30, 175, 70, 175);
 			g.drawLine(70, 175, 66, 171);
 			g.drawLine(70, 175, 66, 179);
@@ -666,7 +666,7 @@ public class Poglebienie extends JFrame implements ActionListener{
 		}
 		this.Cofnij.doClick();
 		Wind.log.writeInfoLog("poglebienie - wykonano", Poglebienie.class.getSimpleName());
-		parent.writelog("Wygenerowano kod dla pog³êbienia walcowego dla wspó³rzêdnych: X" + X + " Y" + Y + " \n\tSrednica poglebienia=" + srednicaOtworu + " Maksymalna mo¿liwa korekcja promieniowa R=" + najazd +"\n\tIloœæ przejœæ(nie licz¹c przejœcia na gotowo): "+ iloscPrzejsc+ "\n\tPrzejscie na gotowo: "+ (przejscieNaGotowo?" 0.5mm":"Nie"));
+		parent.writelog("Wygenerowano kod dla poglebienia walcowego dla wspolrzednych: X" + X + " Y" + Y + " \n\tSrednica poglebienia=" + srednicaOtworu + " Maksymalna mozliwa korekcja promieniowa R=" + najazd +"\n\tIlosc przejsc(nie liczac przejœcia na gotowo): "+ iloscPrzejsc+ "\n\tPrzejscie na gotowo: "+ (przejscieNaGotowo?" 0.5mm":"Nie"));
 	}
 	
 	

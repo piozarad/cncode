@@ -880,7 +880,7 @@ public class Pocket extends JFrame implements ActionListener{
 			System.out.printf(Locale.CANADA,"N%d M5%n",n+=5);
 			System.out.printf(Locale.CANADA,"N%d M1%n",n+=5);
 			
-			this.parent.writelog("Wygenerowano kieszeñ o wymiarach:" + width + " na " + height + " mm na wsplrzednych X" + this.startingPoint.getX() + " Y" + this.startingPoint.getY() + "%n\tZ poczatkowe=" + this.start + " Z koncowe:" + this.end + "%n\tMaksymalna korekcja promieniowa dla narzedzia o srednicy "+ this.toolsize +"mm :" + this.toolsize/5);
+			this.parent.writelog("Wygenerowano kieszen o wymiarach:" + width + " na " + height + " mm na wspolrzednych X" + this.startingPoint.getX() + " Y" + this.startingPoint.getY() + "%n\tZ poczatkowe=" + this.start + " Z koncowe:" + this.end + "%n\tMaksymalna korekcja promieniowa dla narzedzia o srednicy "+ this.toolsize +"mm :" + this.toolsize/5);
 			Wind.log.writeInfoLog("Pocket - wykonano", Pocket.class.getSimpleName());
 			this.cofnij.doClick();
 				

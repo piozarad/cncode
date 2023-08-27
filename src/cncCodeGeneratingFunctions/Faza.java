@@ -428,17 +428,13 @@ public class Faza extends JFrame implements ActionListener {
 			System.out.printf(Locale.CANADA,"N90 M5%n");
 			System.out.printf(Locale.CANADA,"N95 M1%n");
 
-			parent.writelog("Wygenerowano kod dla fazowania otworu o œrednicy " + String.format(Locale.CANADA,"%.2f", this.srednicaOtworu) +"mm"
-			+ "\n\t glebokoœc fazy: " + String.format(Locale.CANADA,"%.1f", glebokoscFazy)+ "mm"
-			+ "\n\t pomiar narzedzia na œrednicy: " + String.format(Locale.CANADA,"%.2f", this.srednicaNarzedzia) +"mm"
+			parent.writelog("Wygenerowano kod dla fazowania otworu o Srednicy " + String.format(Locale.CANADA,"%.2f", this.srednicaOtworu) +"mm"
+			+ "\n\t glebokosc fazy: " + String.format(Locale.CANADA,"%.1f", glebokoscFazy)+ "mm"
+			+ "\n\t pomiar narzedzia na Srednicy: " + String.format(Locale.CANADA,"%.2f", this.srednicaNarzedzia) +"mm"
 					);
 	}
 	
-	
-	
-	
-	
-	
+
 
 
 	@Override
@@ -464,19 +460,13 @@ public class Faza extends JFrame implements ActionListener {
 			
 			
 		}
-		
-		
-		
-		
+
 	}
-	
 	
 	
 	private boolean isOk()
 	{
-		
-		
-		
+
 		
 		try 
 		{
@@ -506,14 +496,14 @@ public class Faza extends JFrame implements ActionListener {
 			
 			if(srednicaNarzedzia<1)
 			{
-				JOptionPane.showMessageDialog(this, "Œrednica narzedzia podejrzanie mala");
+				JOptionPane.showMessageDialog(this, "Srednica narzedzia podejrzanie mala");
 				return false;
 			}
 				
 		}
 		catch(NumberFormatException e)
 		{
-			JOptionPane.showMessageDialog(this, "Zle zdefiniowana œrednica narzedzia");
+			JOptionPane.showMessageDialog(this, "Zle zdefiniowana srednica narzedzia");
 			return false;
 		}
 		
@@ -523,14 +513,14 @@ public class Faza extends JFrame implements ActionListener {
 			
 			if(srednicaOtworu<1)
 			{
-				JOptionPane.showMessageDialog(this, "Œrednica otworu podejrzanie mala");
+				JOptionPane.showMessageDialog(this, "srednica otworu podejrzanie mala");
 				return false;
 			}		
 				
 		}
 		catch(NumberFormatException e)
 		{
-			JOptionPane.showMessageDialog(this, "Zle zdefiniowana œrednica otworu");
+			JOptionPane.showMessageDialog(this, "Zle zdefiniowana srednica otworu");
 			return false;
 		}
 		
@@ -546,7 +536,7 @@ public class Faza extends JFrame implements ActionListener {
 		}
 		catch(NumberFormatException e)
 		{
-			JOptionPane.showMessageDialog(this, "Zle zdefiniowana glebokoœc fazy");
+			JOptionPane.showMessageDialog(this, "Zle zdefiniowana glebokosc fazy");
 			return false;
 		}
 		

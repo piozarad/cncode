@@ -89,7 +89,6 @@ public class Wind extends JFrame implements ActionListener {
 	private JRadioButtonMenuItem fanuc;
 	private JRadioButtonMenuItem sinumeric;
 	private JRadioButtonMenuItem okuma;
-	private JMenuItem wykryjSterowanie;
 	private JMenuItem czasCykluMenu;
 	private JMenuItem toolNumerateItem;
 
@@ -260,11 +259,7 @@ public class Wind extends JFrame implements ActionListener {
 		kalkulatory.add(parametryFrezowania);
 		kalkulatory.add(parametryGwintowania);
 		
-		wykryjSterowanie = new JMenuItem("Wykryj sterowanie");
-		wykryjSterowanie.setMnemonic(KeyEvent.VK_W);
-		wykryjSterowanie.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_W,ActionEvent.CTRL_MASK));
-		wykryjSterowanie.addActionListener(this);
-		
+
 		
 		toolNumerateItem = new JMenuItem("Numeruj Narzedzia");
 		toolNumerateItem.setMnemonic(KeyEvent.VK_N);
@@ -279,7 +274,6 @@ public class Wind extends JFrame implements ActionListener {
 		
 
 		
-		narzedzia.add(wykryjSterowanie);
 		narzedzia.add(kalkulatory);
 		narzedzia.add(konwertuj);
 		narzedzia.add(sprawdzPoprawnosc);
@@ -516,21 +510,7 @@ public class Wind extends JFrame implements ActionListener {
 				
 			}
 		
-		 else if(e.getSource() == wykryjSterowanie)
-		 {
-			
-			 String s = panel.wykryjSterowanie().toString();
-			 if(s.equals("SterowanieOkuma"))
-				 s="Wykryto sterowanie: Okuma";
-			 else if(s.equals("SterowanieFanuc"))
-				 s="Wykryto sterowanie: Fanuc";
-			 else if(s.equals("SterowanieSinumeric"))
-				 s="Wykryto sterowanie Sinumeric";
-			 else
-				 s ="Nie rozpoznano sterowania";
 
-			 JOptionPane.showMessageDialog(this, s);
-		 }
 		
 		 else if(e.getSource() == toolNumerateItem)
 		 {

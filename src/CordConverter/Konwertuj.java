@@ -100,17 +100,13 @@ public class Konwertuj extends JFrame implements ActionListener{
 		add(wykrytoSterowanieLabel,border);
 		
 		//x1 y0
-		border.gridx=1;
-		Sterowanie wykryj = parent.wykryjSterowanie();
-		
-		wykrytoSterowanie = new JLabel(wykryj.toString());
-		add(wykrytoSterowanie,border);
+
 		
 		
 		//x0 y1
 		border.gridx=0;
 		border.gridy=1;
-		zadeklarowaneSterowanieLabel = new JLabel("Zamieñ sterowanie:");
+		zadeklarowaneSterowanieLabel = new JLabel("Zamien sterowanie:");
 		add(zadeklarowaneSterowanieLabel,border);
 		
 		

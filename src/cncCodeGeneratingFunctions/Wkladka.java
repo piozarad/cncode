@@ -150,27 +150,27 @@ public class Wkladka extends JFrame implements ActionListener {
 		border.gridx=0;
 		border.gridy=0;
 		metodaLabel = new JLabel("Metoda ");
-		metodaLabel.setToolTipText("Sposob generowania œciezki dla tej operacji");
+		metodaLabel.setToolTipText("Sposob generowania sciezki dla tej operacji");
 		add(metodaLabel,border);
 		
 		border.gridx=0;
 		border.gridy++;
 		xLabel = new JLabel("Wspolrzedna x");
-		xLabel.setToolTipText("Wspolrzedna x œrodka frezowanej wkladki");
+		xLabel.setToolTipText("Wspolrzedna x srodka frezowanej wkladki");
 		add(xLabel,border);
 		
 		// x0 y1   y cordinate
 		border.gridx=0;
 		border.gridy++;
 		yLabel = new JLabel("Wspolrzedna y");
-		yLabel.setToolTipText("Wspolrzedna y œrodka frezowanej wkladki");
+		yLabel.setToolTipText("Wspolrzedna y srodka frezowanej wkladki");
 		add(yLabel,border);
 		
 		//x0 y2 Diameter
 		border.gridx=0;
 		border.gridy++;
 		diameterLabel = new JLabel("srednica wkladki d"); 
-		diameterLabel.setToolTipText("No to ta œrednica wkladki co ja chcesz rozfrezowac, czego nie rozumiesz?");
+		diameterLabel.setToolTipText("No to ta wyjsciowa srednica wkladki co ja chcesz rozfrezowac, czego nie rozumiesz?");
 		add(diameterLabel,border);
 		
 		
@@ -203,21 +203,21 @@ public class Wkladka extends JFrame implements ActionListener {
 		border.gridy++;
 		border.gridy++;
 		aeLabel = new JLabel("ae");
-		aeLabel.setToolTipText("Szerokoœc skrawania w stosunku do srednicy narzedzia. Np. 0.1 przy srednicy narzedzia 25 daje ae=2.5");
+		aeLabel.setToolTipText("Szerokosc skrawania w stosunku do srednicy narzedzia. Np. 0.1 przy srednicy narzedzia 25 daje ae=2.5");
 		add(aeLabel,border);
 		
 		//x0 y8 speed
 		border.gridx=0;
 		border.gridy++;
 		speedLabel = new JLabel("Obroty");
-		speedLabel.setToolTipText("Predkoœc obrotowa wrzeciona. Mozna podac predkosc skrawania w celu obliczenia obrotow wg formatu: Vc=wartosc");
+		speedLabel.setToolTipText("Predkosc obrotowa wrzeciona. Mozna podac predkosc skrawania w celu obliczenia obrotow wg formatu: Vc=wartosc");
 		add(speedLabel,border);
 		
 		//x0 y9 feed 
 		border.gridx=0;
 		border.gridy++;
 		feedLabel = new JLabel("Posuw");
-		feedLabel.setToolTipText("Predkoœc posuwu Vf w mm/min. Mozna podac posow na zab i liczbe zebow w celu obliczenia predkosci posuwu wg schematu fn=wartosc z=wartosc");
+		feedLabel.setToolTipText("Predkosc posuwu Vf w mm/min. Mozna podac posow na zab i liczbe zebow w celu obliczenia predkosci posuwu wg schematu fn=wartosc z=wartosc");
 		add(feedLabel,border);
 		
 		//x0 y10 calculate
@@ -479,7 +479,7 @@ public class Wkladka extends JFrame implements ActionListener {
 		}
 		catch (NumberFormatException e)
 		{
-			JOptionPane.showMessageDialog(this, "zle zdefiniowany Z pocztkowy");
+			JOptionPane.showMessageDialog(this, "zle zdefiniowany Z poczatkowy");
 			return false;
 		}
 		try
@@ -488,13 +488,13 @@ public class Wkladka extends JFrame implements ActionListener {
 		}
 		catch (NumberFormatException e)
 		{
-			JOptionPane.showMessageDialog(this, "zle zdefiniowany Z koñcowy");
+			JOptionPane.showMessageDialog(this, "zle zdefiniowany Z koncowy");
 			return false;
 		}
 		
 		if(start <end)
 		{
-			JOptionPane.showMessageDialog(this, "Wspolrzedna Z poczatkowa musi byc wiekszy od Z dna wkladki");
+			JOptionPane.showMessageDialog(this, "Wspolrzedna Z poczatkowa musi byc wieksza od Z dna wkladki");
 			return false;
 		}
 		try
@@ -503,7 +503,7 @@ public class Wkladka extends JFrame implements ActionListener {
 		}
 		catch (NumberFormatException e)
 		{
-			JOptionPane.showMessageDialog(this, "zle zdefiniowana œrednica narzedzia");
+			JOptionPane.showMessageDialog(this, "zle zdefiniowana srednica narzedzia");
 			return false;
 		}
 		try
@@ -543,7 +543,7 @@ public class Wkladka extends JFrame implements ActionListener {
 		}
 		catch (NumberFormatException e)
 		{
-			JOptionPane.showMessageDialog(this, "zle zdefiniowana predkoœc obrotowa wrzeciona");
+			JOptionPane.showMessageDialog(this, "zle zdefiniowana predkosc obrotowa wrzeciona");
 			return false;
 		}
 		
@@ -554,7 +554,7 @@ public class Wkladka extends JFrame implements ActionListener {
 		}
 		catch (NumberFormatException e)
 		{
-			JOptionPane.showMessageDialog(this, "zle zdefiniowana predkoœc posuwu");
+			JOptionPane.showMessageDialog(this, "zle zdefiniowana predkosc posuwu");
 			return false;
 		}
 		
@@ -570,7 +570,7 @@ public class Wkladka extends JFrame implements ActionListener {
 		}
 		if(ae <=0 || ae>0.601)
 		{
-			JOptionPane.showMessageDialog(this, "Szerokoœc skrawania ae powinna mieœcic sie w przedziale (0 ; 0.6>");
+			JOptionPane.showMessageDialog(this, "Szerokosc skrawania ae powinna miescic sie w przedziale (0 ; 0.6>");
 			return false;
 		}
 		
@@ -585,13 +585,13 @@ public class Wkladka extends JFrame implements ActionListener {
 		}
 		catch (NumberFormatException e)
 		{
-			JOptionPane.showMessageDialog(this, "zle zdefiniowana œrednica wkladki narzedzia");
+			JOptionPane.showMessageDialog(this, "zle zdefiniowana srednica wkladki narzedzia");
 			return false;
 		}
 		
 		if(toolDiameter > diameter)
 		{
-			JOptionPane.showMessageDialog(this, "srednia narzedzia jest wieksza od œrednicy frezowanej wkladki, jakby nie paczec - nie pojedzie");
+			JOptionPane.showMessageDialog(this, "srednica narzedzia jest wieksza od srednicy frezowanej wkladki, jakby nie paczec - nie pojedzie");
 			
 			return false;
 		}
@@ -600,7 +600,7 @@ public class Wkladka extends JFrame implements ActionListener {
 
 		if((diameter<=toolDiameter*2))
 		{
-			JOptionPane.showMessageDialog(this, "Za mala œrednica, uzyj funkcji poglebienia zamiast frezowania wkladki do wygenerowania kodu");
+			JOptionPane.showMessageDialog(this, "Za mala srednica, uzyj funkcji poglebienia zamiast frezowania wkladki do wygenerowania kodu");
 			
 			return false;
 		}

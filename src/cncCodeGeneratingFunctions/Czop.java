@@ -35,7 +35,7 @@ import DrawFunction.DrawTool;
 		
 		JLabel wspolrzedneXLabel;
 		JLabel wspolrzedneYLabel;
-		JLabel rodzajSpirali;			//	wew/zew
+		JLabel rodzajSpirali;			
 		JLabel srednicaNarzedziaLabel;
 		JLabel srednicaOtworuLabel;
 		JLabel zWejsciaLabel;
@@ -333,7 +333,7 @@ import DrawFunction.DrawTool;
 				g.drawLine(12, 75, 12, 83);
 				
 				//ruch narzedzia
-				g.drawString("Œciezka narzedzia", 10, 195);
+				g.drawString("Sciezka narzedzia", 10, 195);
 				g.drawLine(30, 175, 70, 175);
 				g.drawLine(70, 175, 66, 171);
 				g.drawLine(70, 175, 66, 179);	
@@ -527,7 +527,7 @@ import DrawFunction.DrawTool;
 			}
 			catch (NumberFormatException e)
 			{
-				JOptionPane.showMessageDialog(this, "Nieprawidlowy format danych wejœciowych", "Bl¹d", JOptionPane.NO_OPTION);
+				JOptionPane.showMessageDialog(this, "Nieprawidlowy format danych wejsciowych", "Blad", JOptionPane.NO_OPTION);
 				return null;
 			}
 		}
@@ -543,7 +543,7 @@ import DrawFunction.DrawTool;
 			}
 			catch (NumberFormatException e)
 			{
-				JOptionPane.showMessageDialog(this, "Nieprawidlowy format danych wejœciowych", "Bl¹d", JOptionPane.NO_OPTION);
+				JOptionPane.showMessageDialog(this, "Nieprawidlowy format danych wejsciowych", "Blad", JOptionPane.NO_OPTION);
 				return null; 
 				
 			}
@@ -577,10 +577,9 @@ import DrawFunction.DrawTool;
 			
 				if(x!= null && y!= null && start!=null && bottom!= null && toolDiameter != null && holeDiameter!=null && step!=null && spSpeed!=null && feed!=null)
 				{
-				if(holeDiameter<toolDiameter && (this.rodzajCombo.getSelectedIndex()==0))
-					JOptionPane.showMessageDialog(this, "Srednica narzedzia musi byc mniejsza od otworu!", "Blad", JOptionPane.NO_OPTION);
-				else if(start<bottom)
-					JOptionPane.showMessageDialog(this, "Wspolrzedna dna otworu musi byc mniejsza od wspolrzednej Z pocz¹tkowej spirali", "Bl¹d", JOptionPane.NO_OPTION);
+				
+				if(start<bottom)
+					JOptionPane.showMessageDialog(this, "Wspolrzedna dna otworu musi byc mniejsza od wspolrzednej Z poczatkowej spirali", "Blad", JOptionPane.NO_OPTION);
 				else if(spSpeed>8000)
 				{
 					JOptionPane.showMessageDialog(this, "Nie za wysokie te obroty?", "Bum", JOptionPane.NO_OPTION);
