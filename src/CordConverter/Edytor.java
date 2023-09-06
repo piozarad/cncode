@@ -209,8 +209,8 @@ public class Edytor extends JPanel implements ActionListener {
 		add(s,border);
 		
 		//Przesun
-		przesun = new JButton("Przesuñ");
-		przesun.setToolTipText("Przesuwa obróbkê w danej osi o podan¹ wartoœæ");
+		przesun = new JButton("Przesun");
+		przesun.setToolTipText("Przesuwa obrobkê w danej osi o podana wartosc");
 		przesun.setPreferredSize(BUTTON_PREFFERED_SIZE);
 		border.gridx=6;
 		border.gridy++;
@@ -218,7 +218,7 @@ public class Edytor extends JPanel implements ActionListener {
 		add(przesun,border);
 			
 		// Zamien	
-		zamienButton = new JButton("Zamieñ");
+		zamienButton = new JButton("Zamien");
 		zamienButton.setToolTipText("Zamieñ podana wartosc na zefiniowana przez uzytkownika dla wielu blokow programu");
 		zamienButton.setPreferredSize(BUTTON_PREFFERED_SIZE);
 		zamienButton.addActionListener(this);
@@ -227,7 +227,7 @@ public class Edytor extends JPanel implements ActionListener {
 		add(zamienButton,border);
 		
 		//obroc
-		obroc= new JButton("Obróæ");
+		obroc= new JButton("Obroc");
 		obroc.setToolTipText("[Funkcja w przygotowaniu] Obraca uk³ad wspó³rzêdnych o podany k¹t wzglêdem podanego punktu");
 		obroc.setEnabled(false);
 		obroc.setPreferredSize(BUTTON_PREFFERED_SIZE);
@@ -277,7 +277,7 @@ public class Edytor extends JPanel implements ActionListener {
 		add(rLabel,border);
 
 		circleCenterLabel = new JLabel("O");
-		circleCenterLabel.setToolTipText("Punkt œrodka okregu");
+		circleCenterLabel.setToolTipText("Punkt srodka okregu");
 		border.gridx=0;
 		border.gridy=7;
 		add(circleCenterLabel,border);
@@ -1166,7 +1166,7 @@ public class Edytor extends JPanel implements ActionListener {
 	public void writeErrorMessage(String s)
 	{
 		
-		this.logtxt.append("\n\t(**B£¥D) " +s);
+		this.logtxt.append("\n\t(**BLAD) " +s);
 	}
 
 	

@@ -1,5 +1,7 @@
 package CordConverter;
 
+import java.util.Optional;
+
 import javax.swing.JOptionPane;
 
 import BasicControls.Sterowanie;

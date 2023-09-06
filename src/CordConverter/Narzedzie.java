@@ -150,9 +150,7 @@ public class Narzedzie {
 	{
 		this.endingLine=endingLine;
 	}
-	
-	
-	
+
 	
 	
 	/**
@@ -167,11 +165,8 @@ public class Narzedzie {
 			if(this.toolNumber==-1)
 			{
 				this.toolNumber=f.getToolNumber();
-				
-				
+							
 			}
-			
-			
 			
 		}
 	
@@ -327,7 +322,7 @@ public class Narzedzie {
 
 				temp = temp.replaceAll("[ _]","");
 				
-				Pattern p = Pattern.compile("(\\s|FI)\\d{1,3}\\.?\\d{0,1}");
+				Pattern p = Pattern.compile("(FI)?\\d{1,3}\\.?\\d{0,2}");
 
 				Matcher m = p.matcher(temp);
 				
@@ -335,7 +330,8 @@ public class Narzedzie {
 				{
 					try {
 					
-						this.srednicaNarzedzia = Float.parseFloat(temp.substring(m.start()+1,m.end()));
+						//this.srednicaNarzedzia = Float.parseFloat(temp.substring(m.start()+1,m.end()));
+						this.srednicaNarzedzia = Float.parseFloat(temp.substring(m.start(),m.end()));
 					}
 					
 					catch(NumberFormatException e)
