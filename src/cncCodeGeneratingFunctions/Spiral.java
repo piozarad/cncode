@@ -111,7 +111,6 @@ public class Spiral extends JFrame implements ActionListener
 		border.insets = new Insets(5,5,5,5);
 		border.weightx =0;
 		border.weighty=0;
-		//border.anchor = GridBagConstraints.NORTHWEST;
 		border.fill =GridBagConstraints.HORIZONTAL;
 		
 		//combo box
@@ -499,10 +498,9 @@ public class Spiral extends JFrame implements ActionListener
 		else if(o==macroCheck)
 		{
 			Sterowanie s = parent.getControls();
-			System.out.println(s + " " + s.isType(ControlTypes.OKUMA));
 			if(!(s.isType(ControlTypes.FANUC) || s.isType(ControlTypes.HITACHI) || s.isType(ControlTypes.OKUMA)))
 			{
-				JOptionPane.showMessageDialog(this, "Opcja dostepna tylko na sterowaniu Fanuc", "Niedostepna opcja", JOptionPane.OK_OPTION);
+				JOptionPane.showMessageDialog(this, "Opcja dostepna tylko na sterowaniu Fanuc lub Okuma", "Niedostepna opcja", JOptionPane.OK_OPTION);
 				this.macroCheck.setSelected(false);
 				this.macroCheck.setEnabled(false);
 			}
@@ -559,6 +557,7 @@ public class Spiral extends JFrame implements ActionListener
 			System.out.printf(Locale.CANADA,"%n(AP)%n");
 			System.out.printf(Locale.CANADA,"#3=%.2f %n%n",step);
 			
+			System.out.printf(Locale.CANADA,"S%d M3 %n",sp_speed);
 			System.out.printf(Locale.CANADA,"N%d G0 X%.3f Y%.3f %n", n, x-2,y );
 			n+=5;
 			System.out.printf(Locale.CANADA,"N%d G0 Z%.2f %n", n, start+5 );
@@ -572,7 +571,7 @@ public class Spiral extends JFrame implements ActionListener
 			
 			System.out.printf(Locale.CANADA,"WHILE[#1 GT #2] DO1%n");
 			n+=5;
-			System.out.printf(Locale.CANADA,"G3 X%.3f Y%.3f Z#1 I%.2f J0. %n",rightX, y , -(rightX-x));
+			System.out.printf(Locale.CANADA,"G3 X%.3f Y%.3f Z[#1] I%.2f J0. %n",rightX, y , -(rightX-x));
 			n+=5;
 			System.out.printf(Locale.CANADA,"#1=#1-#3%n");
 			n+=5;
@@ -613,7 +612,7 @@ public class Spiral extends JFrame implements ActionListener
 			}
 			
 			n+=5;
-			System.out.printf(Locale.CANADA,"N%d G3 X%.3f Y%.3f Z%.2f I%.2f J0.%n", n, rightX, y , bottom, -(rightX-x) );
+			System.out.printf(Locale.CANADA,"N%d G3 X%.3f Y%.3f Z[#2] I%.2f J0.%n", n, rightX, y , -(rightX-x) );
 			n+=5;
 			System.out.printf(Locale.CANADA,"N%d G3 X%.3f Y%.3f I%.2f J0.%n", n, rightX, y , -(rightX-x) );
 			n+=5;
