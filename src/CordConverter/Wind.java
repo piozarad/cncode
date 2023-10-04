@@ -17,6 +17,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.LinkedList;
+import java.util.List;
 
 import javax.swing.JDialog;
 import javax.swing.JFrame;
@@ -34,6 +36,8 @@ import BasicControls.SterowanieFanuc;
 import BasicControls.SterowanieOkuma;
 import BasicControls.SterowanieSinumeric;
 import ErrorWindow.ErrorProgressWindow;
+import controls.ControlsGui;
+import controls.ControlsModel;
 import instructionReadFromFile.ReadFromFile;
 import instructionReadFromFile.ReadInstructionsGui;
 import toolNumerator.ToolNumeratorView;
@@ -91,6 +95,7 @@ public class Wind extends JFrame implements ActionListener {
 	private JRadioButtonMenuItem okuma;
 	private JMenuItem czasCykluMenu;
 	private JMenuItem toolNumerateItem;
+	private JMenuItem controlsEdit;
 
 
 	static final Dimension CALC = new Dimension(500, 700);
@@ -110,9 +115,6 @@ public class Wind extends JFrame implements ActionListener {
 		public Wyszukaj w=null;
 		private ErrorProgressWindow errorWindow;
 		private ToolNumeratorView toolNumerate;
-		
-
-		
 		
 		
 		
@@ -253,6 +255,12 @@ public class Wind extends JFrame implements ActionListener {
 		czasCykluMenu = new JMenuItem("Oblicz czas cyklu");
 		czasCykluMenu.addActionListener(this);
 		
+		controlsEdit= new JMenuItem("Sterowania maszyn");
+		List<ControlsModel> controlsList = new LinkedList<>();
+		controlsEdit.addActionListener(e->new ControlsGui(panel, controlsList));
+		controlsEdit.setMnemonic(KeyEvent.VK_T);
+		controlsEdit.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_T,ActionEvent.CTRL_MASK));
+		
 
 		kalkulatory.add(parametryPostojNaDnie);
 		kalkulatory.add(parametryWytaczania);
@@ -280,6 +288,7 @@ public class Wind extends JFrame implements ActionListener {
 		narzedzia.add(czasCykluMenu);
 		narzedzia.add(toolNumerateItem);
 		narzedzia.add(dodaj);
+		narzedzia.add(controlsEdit);
 	
 		mb.add(narzedzia);
 		

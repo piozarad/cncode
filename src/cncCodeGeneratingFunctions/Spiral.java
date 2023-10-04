@@ -608,7 +608,6 @@ public class Spiral extends JFrame implements ActionListener
 				n+=5;
 				System.out.printf(Locale.CANADA,"IF[LV1 GT LV2] GOTO NENA%n");
 				
-				
 			}
 			
 			n+=5;
