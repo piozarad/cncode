@@ -13,12 +13,17 @@ public class ControlsModel implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private String Name;
+	private String toolLengthCompensationFormat;
 	private String dwellFormat;
 	private String retractionFormatLowerLimit;
 	private String retractionFormatUpperLimit;
 	private String DrillingBottomFormat;
 	private String boringretractionFormat;
 	private String drillingDwellFormat;
+	private String longHolesCycleAdvanceFormat;
+	private String tappingAdditionalParametrs;
+	
+
 	private int sprindleCollantCode;
 	private int defaultCollantCode;
 	private int ceilingCollantCode;
@@ -109,6 +114,32 @@ public class ControlsModel implements Serializable {
 		else return "";
 	}
 	
+	public Map<String,String> getCodeMap()
+	{
+		return this.codeDictionary;
+	}
+	
+	public String getToolLengthCompensationFormat() {
+		return toolLengthCompensationFormat;
+	}
+	public void setToolLengthCompensationFormat(String toolLengthCompensationFormat) {
+		this.toolLengthCompensationFormat = toolLengthCompensationFormat;
+	}
+	
+	public String getLongHolesCycleAdvanceFormat() {
+		return longHolesCycleAdvanceFormat;
+	}
+	public void setLongHolesCycleAdvanceFormat(String longHolesCycleAdvanceFormat) {
+		this.longHolesCycleAdvanceFormat = longHolesCycleAdvanceFormat;
+	}
+	
+	public String getTappingAdditionalParametrs() {
+		return tappingAdditionalParametrs;
+	}
+	public void setTappingAdditionalParametrs(String tappingAdditionalParametrs) {
+		this.tappingAdditionalParametrs = tappingAdditionalParametrs;
+	}
+
 	
 	@Override
 	public String toString()
