@@ -230,23 +230,21 @@ public class ToolNumeratorView extends JFrame {
  			for(String s: parent.getTextAsList())
 			{
 				
-				if(s.matches("^[^\\(]*[TDH]\\d+[^\\)]*$") && i<= l.size())
+				if(s.matches("^[^\\(]*[TDH]\\d+[^\\)]*.*$"))
 				{
-					if(i< l.size())
-					{
-						s=s.replaceAll("T\\d++", "T" + l.get(i));
-						if(s.contains("M6")) i++; 
-					}
 					
-					if(this.h) s=s.replaceAll("H\\d++", "H" + l.get((i-1)<0 ? 0 : i-1));
-					if(this.d) s=s.replaceAll("D\\d++", "D" + l.get((i-1)<0 ? 0 : i-1));
+						s=s.replaceAll("T\\d++", "T" + getNextValue(l,i));
+						if(s.contains("M6")) i++; 
+					
+					
+					if(this.h) s=s.replaceAll("H\\d++", "H" + getNextValue(l,i-1));
+					if(this.d) s=s.replaceAll("D\\d++", "D" + getNextValue(l,i-1));
 					
 				}
 				
 				functionList.add(s);
 			}
 			
- 			System.out.println(functionList);
  			
  			//write
  			
@@ -279,6 +277,17 @@ public class ToolNumeratorView extends JFrame {
 		pack();
 	}
 	
+	
+	int getNextValue(List<Integer> list, int index)
+	{
+		if(index<list.size()) return list.get(index);
+		else 
+			{
+				int lastElement = (list.isEmpty() ? 0 :list.get(list.size()-1));
+				return lastElement + index-list.size()+1;
+			}
+			
+	}
 	
 	
 	
