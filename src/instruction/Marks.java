@@ -56,7 +56,15 @@ public enum Marks {
 		{
 			return "vv";
 		}
-	}
+	},
+	LIMIT
+	{
+		@Override
+		public String toString()
+		{
+			return "<MAX>";
+		}
+	};
 
 
 }

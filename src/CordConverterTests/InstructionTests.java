@@ -822,4 +822,46 @@ public class InstructionTests {
 		assertEquals("T1 M6 ",addUntil.applyChanges(line4));
 	}
 	
+	@Test
+	public void testLimit1()
+	{
+		instruction = "Z<MAX>400";
+		String line = "N500 G0Z-450 M5";
+		
+		Instruction limit= InstructionFactory.createInstuction(instruction);
+		
+		assertEquals("N500 G0 Z-450 M5 ",limit.applyChanges(line));
+	}
+	
+	@Test
+	public void testLimit2()
+	{
+		instruction = "Z<MAX>400";
+		String line = "N500 G0 Z450 M5";
+		
+		Instruction limit= InstructionFactory.createInstuction(instruction);
+		
+		assertEquals("N500 G0 Z400 M5 ",limit.applyChanges(line));
+	}
+	
+	@Test
+	public void testLimit3()
+	{
+		instruction = "F<MAX>10000.100";
+		String line = "N500 G1 F12000 M5";
+		
+		Instruction limit= InstructionFactory.createInstuction(instruction);
+		
+		assertEquals("N500 G1 F10000.100 M5 ",limit.applyChanges(line));
+	}
+	@Test
+	public void testLimit4()
+	{
+		instruction = "F<MAX>10000.100";
+		String line = "N500 G1 F9999.999 M5";
+		
+		Instruction limit= InstructionFactory.createInstuction(instruction);
+		
+		assertEquals("N500 G1 F9999.999 M5 ",limit.applyChanges(line));
+	}
 }

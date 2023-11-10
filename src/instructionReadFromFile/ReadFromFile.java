@@ -124,6 +124,7 @@ public class ReadFromFile {
 			bw.append("\n-Dopisz poni¿ej: operator v+	np 'Sv+G4X2' Po napotkaniu linii z kodem obrotów wrzeciona dodaje poni¿ej now¹ liniê z kodem 'G4 X2'");
 			bw.append("\n-Dodaj wy¿ej: operator ^+	 np 'G81^+G71 Z500' Po napotkaniu linii z kodem 'G81' dodaje powy¿ej kod 'G71 Z500' ");
 			bw.append("\n-Wyodrêbnij funkcje: operator <>	 np '<>M5' u¿yty w linii 'N100 M5 M1' zwraca 3 bloki : \n\tN100  \n\tM5  \n\tM1  ");
+			bw.append("\n-Ustaw limit wartosci: operator <MAX>	 np 'Z<MAX>450' u¿yty w linii 'N100 G0 Z500 M5' zwraca blok : 'G0 Z450 M5'  ");
 			bw.append("\n-Wyodrêbnij warunkowo: operator ?<>	np. 'M5?<>M1' jw. z t¹ ró¿nic¹, ¿e wyzwala siê tylko jeœli w bloku znajduje siê pierwsza funkcja (Tu M5)");
 			bw.append("\n-Znak %t jest czytany jako number aktualnego narzêdzia np. 'HA=>D%t' Zamienia korektor HA na D1 (je¿eli wczeœniej zostalo wywo³ane narzêdzie T1 i komenda M6)'");
 			bw.append("\n-Znak %l (ma³a litera L) jest czytany jako dowolny number. Mo¿na go wykorzystaæ gdy znany jest typ kodu ale nie jest znany numer. Np. /D%l kasuje korektor D o dowolnym numerze w kodzie - D1, D2 ..itd");

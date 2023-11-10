@@ -86,6 +86,20 @@ public class InstructionFactory {
 
 			return new SeparateFunction(temp.replace("<>",""));
 		}
+		else if(temp.contains("<MAX>") )
+		{
+			tempArray = temp.split("<MAX>");
+			
+			try
+			{
+				Double.parseDouble(tempArray[1]);			// format check
+				return new Limit(tempArray[0],tempArray[1]);
+			}
+			catch(NumberFormatException e)
+			{
+				return null;
+			}
+		}
 		
 		else
 		{

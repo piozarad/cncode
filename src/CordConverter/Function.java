@@ -666,7 +666,7 @@ public class Function {
 	{
 		if(this.rCycleParam.size()>0)
 			return this.rCycleParam.values().toArray(new Float[0]);
-		else return new Float[] {0.f};
+		else return new Float[] {};
 	}
 	
 	public Map<Character,Float> getCircle()

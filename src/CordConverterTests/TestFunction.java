@@ -6,6 +6,8 @@ import BasicControls.SterowanieFanuc;
 
 import static org.junit.Assert.*;
 
+import java.util.Arrays;
+
 import CordConverter.Point;
 
 import CordConverter.Function;
@@ -411,7 +413,6 @@ public class TestFunction {
 		Function testedFunction = new Function("G3 X10 Y0.5 R10.534");
 		
 		Float[] rParameter = testedFunction.getRcycleParam();
-		
 		
 		//dlugosc zero bo promien R powinien byæ obslugiwany przez funkcje circle
 		assertTrue(rParameter.length==0);
