@@ -45,7 +45,7 @@ public class Circle {
 	{
 		this(endingPoint,i,j);
 		this.startingPoint = startingPoint;
-		this.circleCenter = new Point(startingPoint.getX()+i,startingPoint.getY()+j);
+		this.circleCenter = new Point(startingPoint.getX()+i,startingPoint.getY()+j, TYPE.XY_POINT);
 
 	}
 	
@@ -87,7 +87,8 @@ public class Circle {
 	{
 		return new Point(
 							(a.getCircleCenter().getX() + b.getCircleCenter().getX())/2,
-							(a.getCircleCenter().getY() + b.getCircleCenter().getY())/2
+							(a.getCircleCenter().getY() + b.getCircleCenter().getY())/2,
+							TYPE.XY_POINT
 						);
 		
 	}
@@ -144,12 +145,12 @@ public class Circle {
 		{
 			if(line!=null)
 			{
-				result.add(new Point(x,line.getA()*x + line.getB()));
+				result.add(new Point(x,line.getA()*x + line.getB(),TYPE.XY_POINT));
 			}
 			else
 			{
 				//if line isn't initialised y is calculated insted of x 
-				result.add(new Point(constX,x));
+				result.add(new Point(constX,x,TYPE.XY_POINT));
 			}
 		}
 		

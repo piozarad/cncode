@@ -105,7 +105,7 @@ public class Line {
 		float deltaX = (float) (distance * Math.cos(Math.atan(a)));
 		float deltaY = (float) (distance * Math.sin(Math.atan(a)));
 		
-		return new Point(startingPoint.getX() + deltaX, startingPoint.getY() + deltaY);
+		return new Point(startingPoint.getX() + deltaX, startingPoint.getY() + deltaY,TYPE.XY_POINT);
 	}
 	
 	

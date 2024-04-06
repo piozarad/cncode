@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 
 import CordConverter.Point;
+import CordConverter.TYPE;
 
 public class HorizontalDimension implements DrawableFunction {
 
@@ -38,8 +39,8 @@ public class HorizontalDimension implements DrawableFunction {
 
 	@Override
 	public void drawInCenter(Graphics g, Dimension windowSize) {
-		Point left = new Point(this.leftPoint.getX() + (float)windowSize.getWidth()/2f , this.leftPoint.getY() + (float)windowSize.getHeight()/2);
-		Point right = new Point(this.rightPoint.getX() + (float)windowSize.getWidth()/2f , this.rightPoint.getY() + (float)windowSize.getHeight()/2);
+		Point left = new Point(this.leftPoint.getX() + (float)windowSize.getWidth()/2f , this.leftPoint.getY() + (float)windowSize.getHeight()/2,TYPE.XY_POINT);
+		Point right = new Point(this.rightPoint.getX() + (float)windowSize.getWidth()/2f , this.rightPoint.getY() + (float)windowSize.getHeight()/2,TYPE.XY_POINT);
 		
 		drawHorizontaldimension( g, left, right);
 		

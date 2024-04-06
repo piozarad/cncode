@@ -26,7 +26,7 @@ public class CzasCyklu {
 		Point previousPoint=new Point(400f,500f,800f);
 		Point actualPoint = new Point(400f,500f,800f);
 		Function f;
-		Point srodekOkregu = new Point(0f,0f);
+		Point srodekOkregu = new Point(0f,0f,TYPE.XY_POINT);
 		float r;
 		Wektor pierwszy = new Wektor(1,1);
 		Wektor drugi = new Wektor(1,1);

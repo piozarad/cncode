@@ -34,6 +34,7 @@ import javax.swing.JToggleButton;
 import javax.swing.SpinnerNumberModel;
 
 import CordConverter.Point;
+import CordConverter.TYPE;
 import DrawFunction.DrawCordinateSystem;
 import DrawFunction.DrawTool;
 import DrawFunction.RectangleWithDimensions;
@@ -1014,7 +1015,7 @@ public class PlaneView extends JFrame {
 		{
 			if(Visual.this.showCordinate)
 			{	
-				new DrawCordinateSystem(new Point((int)baseXPosition+300f,-(int)baseYPosition+250f),Color.red).draw(g);	
+				new DrawCordinateSystem(new Point((int)baseXPosition+300f,-(int)baseYPosition+250f,TYPE.XY_POINT),Color.red).draw(g);	
 			}
 		}
 		
@@ -1032,7 +1033,7 @@ public class PlaneView extends JFrame {
 		public void toolPathWithoutRadius(Graphics g,List<Point>toolpath,Point toolStartPoint)
 		{
 			ToolPath t = new ToolPath(CANVAS_SIZE,toolStartPoint);
-			t.setLocalCs(new Point(0f,0f));
+			t.setLocalCs(new Point(0f,0f,TYPE.XY_POINT));
 			
 			//showToolPath
 			if(showToolPath)
@@ -1051,7 +1052,7 @@ public class PlaneView extends JFrame {
 		{
 			
 			ToolPath t = new ToolPath(CANVAS_SIZE,toolStartPoint);
-			t.setLocalCs(new Point(PlaneView.this.baseXPosition,PlaneView.this.baseYPosition));
+			t.setLocalCs(new Point(PlaneView.this.baseXPosition,PlaneView.this.baseYPosition,TYPE.XY_POINT));
 			
 			
 			Point p;

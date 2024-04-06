@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import CordConverter.Line;
 import CordConverter.Point;
+import CordConverter.TYPE;
 
 public class TestLine {
 
@@ -19,7 +20,7 @@ public class TestLine {
 	@Test
 	public void testConstructor2()
 	{
-		Line l = new Line(new Point(1f,1f),new Point(2f,2f));
+		Line l = new Line(new Point(1f,1f,TYPE.XY_POINT),new Point(2f,2f,TYPE.XY_POINT));
 		
 		Assert.assertNotNull(l);
 				
@@ -37,7 +38,7 @@ public class TestLine {
 	public void testToStringFunction2()
 	{
 		
-		Line l = new Line(new Point(1f,1f),new Point(2f,2f));
+		Line l = new Line(new Point(1f,1f,TYPE.XY_POINT),new Point(2f,2f,TYPE.XY_POINT));
 		
 		Assert.assertTrue(l.toString().equals("1.0x+0.0"));
 		
@@ -45,7 +46,7 @@ public class TestLine {
 	@Test
 	public void testComputing0xAngle()
 	{
-		Line l = new Line(new Point(1f,1f),new Point(2f,2f));
+		Line l = new Line(new Point(1f,1f,TYPE.XY_POINT),new Point(2f,2f,TYPE.XY_POINT));
 
 		Assert.assertEquals(45.0f, l.getAngle0x(), 0.001);
 		
@@ -95,7 +96,7 @@ public class TestLine {
 	{
 		Line first = new Line(1f,4f);
 		
-		Line second = new Line(new Point(2f,6f),new Point(10f,14f));
+		Line second = new Line(new Point(2f,6f,TYPE.XY_POINT),new Point(10f,14f,TYPE.XY_POINT));
 		
 		Assert.assertEquals(first,second);
 				
@@ -108,7 +109,7 @@ public class TestLine {
 	{
 		Line line = new Line(1.5f,4f);
 		
-		Point p = new Point(2f,5f);
+		Point p = new Point(2f,5f,TYPE.XY_POINT);
 		
 		Line secondLine = new Line(-0.6667f,6.33334f);
 		line = line.rotateArroundPoint(p);
@@ -121,9 +122,9 @@ public class TestLine {
 	{
 		Line newLine = new Line(0.75f,1f);
 		
-		Point startingPoint = new Point (0f,1f);
+		Point startingPoint = new Point (0f,1f,TYPE.XY_POINT);
 		
-		Assert.assertEquals(new Point(4f,4f),newLine.distanceOnLine(5, startingPoint));
+		Assert.assertEquals(new Point(4f,4f,TYPE.XY_POINT),newLine.distanceOnLine(5, startingPoint));
 	}
 	
 	
@@ -132,7 +133,7 @@ public class TestLine {
 	{
 		Line line  = new Line(2.5f,10f);
 		
-		Point point = new Point(-1f,-10f);
+		Point point = new Point(-1f,-10f,TYPE.XY_POINT);
 		
 		Assert.assertFalse(line.isGreater(point));
 	}
@@ -142,7 +143,7 @@ public class TestLine {
 	{
 		Line line  = new Line(2.5f,10f);
 		
-		Point point = new Point(0f,11f);
+		Point point = new Point(0f,11f,TYPE.XY_POINT);
 		
 		Assert.assertTrue(line.isGreater(point));
 	}

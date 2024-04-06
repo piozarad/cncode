@@ -1,5 +1,7 @@
 package CordConverter;
 
+
+
 public class Point implements Cloneable {
 
 	private Float x;
@@ -13,22 +15,51 @@ public class Point implements Cloneable {
 	public Point() {
 
 	}
-	public Point(Float x, Float y) {
+	
+//	public Point(Float x, Float y) {
+//		
+//		this.x = roundToThree(x);
+//		this.y = roundToThree(y);
+//		
+//		
+//}
+	
+	public Point(Float first, Float second, TYPE type)
+	{
+		switch (type)
+		{
+		case RADIUS_ANGLE_POINT:
+			// first parameter is radius second parameter angle
 		
-		this.x = roundToThree(x);
-		this.y = roundToThree(y);
-		
-}
-	public Point(Float x, Float y, boolean xV, boolean yV) {
+			float angle = (second/180) * (float)Math.PI;
+			float radius = first;
+			this.x = (float)Math.cos(angle) * radius;
+			this.y = (float)Math.sin(angle) * radius;
+			
+			break;
+		case XY_POINT:
+			this.x = roundToThree(first);
+			this.y = roundToThree(second);
+//			yVar =true;
+//			xVar=true;
+			break;
+		default:
+			break;
+			
+		}
+	}
+	
+	public Point(Float x, Float y, boolean xV, boolean yV ) {
 	
 			this.x = roundToThree(x);
 			this.y = roundToThree(y);
-			
 			
 			if(xV)
 				xVar=true;
 			if(yV)
 				yVar =true;
+	
+			
 	}
 	public Point(Float x,Float y, Float z)
 	{
@@ -37,6 +68,7 @@ public class Point implements Cloneable {
 		this.z = roundToThree(z);
 	}
 
+	
 	public Point(Float z, boolean zV) {
 		this.z = roundToThree(z);
 		if(zV)
@@ -276,7 +308,7 @@ public class Point implements Cloneable {
 	
 	public Point updatePositionInLocalCS(Point localCSZero)
 	{
-		return new Point(localCSZero.getX()+this.getX(),localCSZero.getY()+this.getY());
+		return new Point(localCSZero.getX()+this.getX(),localCSZero.getY()+this.getY(),TYPE.XY_POINT);
 		
 	}
 	
@@ -308,8 +340,8 @@ public class Point implements Cloneable {
 		else 
 		{
 			// tempPoint representes given point 'p' in local cordintate system where center (x0, y0) is set at given point 'center' 
-			Point tempPoint = new Point(p.getX()-center.getX(), p.getY()-center.getY());
-			Wektor wektor = new Wektor(new Point(0f,0f), tempPoint);
+			Point tempPoint = new Point(p.getX()-center.getX(), p.getY()-center.getY(),TYPE.XY_POINT);
+			Wektor wektor = new Wektor(new Point(0f,0f,TYPE.XY_POINT), tempPoint);
 			
 			return wektor.katUkladuBiegunowego();
 		}
@@ -317,7 +349,7 @@ public class Point implements Cloneable {
 	
 	public static Point averagePoint(Point first, Point second)
 	{
-		return new Point((first.getX()+second.getX())/2, (first.getY()+second.getY())/2);
+		return new Point((first.getX()+second.getX())/2, (first.getY()+second.getY())/2,TYPE.XY_POINT);
 
 	}
 	

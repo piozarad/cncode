@@ -661,7 +661,7 @@ public class Wind extends JFrame implements ActionListener {
 
 		else if (e.getSource() == oProgramie) {
 
-			JOptionPane.showMessageDialog(this, "v2.0.14 12.07.23");
+			JOptionPane.showMessageDialog(this, "v2.0.15 24.03.24");
 		} 
 		else 
 		{

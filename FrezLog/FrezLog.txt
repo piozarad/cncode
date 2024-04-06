@@ -1,0 +1,44 @@
+lis 26, 2023 9:47:44 PM CordConverter.Log writeInfoLog
+INFO: LN 1: Class invoked: Poglebienie
+:poglebienie - wykonano
+
+lis 26, 2023 9:49:53 PM CordConverter.Log writeErrorLog
+SEVERE:  LN 2: Exception occured:Index 20 out of bounds for length 20 Class invoked: InterpreterListener
+TFN:Index out of bounds
+
+lis 26, 2023 9:50:27 PM CordConverter.Log writeInfoLog
+INFO: LN 3: Class invoked: Spiral
+:Spiral inner - wygenerowano
+
+mar 24, 2024 9:26:56 PM CordConverter.Log writeInfoLog
+INFO: LN 1: Class invoked: Drilling
+:wiercenie - wykonano
+
+mar 24, 2024 9:26:57 PM CordConverter.Log writeErrorLog
+SEVERE:  LN 2: Exception occured:Index 13 out of bounds for length 13 Class invoked: InterpreterListener
+TFN:Index out of bounds
+
+mar 24, 2024 10:46:58 PM CordConverter.Log writeInfoLog
+INFO: LN 1: Class invoked: Drilling
+:wiercenie - wykonano
+
+mar 24, 2024 10:57:54 PM CordConverter.Log writeInfoLog
+INFO: LN 1: Class invoked: Drilling
+:wiercenie - wykonano
+
+mar 24, 2024 10:57:55 PM CordConverter.Log writeErrorLog
+SEVERE:  LN 2: Exception occured:Index 13 out of bounds for length 13 Class invoked: InterpreterListener
+TFN:Index out of bounds
+
+mar 24, 2024 10:58:08 PM CordConverter.Log writeErrorLog
+SEVERE:  LN 3: Exception occured:Index 13 out of bounds for length 13 Class invoked: InterpreterListener
+TFN:Index out of bounds
+
+mar 24, 2024 10:58:21 PM CordConverter.Log writeInfoLog
+INFO: LN 4: Class invoked: Drilling
+:wiercenie - wykonano
+
+mar 24, 2024 10:58:33 PM CordConverter.Log writeErrorLog
+SEVERE:  LN 5: Exception occured:Index 13 out of bounds for length 13 Class invoked: InterpreterListener
+TFN:Index out of bounds
+

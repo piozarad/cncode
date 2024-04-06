@@ -33,6 +33,7 @@ import CordConverter.ControlTypes;
 import CordConverter.Edytor;
 import CordConverter.Function;
 import CordConverter.Point;
+import CordConverter.TYPE;
 import CordConverter.Wind;
 import DrawFunction.DrawCordinateSystem;
 import DrawFunction.DrawTool;
@@ -598,12 +599,12 @@ public class Przepona extends JFrame implements ActionListener{
 			
 			
 			
-			ToolPath path=  new ToolPath(visualSize,new Point(0f,0f));
-			path.move(new Point(80f,60f),0);
+			ToolPath path=  new ToolPath(visualSize,new Point(0f,0f,TYPE.XY_POINT));
+			path.move(new Point(80f,60f,TYPE.XY_POINT),0);
 			path.draw(g);
-			path.move(new Point(80f,80f),1);
+			path.move(new Point(80f,80f,TYPE.XY_POINT),1);
 			path.draw(g);
-			path.move(new Point(80f,80f),2,20f,0f);
+			path.move(new Point(80f,80f,TYPE.XY_POINT),2,20f,0f);
 			path.draw(g);
 			
 			if(showLegend)
@@ -621,14 +622,14 @@ public class Przepona extends JFrame implements ActionListener{
 			}
 			
 			if(drawCordinate)
-				new DrawCordinateSystem(new Point(Przepona.this.x0,Przepona.this.y0),Color.red).draw(g);
+				new DrawCordinateSystem(new Point(Przepona.this.x0,Przepona.this.y0,TYPE.XY_POINT),Color.red).draw(g);
 			if(showDimensions && Przepona.this.membraneHeight >20 && Przepona.this.membraneWidth>20)
 			{
-				new VerticalDimension(new Point(visualSize.width/2f-Przepona.this.membraneWidth/2 +15, visualSize.height/2f-Przepona.this.membraneHeight/2),
-						new Point(visualSize.width/2f-Przepona.this.membraneWidth/2 +15, visualSize.height/2f+Przepona.this.membraneHeight/2))
+				new VerticalDimension(new Point(visualSize.width/2f-Przepona.this.membraneWidth/2 +15, visualSize.height/2f-Przepona.this.membraneHeight/2,TYPE.XY_POINT),
+						new Point(visualSize.width/2f-Przepona.this.membraneWidth/2 +15, visualSize.height/2f+Przepona.this.membraneHeight/2,TYPE.XY_POINT))
 						.draw(g);
-				new HorizontalDimension(new Point(visualSize.width/2f-Przepona.this.membraneWidth/2, visualSize.height/2f + Przepona.this.membraneHeight/2 -15),
-					new Point(visualSize.width/2f+Przepona.this.membraneWidth/2, visualSize.height/2f + Przepona.this.membraneHeight/2 -15))
+				new HorizontalDimension(new Point(visualSize.width/2f-Przepona.this.membraneWidth/2, visualSize.height/2f + Przepona.this.membraneHeight/2 -15,TYPE.XY_POINT),
+					new Point(visualSize.width/2f+Przepona.this.membraneWidth/2, visualSize.height/2f + Przepona.this.membraneHeight/2 -15,TYPE.XY_POINT))
 					.draw(g);
 			}
 			
@@ -1025,34 +1026,34 @@ public class Przepona extends JFrame implements ActionListener{
 	 private Point advancePoint()
 	 {
 		 if(advancePoint.equals("xZeroYPlus"))
-			 return new Point(x,y+height/2-toolDiameter/2);
+			 return new Point(x,y+height/2-toolDiameter/2,TYPE.XY_POINT);
 		
 		 else if(advancePoint.equals("x_plus_y_plus"))
-				 return new Point(x+width/2-toolDiameter/2,y+height/2-toolDiameter/2);
+				 return new Point(x+width/2-toolDiameter/2,y+height/2-toolDiameter/2,TYPE.XY_POINT);
 		 
 		 else if(advancePoint.equals("x_plus_y_zero"))
-			 return new Point(x+width/2-toolDiameter/2,y);
+			 return new Point(x+width/2-toolDiameter/2,y,TYPE.XY_POINT);
 		 
 		 else if(advancePoint.equals("x_plus_y_minus"))
-			 return new Point(x+width/2-toolDiameter/2,y-height/2+toolDiameter/2);
+			 return new Point(x+width/2-toolDiameter/2,y-height/2+toolDiameter/2,TYPE.XY_POINT);
 		 
 		 else if(advancePoint.equals("x_zero_y_minus"))
-			 return new Point(x,y-height/2+toolDiameter/2);
+			 return new Point(x,y-height/2+toolDiameter/2,TYPE.XY_POINT);
 		 
 		 else if(advancePoint.equals("x_minus_y_minus"))
-			 return new Point(x-width/2+toolDiameter/2,y-height/2+toolDiameter/2);
+			 return new Point(x-width/2+toolDiameter/2,y-height/2+toolDiameter/2,TYPE.XY_POINT);
 		 
 		 
 		 else if(advancePoint.equals("x_minus_y_zero"))
-			 return new Point(x-width/2+toolDiameter/2,y);
+			 return new Point(x-width/2+toolDiameter/2,y,TYPE.XY_POINT);
 		 
 		 else if(advancePoint.equals("xMinusYPlus"))
-			 return new Point(x-width/2+toolDiameter/2,y+height/2-toolDiameter/2);
+			 return new Point(x-width/2+toolDiameter/2,y+height/2-toolDiameter/2,TYPE.XY_POINT);
 		 
 		 else if(advancePoint.equals("x_zero_y_zero"))
-			 return new Point(x,y);
+			 return new Point(x,y,TYPE.XY_POINT);
 		 
-		 else return new Point(x,y);
+		 else return new Point(x,y,TYPE.XY_POINT);
 			 
 			 
 	 }

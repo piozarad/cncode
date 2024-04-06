@@ -95,7 +95,7 @@ public class GCodeInterpreterControler {
 		}	
 		else throw new IllegalArgumentException();
 		
-		return new Point(x,y);
+		return new Point(x,y,TYPE.XY_POINT);
 	}
 	
 

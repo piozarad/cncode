@@ -25,6 +25,7 @@ import CordConverter.ControlTypes;
 import CordConverter.Edytor;
 import CordConverter.Function;
 import CordConverter.Point;
+import CordConverter.TYPE;
 import CordConverter.Wind;
 import DrawFunction.DrawCordinateSystem;
 
@@ -313,7 +314,7 @@ public class Faza extends JFrame implements ActionListener {
 		{
 			super.paintComponent(g);
 			//uklad wspolrzednych
-			new DrawCordinateSystem(new Point(10f,220f)).draw(g);
+			new DrawCordinateSystem(new Point(10f,220f,TYPE.XY_POINT)).draw(g);
 			
 			//zew okr¹g
 			g.drawArc(4, 14, 80, 80, 0, 360);

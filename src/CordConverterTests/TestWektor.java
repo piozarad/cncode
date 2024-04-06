@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import CordConverter.Point;
+import CordConverter.TYPE;
 import CordConverter.Wektor;
 
 
@@ -95,8 +96,8 @@ public class TestWektor {
 	@Test
 	public void testcreatingWektorFromTwoPoints()
 	{
-		Point punktPoczatkowy = new Point(300f,250f);
-		Point punktKoncowy = new Point(250f,300f);
+		Point punktPoczatkowy = new Point(300f,250f,TYPE.XY_POINT);
+		Point punktKoncowy = new Point(250f,300f,TYPE.XY_POINT);
 		
 		Wektor w = new Wektor(punktPoczatkowy,punktKoncowy);
 		
@@ -107,8 +108,8 @@ public class TestWektor {
 	@Test
 	public void testKadUkladuBiegunowego()
 	{
-		Point punktPoczatkowy = new Point(300f,300f);
-		Point punktKoncowy = new Point(250f,300f);
+		Point punktPoczatkowy = new Point(300f,300f,TYPE.XY_POINT);
+		Point punktKoncowy = new Point(250f,300f,TYPE.XY_POINT);
 	
 		Wektor w = new Wektor(punktPoczatkowy,punktKoncowy);
 		float kat = w.katUkladuBiegunowego();
@@ -119,8 +120,8 @@ public class TestWektor {
 	@Test
 	public void testKadUkladuBiegunowegoI()
 	{
-		Point punktPoczatkowy = new Point(300f,300f);
-		Point punktKoncowy = new Point(250f,250f);
+		Point punktPoczatkowy = new Point(300f,300f,TYPE.XY_POINT);
+		Point punktKoncowy = new Point(250f,250f,TYPE.XY_POINT);
 	
 		Wektor w = new Wektor(punktPoczatkowy,punktKoncowy);
 		float kat = w.katUkladuBiegunowego();

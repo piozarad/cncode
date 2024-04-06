@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 
 import CordConverter.Point;
+import CordConverter.TYPE;
 
 public class VerticalDimension implements DrawableFunction {
 
@@ -39,8 +40,8 @@ public class VerticalDimension implements DrawableFunction {
 	@Override
 	public void drawInCenter(Graphics g, Dimension windowSize) {
 		
-		Point left = new Point(leftPoint.getX() + (float)windowSize.getWidth()/2, leftPoint.getY() + (float)windowSize.getHeight()/2);
-		Point right = new Point(rightPoint.getX() + (float) windowSize.getWidth()/2, rightPoint.getY() + (float)windowSize.getHeight()/2);
+		Point left = new Point(leftPoint.getX() + (float)windowSize.getWidth()/2, leftPoint.getY() + (float)windowSize.getHeight()/2,TYPE.XY_POINT);
+		Point right = new Point(rightPoint.getX() + (float) windowSize.getWidth()/2, rightPoint.getY() + (float)windowSize.getHeight()/2,TYPE.XY_POINT);
 		
 		drawVerticalDimension( g,  left,  right);
 		

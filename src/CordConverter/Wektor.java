@@ -32,7 +32,7 @@ static final int LEWO=3;
 	}
 		public Wektor(float x, float y)
 		{
-			this(new Point(0f, 0f),new Point(x,y));
+			this(new Point(0f, 0f,TYPE.XY_POINT),new Point(x,y,TYPE.XY_POINT));
 	
 		}
 	
@@ -57,7 +57,7 @@ static final int LEWO=3;
 	
 	public void odwrocWektor()
 	{	
-		Point pomocniczy = new Point(this.getStartingPoint().getX(),this.getStartingPoint().getY());
+		Point pomocniczy = new Point(this.getStartingPoint().getX(),this.getStartingPoint().getY(),TYPE.XY_POINT);
 		
 		this.setPunktPoczatkowy(this.getEndPoint());
 		this.setPunktKoncowy(pomocniczy);

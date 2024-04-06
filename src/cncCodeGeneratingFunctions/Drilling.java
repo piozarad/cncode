@@ -31,6 +31,7 @@ import BasicControls.Sterowanie;
 import CordConverter.ControlTypes;
 import CordConverter.Edytor;
 import CordConverter.Point;
+import CordConverter.TYPE;
 import CordConverter.Wind;
 import DrawFunction.DrawAbove;
 import DrawFunction.DrawCordinateSystem;
@@ -86,6 +87,7 @@ public class Drilling extends JFrame {
 	Float Q;
 	int S;
 	boolean angleRadius = false;
+	
 	
 	//JList
 	JList<Point> pointList;
@@ -162,7 +164,7 @@ public class Drilling extends JFrame {
 		//zsz
 		border.gridy++;
 		katPromienXY = new JButton("Wspolrzedne");
-		katPromienXY.setToolTipText("Definiuj polozenie przez wspólrzedne lub k¹t i promieñ");
+		katPromienXY.setToolTipText("Definiuj polozenie przez wspólrzedne lub kst i promien");
 		add(katPromienXY,border);
 		
 		katPromienXY.addActionListener(p->{
@@ -173,17 +175,17 @@ public class Drilling extends JFrame {
 			
 			yWierceniaLabel.setText("Wspolrzedna y");
 			yWierceniaLabel.setToolTipText("Wspolrzedna y wierconego otworu");
-			katPromienXY.setText("Wspólrzedne");
+			katPromienXY.setText("Wspolrzedne");
 			angleRadius=false;
 		}
 		else
 		{
-			xWierceniaLabel.setText("Promieñ");
-			xWierceniaLabel.setToolTipText("Promieñ od œrodka ukladu wspólrzednych do osi otworu");
+			xWierceniaLabel.setText("Promien");
+			xWierceniaLabel.setToolTipText("Promien od sœrodka ukladu wspolrzednych do osi otworu");
 			
-			yWierceniaLabel.setText("K¹t");
-			yWierceniaLabel.setToolTipText("K¹t mierzony od osi 0X do osi otworu");
-			katPromienXY.setText("Promieñ-k¹t");
+			yWierceniaLabel.setText("Kat");
+			yWierceniaLabel.setToolTipText("Kat mierzony od osi 0X do osi otworu");
+			katPromienXY.setText("Promien-kat");
 			angleRadius=true;
 		}
 			
@@ -223,7 +225,7 @@ public class Drilling extends JFrame {
 			//oblicz button
 		border.gridy++;
 		oblicz = new JButton("Generuj");
-		oblicz.setToolTipText("Generuj kod dla podanych parametrów");
+		oblicz.setToolTipText("Generuj kod dla podanych parametrow");
 		oblicz.setPreferredSize(BUTTON_SIZE);
 		oblicz.addActionListener(e->{
 			if(typeCombo.getSelectedIndex()==0 && wiercZDwochStron.isSelected() && getValues())
@@ -378,13 +380,13 @@ public class Drilling extends JFrame {
 			{
 				if(!angleRadius)
 				{
-					model.addElement(new Point(x,y));
+					model.addElement(new Point(x,y,TYPE.XY_POINT));
 				}
 				else 
-				{
-					//change to radians 
-					y=((float)Math.PI * y)/180;
-					model.addElement(new Point(x*(float)Math.cos(y),x*(float)Math.sin(y)));
+				{	
+					Point point = new Point(x,y,TYPE.RADIUS_ANGLE_POINT);
+					
+					model.addElement(point);
 				}
 				pointList.setModel(model);
 				this.xWierceniaTxt.setText("");
@@ -463,9 +465,14 @@ public class Drilling extends JFrame {
 	
 	private void drill()
 	{
+		Point p;
 		PrintStream stream = new PrintStream(parent.txt);
 		System.setOut(stream);
 		System.setErr(stream);
+		
+		
+		if(!this.angleRadius) p= new Point(x,y,TYPE.XY_POINT);
+		else p= new Point(x,y,TYPE.RADIUS_ANGLE_POINT);
 		
 		int n = 0;
 		if(this.typeCombo.getSelectedIndex()==3)
@@ -480,7 +487,12 @@ public class Drilling extends JFrame {
 		sterowanie.przygotowanieUkladuINarzedzia(5, toolNumber, Wind.options.getSafeRetraction(), rotationB,base);
 		
 		System.out.printf(Locale.CANADA,"N%d S%d M3%n",n+=5,S);
-		System.out.printf(Locale.CANADA,"N%d G0 X%.3f Y%.3f M8%n",n+=5,x,y);
+		
+		
+		
+		
+		
+		System.out.printf(Locale.CANADA,"N%d G0 X%.3f Y%.3f M8%n",n+=5,p.getX(),p.getY());
 		
 		if(this.parent.getControls().isType(ControlTypes.FANUC))
 		System.out.printf(Locale.CANADA,"N%d G1 Z%.2f F10000.%n",n+=5,r);
@@ -668,6 +680,10 @@ public class Drilling extends JFrame {
 			PrintStream stream = new PrintStream(parent.txt);
 			System.setOut(stream);
 			System.setErr(stream);
+			Point p;
+			
+			if(!this.angleRadius) p= new Point(x,y,TYPE.XY_POINT);
+			else p= new Point(x,y,TYPE.RADIUS_ANGLE_POINT);
 			
 			int safe;
 			int n = 0;
@@ -678,7 +694,7 @@ public class Drilling extends JFrame {
 			
 			
 			System.out.printf(Locale.CANADA,"N%d S%d M3%n",n+=5,S);
-			System.out.printf(Locale.CANADA,"N%d G0 X%.3f Y%.3f M8%n",n+=5,x,y);
+			System.out.printf(Locale.CANADA,"N%d G0 X%.3f Y%.3f M8%n",n+=5,p.getX(),p.getY());
 			
 		if(this.parent.getControls().isType(ControlTypes.FANUC)){
 			
@@ -821,7 +837,7 @@ public class Drilling extends JFrame {
 				
 				if(model.getSize()!=0)
 				{
-					Point p;
+					
 					for(int i=0; i<model.getSize();i++)
 					{
 						p=model.get(i);
@@ -879,7 +895,7 @@ public class Drilling extends JFrame {
 			return Optional.empty();
 		}
 		
-		return Optional.of(new Point(x,y));
+		return  Optional.of(new Point(x,y,TYPE.XY_POINT));
 	}
 
 	private boolean getPoint()
@@ -902,6 +918,9 @@ public class Drilling extends JFrame {
 			JOptionPane.showMessageDialog(this, "Zle zdefiniowana wspólrzedna y", "Blad", JOptionPane.NO_OPTION);
 			return false;
 		}
+		
+		 
+		
 		
 		return true;
 	}
@@ -1020,7 +1039,14 @@ public class Drilling extends JFrame {
 		{
 			if(tryToGetPoint().isPresent())
 			{
-				this.displayListModel.addElement(tryToGetPoint().get());
+				if(!angleRadius)
+					this.displayListModel.addElement(tryToGetPoint().get());
+				else 
+				{
+					Point point = tryToGetPoint().get();
+					this.displayListModel.addElement(new Point(point.getX(),point.getY(),TYPE.RADIUS_ANGLE_POINT));
+					
+				}
 			}
 		}
 	
@@ -1058,7 +1084,7 @@ public class Drilling extends JFrame {
 					}		
 					new Hole(m.getModel().getElementAt(i)).drawInCenter(g, WINDOW_SIZE);			
 				}	
-				new DrawCordinateSystem(new Point(10f,740f)).draw(g);
+				new DrawCordinateSystem(new Point(10f,740f,TYPE.XY_POINT)).draw(g);
 		}
 	}
 	}

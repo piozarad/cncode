@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 import java.util.Arrays;
 
 import CordConverter.Point;
-
+import CordConverter.TYPE;
 import CordConverter.Function;
 import CordConverter.FunctionAnalyzeUtilities;
 public class TestFunction {
@@ -556,7 +556,7 @@ public class TestFunction {
 		String block = "X-.125 Y.999";
 		Function function = new Function(block);
 		
-		Point comparingPoint = new Point(-0.125f,0.999f);
+		Point comparingPoint = new Point(-0.125f,0.999f,TYPE.XY_POINT);
 		
 		assertEquals(function.getPoint(), comparingPoint);
 		

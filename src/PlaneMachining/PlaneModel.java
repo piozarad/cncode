@@ -9,6 +9,7 @@ import java.util.Optional;
 import BasicControls.Sterowanie;
 import CordConverter.Edytor;
 import CordConverter.Point;
+import CordConverter.TYPE;
 import CordConverter.Wind;
 
 public class PlaneModel {
@@ -117,30 +118,30 @@ public class PlaneModel {
 			{
 			case LEFT:
 				this.toolStartPoint = new Point(-this.d/2-20-toolDiameter/2,
-					 (upperDirectionLocked ? 0f  : h/2+toolDiameter/2-aemm));
+					 (upperDirectionLocked ? 0f  : h/2+toolDiameter/2-aemm),TYPE.XY_POINT);
 				
 				isDirectionChoosed = true;
 				break;  
 			case RIGHT:
 				this.toolStartPoint = new Point(d/2+20+toolDiameter/2,
-					  (bottomDirectionLocked ? 0f  : -h/2-toolDiameter/2+aemm));
+					  (bottomDirectionLocked ? 0f  : -h/2-toolDiameter/2+aemm),TYPE.XY_POINT);
 			
 				isDirectionChoosed = true;
 				break;
 			case UP:
 				toolStartPoint = new Point(rightDirectionLocked ? 0f : d/2 +toolDiameter/2 -aemm,
-					toolDiameter/2 + 20 + h/2);
+					toolDiameter/2 + 20 + h/2,TYPE.XY_POINT);
 			
 				isDirectionChoosed = true;
 				break;
 			case DOWN:
 				toolStartPoint = new Point(leftDirectionLocked ? 0f: - d/2 - toolDiameter/2 +aemm,
-					- toolDiameter/2 - 20 - this.h/2);
+					- toolDiameter/2 - 20 - this.h/2,TYPE.XY_POINT);
 			
 				isDirectionChoosed = true;
 				break;
 			default :
-				toolStartPoint = new Point(0f,0f);
+				toolStartPoint = new Point(0f,0f,TYPE.XY_POINT);
 				isDirectionChoosed = false;
 				break;
 			}
@@ -231,7 +232,7 @@ public class PlaneModel {
 
 		if(!(Math.abs(actualPoint.getX() - x)<0.01 && Math.abs(actualPoint.getY() - y)<0.01))
 		{
-			actualPoint.updatePoint(new Point(x ,y)); 	
+			actualPoint.updatePoint(new Point(x ,y,TYPE.XY_POINT)); 	
 			this.toolpath.add(actualPoint.clone());
 		}	
 	}
@@ -586,26 +587,26 @@ public class PlaneModel {
 		float r = this.radius;
 		
 		//first point in material
-		actualPoint.updatePoint(new Point(minXDirection ,maxYDirection)); 
+		actualPoint.updatePoint(new Point(minXDirection ,maxYDirection,TYPE.XY_POINT)); 
 		
 		System.out.println("r=" + r);
 		for(int i=0; i<=numberOfRadialPasses; i++)
 		{
-			actualPoint.updatePoint(new Point(maxXDirection-r ,maxYDirection));	// >
+			actualPoint.updatePoint(new Point(maxXDirection-r ,maxYDirection,TYPE.XY_POINT));	// >
 			this.toolpath.add(actualPoint.clone());
-			actualPoint.updatePoint(new Point(maxXDirection ,maxYDirection-r));	// /
+			actualPoint.updatePoint(new Point(maxXDirection ,maxYDirection-r,TYPE.XY_POINT));	// /
 			this.toolpath.add(actualPoint.clone());
-			actualPoint.updatePoint(new Point(maxXDirection ,minYDirection+r)); 	// v
+			actualPoint.updatePoint(new Point(maxXDirection ,minYDirection+r,TYPE.XY_POINT)); 	// v
 			this.toolpath.add(actualPoint.clone());
-			actualPoint.updatePoint(new Point(maxXDirection -r ,minYDirection)); 	// /
+			actualPoint.updatePoint(new Point(maxXDirection -r ,minYDirection,TYPE.XY_POINT)); 	// /
 			this.toolpath.add(actualPoint.clone());
-			actualPoint.updatePoint(new Point(minXDirection +r,minYDirection)); 	// <
+			actualPoint.updatePoint(new Point(minXDirection +r,minYDirection,TYPE.XY_POINT)); 	// <
 			this.toolpath.add(actualPoint.clone());
 			
 			if(numberOfRadialPasses==0)
 			{
 				//prosty wyjazd prz pojedynczym przejsciu
-				actualPoint.updatePoint(new Point(toolStartPoint.getX(), actualPoint.getY() )); 	// < wyjazd
+				actualPoint.updatePoint(new Point(toolStartPoint.getX(), actualPoint.getY() ,TYPE.XY_POINT)); 	// < wyjazd
 				this.toolpath.add(actualPoint.clone());		
 			}
 			else
@@ -613,15 +614,15 @@ public class PlaneModel {
 				//jesli nie jest to ostatni przejazd podjedz na pozycje do nast petli
 				if(numberOfRadialPasses!=i)
 				{
-					actualPoint.updatePoint(new Point(minXDirection ,minYDirection+r)); 	// \
+					actualPoint.updatePoint(new Point(minXDirection ,minYDirection+r,TYPE.XY_POINT)); 	// \
 					this.toolpath.add(actualPoint.clone());
-					actualPoint.updatePoint(new Point(minXDirection ,maxYDirection-aemm-r)); 	// ^ - ae
+					actualPoint.updatePoint(new Point(minXDirection ,maxYDirection-aemm-r,TYPE.XY_POINT)); 	// ^ - ae
 					this.toolpath.add(actualPoint.clone());
 				}
 					// jestli to ostatni - wyjazdy po prostej w lewo
 				else
 				{
-					actualPoint.updatePoint(new Point(toolStartPoint.getX(),actualPoint.getY())); 	//wyjscie w lewo
+					actualPoint.updatePoint(new Point(toolStartPoint.getX(),actualPoint.getY(),TYPE.XY_POINT)); 	//wyjscie w lewo
 					this.toolpath.add(actualPoint.clone());
 				}
 					
@@ -724,7 +725,7 @@ public class PlaneModel {
 	 
 	 Point getToolStartPoint()
 	{
-		return  Optional.ofNullable(this.toolStartPoint).orElse(new Point(0f,0f));
+		return  Optional.ofNullable(this.toolStartPoint).orElse(new Point(0f,0f,TYPE.XY_POINT));
 	}
 	
 	 float getAe() {

@@ -25,6 +25,7 @@ import CordConverter.ControlTypes;
 import CordConverter.Edytor;
 import CordConverter.Function;
 import CordConverter.Point;
+import CordConverter.TYPE;
 import CordConverter.Wind;
 import DrawFunction.DrawTool;
 
@@ -485,7 +486,7 @@ public class Pocket extends JFrame implements ActionListener{
 			g.drawLine(60, 255, 56, 259);
 			
 			//narzedzie rysunek
-			new DrawTool(new Point(110f,110f),30).draw(g);
+			new DrawTool(new Point(110f,110f,TYPE.XY_POINT),30).draw(g);
 			
 			
 			}
@@ -593,7 +594,7 @@ public class Pocket extends JFrame implements ActionListener{
 		g.drawLine(80, 25, 84, 29);
 		
 		//rysunek narzedzia
-		new DrawTool(new Point(130f,60f),30).draw(g);
+		new DrawTool(new Point(130f,60f,TYPE.XY_POINT),30).draw(g);
 		
 		//legenda
 		g.drawString("sciezka narzedzia", 80, 180);
@@ -624,7 +625,7 @@ public class Pocket extends JFrame implements ActionListener{
 			JOptionPane.showMessageDialog(parent,"Zle zdefiniowany punkt srodkowy symetrii");
 			return false;
 		}
-		this.startingPoint = new Point(x,y);
+		this.startingPoint = new Point(x,y,TYPE.XY_POINT);
 		
 		try
 		{

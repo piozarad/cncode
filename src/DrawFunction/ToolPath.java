@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 
 import CordConverter.Point;
+import CordConverter.TYPE;
 import CordConverter.Wektor;
 
 public class ToolPath implements DrawableFunction {
@@ -21,8 +22,8 @@ public class ToolPath implements DrawableFunction {
 	
 	private ToolPath()
 	{
-		this.actualPoint = new Point(0f,0f);
-		this.nextPoint = new Point(0f,0f);
+		this.actualPoint = new Point(0f,0f,TYPE.XY_POINT);
+		this.nextPoint = new Point(0f,0f,TYPE.XY_POINT);
 	}
 
 	
@@ -30,7 +31,7 @@ public class ToolPath implements DrawableFunction {
 	{
 		this();
 		this.windowSize=canvasArea;
-		this.localCs=new Point(0f,0f);
+		this.localCs=new Point(0f,0f,TYPE.XY_POINT);
 		
 	}
 	public ToolPath(Dimension canvasArea, Point startPoint)
@@ -38,14 +39,14 @@ public class ToolPath implements DrawableFunction {
 		this.windowSize=canvasArea;
 		this.actualPoint = startPoint;
 		this.nextPoint = startPoint;
-		this.localCs=new Point(0f,0f);
+		this.localCs=new Point(0f,0f,TYPE.XY_POINT);
 	}
 	
 	public ToolPath(int width, int height)
 	{
 		this();
 		this.windowSize=new Dimension(width,height);
-		this.localCs=new Point(0f,0f);
+		this.localCs=new Point(0f,0f,TYPE.XY_POINT);
 	}
 	
 	public ToolPath(int width, int height,Point startPoint)
@@ -58,14 +59,14 @@ public class ToolPath implements DrawableFunction {
 	public void move(Point nextPoint, int gCode)
 	{
 		this.actualPoint = this.nextPoint.clone();
-		this.nextPoint=new Point(nextPoint.getX(), nextPoint.getY());
+		this.nextPoint=new Point(nextPoint.getX(), nextPoint.getY(),TYPE.XY_POINT);
 		this.gCode=gCode;
 	}
 	
 	public void move(float x, float y, int gCode)
 	{
 		this.actualPoint = this.nextPoint.clone();
-		this.nextPoint= new Point(x,y);
+		this.nextPoint= new Point(x,y,TYPE.XY_POINT);
 		this.gCode=gCode;
 	}
 	
@@ -92,7 +93,7 @@ public class ToolPath implements DrawableFunction {
 	public void move(float x, float y, int gCode ,Float iVector, Float jVector )
 	{
 		this.actualPoint = this.nextPoint.clone();
-		this.nextPoint = new Point(x,y);
+		this.nextPoint = new Point(x,y,TYPE.XY_POINT);
 		this.iVector=iVector;
 		this.jVector=jVector;
 		this.gCode=gCode;
@@ -104,12 +105,12 @@ public class ToolPath implements DrawableFunction {
 	public void setLocalCs(Point localCs)
 	{
 		//return to standard 0,0 system
-		this.actualPoint = new Point(actualPoint.getX(),actualPoint.getY());
-		this.nextPoint = new Point(nextPoint.getX(),actualPoint.getY() );
+		this.actualPoint = new Point(actualPoint.getX(),actualPoint.getY(),TYPE.XY_POINT);
+		this.nextPoint = new Point(nextPoint.getX(),actualPoint.getY() ,TYPE.XY_POINT);
 		
 		this.localCs=localCs;
-		this.actualPoint = new Point(actualPoint.getX()+localCs.getX(),actualPoint.getY());
-		this.nextPoint = new Point(nextPoint.getX(),actualPoint.getY() );
+		this.actualPoint = new Point(actualPoint.getX()+localCs.getX(),actualPoint.getY(),TYPE.XY_POINT);
+		this.nextPoint = new Point(nextPoint.getX(),actualPoint.getY() ,TYPE.XY_POINT);
 	}
 	
 	
@@ -118,7 +119,7 @@ public class ToolPath implements DrawableFunction {
 	 */
 	public void resetLocalCs()
 	{
-		this.localCs=new Point((float)windowSize.getWidth()/2,(float)windowSize.getHeight()/2);
+		this.localCs=new Point((float)windowSize.getWidth()/2,(float)windowSize.getHeight()/2,TYPE.XY_POINT);
 	}
 	
 	
@@ -170,10 +171,10 @@ public class ToolPath implements DrawableFunction {
 			}
 			else
 			{
-				Point actualPointinLocalCs = new Point((float)(actualPoint.getX()-localCs.getX()+canvasArea.getWidth()/2),(float)(localCs.getY()-actualPoint.getY()+canvasArea.getHeight()/2));
-				Point nextPointinLocalCs = new Point((float)(nextPoint.getX()-localCs.getX()+canvasArea.getWidth()/2),(float)(localCs.getY()-nextPoint.getY()+canvasArea.getHeight()/2));
+				Point actualPointinLocalCs = new Point((float)(actualPoint.getX()-localCs.getX()+canvasArea.getWidth()/2),(float)(localCs.getY()-actualPoint.getY()+canvasArea.getHeight()/2),TYPE.XY_POINT);
+				Point nextPointinLocalCs = new Point((float)(nextPoint.getX()-localCs.getX()+canvasArea.getWidth()/2),(float)(localCs.getY()-nextPoint.getY()+canvasArea.getHeight()/2),TYPE.XY_POINT);
 				
-				 Point circleCenter = new Point( (float)canvasArea.getWidth()/2 + actualPoint.getX()+iVector,(float)canvasArea.getHeight()/2 -actualPoint.getY()+ jVector);
+				 Point circleCenter = new Point( (float)canvasArea.getWidth()/2 + actualPoint.getX()+iVector,(float)canvasArea.getHeight()/2 -actualPoint.getY()+ jVector,TYPE.XY_POINT);
 				 float radius = (float) Math.sqrt(Math.pow(iVector, 2) + Math.pow(jVector, 2));
 				
 				Wektor first = new Wektor(circleCenter,actualPointinLocalCs);
