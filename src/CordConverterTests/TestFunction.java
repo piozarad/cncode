@@ -562,6 +562,37 @@ public class TestFunction {
 		
 	}
 	
+	@Test
+	public void testCycleWithI()
+	{
+		String block = "G81 G90 R10. Z0.15 I0.1 F150.";
+		Function function = new Function(block);
+		
+		
+		assertTrue(Math.abs(function.getCircle().get('I') - 0.1f) < 0.0001f);
+		
+	}
+	
+	@Test
+	public void testCycleWithJ()
+	{
+		String block = "G81 G90 R10. Z0.15 J0.1 F150.";
+		Function function = new Function(block);
+		
+		
+		assertTrue(Math.abs(function.getCircle().get('J') - 0.1f) < 0.0001f);
+		
+	}
+	
+	@Test
+	public void testCycleWithJToString()
+	{
+		String block = "G81 G90 Z0.15 R10.0 J0.1 F150.0 ";
+		Function function = new Function(block);
+		
+		assertEquals(block+'\n', function.toString());
+		
+	}
 	
 	
 }

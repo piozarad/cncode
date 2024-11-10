@@ -257,10 +257,6 @@ public class Przesun extends JFrame implements ActionListener{
 		return f; 
 	}
 	
-	
-	
-	
-
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
@@ -278,7 +274,6 @@ public class Przesun extends JFrame implements ActionListener{
 				odBlokuTxt.setEditable(true);
 				doBlokuTxt.setEditable(true);
 			}
-			
 			
 		}
 		else if(o==oblicz)
@@ -301,14 +296,10 @@ public class Przesun extends JFrame implements ActionListener{
 				end = getEndBlock();
 			}	
 			
-			
-			
-			
-			
+				
 			if(start != -1 && end != -1 && value != null)
 			{
-				
-				
+						
 				
 				Function f;
 				char axis =  ((String)this.osCombo.getSelectedItem()).charAt(0);
@@ -344,8 +335,7 @@ public class Przesun extends JFrame implements ActionListener{
 
 							}
 						}
-						
-						
+												
 					parent.txt.getTxtArea().setText("");
 					parent.write();
 						
@@ -354,12 +344,12 @@ public class Przesun extends JFrame implements ActionListener{
 			
 				String wJakichBlokachKomentarz = (end ==Integer.MAX_VALUE) ? "We wszystkich blokach": ("W blokach " + start + " do "+ end);
 					
-				parent.writelog("Przesunieto obróbkê w osi " + this.osCombo.getSelectedItem() + " o wartoœæ " + this.getAddingValue() + "\n\t"+wJakichBlokachKomentarz);
-				Wind.log.writeInfoLog("Przesuñ - wykonano", Przesun.class.getSimpleName());
+				parent.writelog("Przesunieto obrobkê w osi " + this.osCombo.getSelectedItem() + " o wartosc " + this.getAddingValue() + "\n\t"+wJakichBlokachKomentarz);
+				Wind.log.writeInfoLog("Przesun - wykonano", Przesun.class.getSimpleName());
 			}
 			else
 			{
-				JOptionPane.showMessageDialog(parent, "Podano z³e dane", "B³¹d", JOptionPane.NO_OPTION);
+				JOptionPane.showMessageDialog(parent, "Podano zle dane", "Blad", JOptionPane.NO_OPTION);
 			}
 		}
 		else if(o==cancel)

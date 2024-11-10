@@ -967,24 +967,22 @@ public class Function {
 				}
 
 			}
-			else
-			{
-				if(!circle.isEmpty())
+			if(!circle.isEmpty())
 				{
 					
 					if(circle.containsKey('R'))
 						
 						functionString.add(("R"+circle.get('R')));
-					else {
+					
 						if(circle.containsKey('I'))
 							functionString.add(("I"+circle.get('I')));
 						if(circle.containsKey('J'))
 							functionString.add(("J"+circle.get('J')));
 						if(circle.containsKey('K'))
 							functionString.add(("K"+circle.get('K')));
-					}
-				}
+					
 			}
+			
 			
 			if(P!=null )
 			{
