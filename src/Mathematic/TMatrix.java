@@ -1,8 +1,13 @@
 package Mathematic;
 
+import java.util.Optional;
+
+import CordConverter.Function;
 import CordConverter.Point;
 
 public class TMatrix {
+	
+	public enum AXIS {X, Y, Z}
 	
 	private static TMatrix MATRIX;
 	
@@ -11,7 +16,6 @@ public class TMatrix {
 	private static float z=0;
 
 	
-	
 	public static TMatrix getInstance()
 	{
 		if(MATRIX == null) return new TMatrix();
@@ -19,12 +23,11 @@ public class TMatrix {
 		return MATRIX;
 	}
 	
-	
 	private static void update(Point p)
 	{
-		TMatrix.x=p.getX();
-		TMatrix.y=p.getY();
-		TMatrix.z=p.getZ();
+		TMatrix.x=Optional.ofNullable(p.getX()).orElseGet(()->0f);
+		TMatrix.y=Optional.ofNullable(p.getY()).orElseGet(()->0f);
+		TMatrix.z=Optional.ofNullable(p.getZ()).orElseGet(()->0f);
 	}
 	
 	public static Point getPoint()
@@ -80,4 +83,50 @@ public class TMatrix {
 		rotateZ(angle);
 	}
 	
+	/**
+	 * Rotates cordinates in given g code function arround given axis
+	 * @param func g code function string
+	 * @param angle in degrees. Positive angle is determined by right hand rule
+	 * @param axis enum: X,Y or Z specify rotated axis
+	 * @return
+	 */
+	public static Function rotateGCodeBlock(Function func, float angle, AXIS axis) {
+		
+		//rotate point
+		if(func.getPoint()!=null)
+		{
+			Point point = func.getPoint();
+			switch(axis)
+			{
+				case X:
+					TMatrix.rotateX(angle, point);
+					break;
+				case Y:
+					TMatrix.rotateY(angle, point);
+					break;
+				case Z:
+					TMatrix.rotateZ(angle, point);
+					break;
+			}
+			func.setPoint(TMatrix.getPoint());
+		}
+		
+		if( func.getCircle().get('R') != null && axis != AXIS.Z)
+		{
+			Point temp = new Point(0f, 0f, func.getCircle().get('R'));
+			
+			if(axis == AXIS.X)
+			{
+				rotateX(angle, temp);
+				func.setCircle(TMatrix.getPoint().getZ());
+			}
+			if(axis == AXIS.Y)
+			{
+				rotateY(angle, temp);
+				func.setCircle(TMatrix.getPoint().getZ());
+			}
+		}
+		
+		return func;
+	}
 }

@@ -7,6 +7,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import CordConverter.Point;
+import CordConverter.Function;
 import Mathematic.TMatrix;
 
 public class TestTMatrix {
@@ -81,4 +82,85 @@ public class TestTMatrix {
 		
 		Assert.assertEquals(new Point(2.732f, 1.098f, 4f), TMatrix.getPoint() );
 	}
+	
+	@Test
+	public void testRotateAFunction()
+	{
+		Function f = new Function("N10 G0 X10 Y15 Z20");
+		
+		TMatrix.rotateGCodeBlock(f, 45, TMatrix.AXIS.X);
+		
+		Assert.assertEquals(new Point(10f, 21.213f, 0f), f.getPoint());
+	}
+	
+	@Test
+	public void testRotateBFunction()
+	{
+		Function f = new Function("N10 G0 X10 Y15 Z20");
+		
+		TMatrix.rotateGCodeBlock(f, 45, TMatrix.AXIS.Y);
+		
+		Assert.assertEquals(new Point(0f, 15f, 28.284f), f.getPoint());
+	}
+	
+
+	@Test
+	public void testRotateCFunction()
+	{
+		Function f = new Function("N10 G0 X10 Y15 Z20");
+		
+		TMatrix.rotateGCodeBlock(f, 45, TMatrix.AXIS.Z);
+		
+		Assert.assertEquals(new Point(14.142f, 0f, 20f), f.getPoint());
+	}
+	@Test
+	public void testRotateZInFixedCycleXRotated()
+	{
+		Function f = new Function("N10 G81 R10 Z5.2 F200.");
+		
+		TMatrix.rotateGCodeBlock(f, 10, TMatrix.AXIS.X);
+		
+		Assert.assertEquals(4.218f, f.getPoint().getZ(),0.001);
+	}
+	
+	@Test
+	public void testRotateZInFixedCycleYRotated()
+	{
+		Function f = new Function("N10 G81 R10 Z5.2 F200.");
+		
+		TMatrix.rotateGCodeBlock(f, -10, TMatrix.AXIS.Y);
+		
+		Assert.assertEquals(4.218f, f.getPoint().getZ(),0.001);
+	}
+	
+	@Test
+	public void testRotateZInFixedCycleZRotated()
+	{
+		Function f = new Function("N10 G81 R10 Z5.2 F200.");
+		
+		TMatrix.rotateGCodeBlock(f, 10, TMatrix.AXIS.Z);
+		
+		Assert.assertEquals(5.2f, f.getPoint().getZ(), 0.001);
+	}
+	
+	@Test
+	public void testRotateRParamInFixedCycleXRotated()
+	{
+		Function f = new Function("N10 G81 R10 Z5.2 F200.");
+		
+		TMatrix.rotateGCodeBlock(f, 10, TMatrix.AXIS.X);
+		
+		Assert.assertEquals(8.111f, f.getCircle().get('R'), 0.01);
+		
+	}
+	@Test
+	public void testRotateRParamInFixedCycleYRotated()
+	{
+		Function f = new Function("N10 G81 R10 Z5.2 F200.");
+		
+		TMatrix.rotateGCodeBlock(f, 10, TMatrix.AXIS.Y);
+		
+		Assert.assertEquals(11.584f, f.getCircle().get('R'), 0.01);	
+	}
+	
 }
