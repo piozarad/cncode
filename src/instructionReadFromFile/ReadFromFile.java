@@ -221,6 +221,7 @@ public class ReadFromFile {
 	public void actionPerformed(ActionEvent e) {
 		String []temp = parent.txt.getTxtArea().getText().split("\n");
 		
+		
 		temp=Arrays.stream(temp)
 				.map(f->f.replace("\r",""))
 				.toArray(String[]::new);
@@ -234,16 +235,17 @@ public class ReadFromFile {
 			}
 		}
 
-		parent.txt.getTxtArea().setText("");
-
-		PrintStream stream = new PrintStream(parent.txt);
-		System.setOut(stream);
-		
-		for(String s: temp)
-		{
-			if(s.length()!=0)
-				System.out.println(s);
-		}
+		parent.writeCode(temp);
+//		parent.txt.getTxtArea().setText("");
+//
+//		PrintStream stream = new PrintStream(parent.txt);
+//		System.setOut(stream);
+//		
+//		for(String s: temp)
+//		{
+//			if(s.length()!=0)
+//				System.out.println(s);
+//		}
 	}
 	}
 }

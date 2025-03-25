@@ -7,6 +7,7 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.PrintStream;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
@@ -228,9 +229,13 @@ public class Edytor extends JPanel implements ActionListener {
 		
 		//obroc
 		obroc= new JButton("Obroc");
-		obroc.setToolTipText("[Funkcja w przygotowaniu] Obraca uk³ad wspó³rzêdnych o podany k¹t wzglêdem podanego punktu");
-		obroc.setEnabled(false);
+		obroc.setToolTipText("Obraca uk³ad wspó³rzêdnych o podany kat wzgledem podanego punktu");
+		obroc.setEnabled(true);
 		obroc.setPreferredSize(BUTTON_PREFFERED_SIZE);
+		obroc.addActionListener((e)->{
+			//TODO ogarnac this
+			new Rotate(this);
+		});
 		border.gridx=6;
 		border.gridy++;
 		add(obroc,border);
@@ -324,17 +329,18 @@ public class Edytor extends JPanel implements ActionListener {
 	}
 	
 	public Function[] getArrayFunction()
-		{
-			int size = this.f.size();
+	{
+		analyze();
+		int size = this.f.size();
 			
-				Function[] result = new Function[size];
+			Function[] result = new Function[size];
 					
-			for(int i=0; i<size;i++)
-			{
-				result[i]=f.get(i);				
-			}
-			return result;	
+		for(int i=0; i<size;i++)
+		{
+			result[i]=f.get(i);				
 		}
+		return result;	
+	}
 	public Sterowanie getControls()
 	{
 		return this.sterowanie;
@@ -412,16 +418,6 @@ public class Edytor extends JPanel implements ActionListener {
 			
 			
 		}
-//		else if(o==faza)
-//		{
-//			if(this.F==null)
-//			{
-//				
-//				F=new Faza(this);
-//			}
-//			else 
-//				F.setAlwaysOnTop(true);
-//}
 		
 		else if(o==zamienButton)
 		{
@@ -433,53 +429,6 @@ public class Edytor extends JPanel implements ActionListener {
 				z.setAlwaysOnTop(true);
 					
 		}
-//		else if(o==poglebienie)
-//		{
-//			if(pogl==null)
-//			{				
-//				pogl = new Poglebienie(this);
-//				
-//			}
-//			else pogl.setAlwaysOnTop(true);
-//			
-//		}
-//		else if(o==wiercenie)
-//		{
-//			if(w==null)
-//			{
-//				w = new wiercenie(this);
-//				
-//			}
-//			else w.setAlwaysOnTop(true);
-//		}
-//		else if(o==kieszen)
-//		{		
-//			if(poc==null)
-//			{
-//				poc = new Pocket(this);
-//			}
-//			else poc.setAlwaysOnTop(true);
-//		}
-//		else if(o==przepona)
-//		{
-//			if(przep==null)
-//			{
-//				przep= new Przepona(this);
-//			}
-//			else przep.setAlwaysOnTop(true);
-//		
-//		}
-//		else if(o==wkladka)
-//		{
-//			if(wklad ==null)
-//			{
-//				wklad = new Wkladka(this);
-//			}
-//			else 
-//			{
-//				wklad.setAlwaysOnTop(true);				
-//			}		
-//		}
 	}
 	
 	
@@ -1040,16 +989,7 @@ public class Edytor extends JPanel implements ActionListener {
 			for(int i=0; i<input.length;i++)
 			{
 				if(input[i]!=null)
-					f.add(new Function(input[i],sterowanie));
-				
-//				//log
-//				if(FunctionAnalyzeUtilities.characterCountDifference(input[i], f.get(i).toString()) != 0)
-//				{
-//					Wind.log.writeInfoLog("Character count difference First:" + input[i]  + " Second:" + f.get(i).toString()+ " COUNT:" 
-//				+FunctionAnalyzeUtilities.characterCountDifference(input[i], f.get(i).toString()), Edytor.class.toString());
-					
-				//}
-				
+					f.add(new Function(input[i],sterowanie));		
 			}
 	
 	}
@@ -1232,6 +1172,30 @@ public class Edytor extends JPanel implements ActionListener {
 		this.txt.getTxtArea().moveCaretPosition(charEnd);
 	}
 
+	public void writeCode(List<Function> functinList)
+	{
+		txt.getTxtArea().setText("");
+
+		PrintStream stream = new PrintStream(txt);
+		System.setOut(stream);
+		
+		for(Function fun: functinList) System.out.print(fun.toString());
+		
+	}
+	
+	public void writeCode(String[] functinList)
+	{
+		txt.getTxtArea().setText("");
+
+		PrintStream stream = new PrintStream(txt);
+		System.setOut(stream);
+		
+		for(String fun: functinList)
+		{
+			if(fun.length()!=0)
+				System.out.println(fun);
+		}
+	}
 
 
 }

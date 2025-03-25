@@ -9,7 +9,7 @@ public class TMatrix {
 	
 	public enum AXIS {X, Y, Z}
 	
-	private static TMatrix MATRIX;
+	private static TMatrix matrix;
 	
 	private static float x=0;
 	private static float y=0;
@@ -18,9 +18,9 @@ public class TMatrix {
 	
 	public static TMatrix getInstance()
 	{
-		if(MATRIX == null) return new TMatrix();
+		if(matrix == null) return new TMatrix();
 		
-		return MATRIX;
+		return matrix;
 	}
 	
 	private static void update(Point p)
