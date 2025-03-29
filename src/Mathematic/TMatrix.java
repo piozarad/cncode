@@ -41,8 +41,10 @@ public class TMatrix {
 		float cos = (float) Math.cos(angle);
 		float sin = (float) Math.sin(angle);
 		
-		y = y * cos + (sin * y);
-		z = -z * sin + (cos * z);
+		float y1 = y * cos - (sin * z);
+		float z1 = y * sin + (cos * z);
+		y=y1;
+		z=z1;
 	}
 	
 	public static void rotateX(float angle, Point p)
@@ -57,8 +59,10 @@ public class TMatrix {
 		float cos = (float) Math.cos(angle);
 		float sin = (float) Math.sin(angle);
 		
-		x = x * cos - (sin * x);
-		z = z * sin + (cos * z);
+		float x1 = x * cos + (sin * z);
+		float z1 = -x* sin + (cos * z);
+		x=x1;
+		z=z1;
 	}
 	
 	public static void rotateY(float angle, Point p)
@@ -73,8 +77,10 @@ public class TMatrix {
 		float cos = (float) Math.cos(angle);
 		float sin = (float) Math.sin(angle);
 		
-		x = x * cos + (sin * x);
-		y = y * cos - (sin * y);
+		float x1 = x * cos - (sin * y);
+		float y1 = y * cos + (sin * x);
+		x=x1;
+		y=y1;
 	}
 	
 	public static void rotateZ(float angle, Point p)
@@ -109,23 +115,26 @@ public class TMatrix {
 					break;
 			}
 			func.setPoint(TMatrix.getPoint());
+			
+			//rotate R in fixed cycle
+			if(!(func.containsFunction(2,3)) && func.getCircle().get('R') != null && axis != AXIS.Z)
+			{
+				Point temp = new Point(point.getX(), point.getY(), func.getCircle().get('R'));
+			
+				if(axis == AXIS.X)
+				{
+					rotateX(angle, temp);
+					func.setCircle(TMatrix.getPoint().getZ());
+				}
+				if(axis == AXIS.Y)
+				{
+					rotateY(angle, temp);
+					func.setCircle(TMatrix.getPoint().getZ());
+				}
+			}
 		}
 		
-		if( func.getCircle().get('R') != null && axis != AXIS.Z)
-		{
-			Point temp = new Point(0f, 0f, func.getCircle().get('R'));
-			
-			if(axis == AXIS.X)
-			{
-				rotateX(angle, temp);
-				func.setCircle(TMatrix.getPoint().getZ());
-			}
-			if(axis == AXIS.Y)
-			{
-				rotateY(angle, temp);
-				func.setCircle(TMatrix.getPoint().getZ());
-			}
-		}
+		
 		
 		return func;
 	}

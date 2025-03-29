@@ -3,7 +3,7 @@ package instruction;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import CordConverter.FunctionAnalyzeUtilities;
+import CordConverter.FunctionUtilities;
 
 public class SeparateFunction extends Instruction{
 
@@ -29,7 +29,7 @@ public class SeparateFunction extends Instruction{
 	public String applyChanges(String line) {
 		
 		updateToolNumber(line);
-		line =FunctionAnalyzeUtilities.separateFunctions(line);	
+		line =FunctionUtilities.separateFunctions(line);	
 		String trigger = getTrigger() ;
 		
 		if(trigger.contains("%l") )

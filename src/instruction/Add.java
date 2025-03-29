@@ -1,6 +1,6 @@
 package instruction;
 
-import CordConverter.FunctionAnalyzeUtilities;
+import CordConverter.FunctionUtilities;
 
 public class Add extends Instruction{
 
@@ -16,7 +16,7 @@ public class Add extends Instruction{
 	public String applyChanges(String line) {
 		updateToolNumber(line);
 		
-		line =FunctionAnalyzeUtilities.separateFunctions(line);	
+		line =FunctionUtilities.separateFunctions(line);	
 		
 		return  isTriggered(line) ? line + super.getChangeTo() : line;
 	}

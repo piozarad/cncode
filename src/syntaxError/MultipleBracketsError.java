@@ -3,7 +3,7 @@ package syntaxError;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import CordConverter.FunctionAnalyzeUtilities;
+import CordConverter.FunctionUtilities;
 
 public class MultipleBracketsError implements SyntaxError {
 
@@ -14,7 +14,7 @@ public class MultipleBracketsError implements SyntaxError {
 
 	@Override
 	public boolean checkError(String block) {
-		if(FunctionAnalyzeUtilities.hasComment(block))
+		if(FunctionUtilities.hasComment(block))
 		{
 			Pattern p = Pattern.compile(".*\\(.*\\(.*\\).*\\).*");
 			Matcher m = p.matcher(block);

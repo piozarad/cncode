@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 
 import BasicControls.Sterowanie;
 
-public class FunctionAnalyzeUtilities {
+public class FunctionUtilities {
 
 	static Pattern p;
 	static Matcher m;
@@ -22,7 +22,7 @@ public class FunctionAnalyzeUtilities {
 	
 	static List<Integer>gCodeList = new LinkedList<>();
 	
-	private FunctionAnalyzeUtilities()
+	private FunctionUtilities()
 	{
 		
 	}
@@ -442,10 +442,10 @@ public class FunctionAnalyzeUtilities {
 	public static String separateFunctions(String line)
 	{
 		String comment = "";
-		if(FunctionAnalyzeUtilities.hasComment(line))
+		if(FunctionUtilities.hasComment(line))
 		{
 			comment = line.substring(line.indexOf('('),line.indexOf(')')+1);
-			line = FunctionAnalyzeUtilities.removeComment(line);
+			line = FunctionUtilities.removeComment(line);
 		}
 		line =line.toUpperCase();
 		

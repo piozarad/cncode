@@ -1,28 +1,28 @@
 package CordConverterTests;
 
-import static CordConverter.FunctionAnalyzeUtilities.contains;
-import static CordConverter.FunctionAnalyzeUtilities.fixedCycleParameters;
-import static CordConverter.FunctionAnalyzeUtilities.gFunctions;
-import static CordConverter.FunctionAnalyzeUtilities.getCircleParam;
-import static CordConverter.FunctionAnalyzeUtilities.getDwellTime;
-import static CordConverter.FunctionAnalyzeUtilities.getFloatResult;
-import static CordConverter.FunctionAnalyzeUtilities.getIntResult;
-import static CordConverter.FunctionAnalyzeUtilities.getStringResult;
-import static CordConverter.FunctionAnalyzeUtilities.hasBRotation;
-import static CordConverter.FunctionAnalyzeUtilities.hasBlockNumber;
-import static CordConverter.FunctionAnalyzeUtilities.hasComment;
-import static CordConverter.FunctionAnalyzeUtilities.hasD;
-import static CordConverter.FunctionAnalyzeUtilities.hasFeed;
-import static CordConverter.FunctionAnalyzeUtilities.hasH;
-import static CordConverter.FunctionAnalyzeUtilities.hasMFunction;
-import static CordConverter.FunctionAnalyzeUtilities.hasMacro;
-import static CordConverter.FunctionAnalyzeUtilities.hasP;
-import static CordConverter.FunctionAnalyzeUtilities.hasQ;
-import static CordConverter.FunctionAnalyzeUtilities.hasS;
-import static CordConverter.FunctionAnalyzeUtilities.hasXCordinate;
-import static CordConverter.FunctionAnalyzeUtilities.hasYCordinate;
-import static CordConverter.FunctionAnalyzeUtilities.hasZCordinate;
-import static CordConverter.FunctionAnalyzeUtilities.parsePoint;
+import static CordConverter.FunctionUtilities.contains;
+import static CordConverter.FunctionUtilities.fixedCycleParameters;
+import static CordConverter.FunctionUtilities.gFunctions;
+import static CordConverter.FunctionUtilities.getCircleParam;
+import static CordConverter.FunctionUtilities.getDwellTime;
+import static CordConverter.FunctionUtilities.getFloatResult;
+import static CordConverter.FunctionUtilities.getIntResult;
+import static CordConverter.FunctionUtilities.getStringResult;
+import static CordConverter.FunctionUtilities.hasBRotation;
+import static CordConverter.FunctionUtilities.hasBlockNumber;
+import static CordConverter.FunctionUtilities.hasComment;
+import static CordConverter.FunctionUtilities.hasD;
+import static CordConverter.FunctionUtilities.hasFeed;
+import static CordConverter.FunctionUtilities.hasH;
+import static CordConverter.FunctionUtilities.hasMFunction;
+import static CordConverter.FunctionUtilities.hasMacro;
+import static CordConverter.FunctionUtilities.hasP;
+import static CordConverter.FunctionUtilities.hasQ;
+import static CordConverter.FunctionUtilities.hasS;
+import static CordConverter.FunctionUtilities.hasXCordinate;
+import static CordConverter.FunctionUtilities.hasYCordinate;
+import static CordConverter.FunctionUtilities.hasZCordinate;
+import static CordConverter.FunctionUtilities.parsePoint;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
@@ -34,10 +34,10 @@ import org.junit.Test;
 
 import BasicControls.Sterowanie;
 import BasicControls.SterowanieFanuc;
-import CordConverter.FunctionAnalyzeUtilities;
+import CordConverter.FunctionUtilities;
 import CordConverter.Point;
 
-public class TestFunctionAnalyzeUtilities {
+public class TestFunctionUtilities {
 
 	//Tested controls
 	Sterowanie fanuc= new SterowanieFanuc();
@@ -484,7 +484,7 @@ public class TestFunctionAnalyzeUtilities {
 	{
 		float number = 1.500f;
 		
-		int result = FunctionAnalyzeUtilities.getSubvalue(number);
+		int result = FunctionUtilities.getSubvalue(number);
 		
 		assertEquals(5,result);
 	}
@@ -494,7 +494,7 @@ public class TestFunctionAnalyzeUtilities {
 	{
 		float gCode = 5.12f;
 		
-		int result =  FunctionAnalyzeUtilities.getSubvalue(gCode);
+		int result =  FunctionUtilities.getSubvalue(gCode);
 		
 		assertEquals(12,result);
 	}
@@ -505,7 +505,7 @@ public class TestFunctionAnalyzeUtilities {
 	{
 		String function = "M1(costamcostam)";
 		
-		function = FunctionAnalyzeUtilities.removeComment(function);
+		function = FunctionUtilities.removeComment(function);
 		
 		
 		assertEquals("M1", function);
@@ -516,7 +516,7 @@ public class TestFunctionAnalyzeUtilities {
 	{
 		String function = "N100 (costamcostam) M1 ";
 		
-		function = FunctionAnalyzeUtilities.removeComment(function);
+		function = FunctionUtilities.removeComment(function);
 		
 		
 		assertEquals("N100  M1 ", function);
@@ -527,7 +527,7 @@ public class TestFunctionAnalyzeUtilities {
 	{
 		String function = "N100G90G54G0X0Z0";
 		
-		function = FunctionAnalyzeUtilities.separateFunctions(function);
+		function = FunctionUtilities.separateFunctions(function);
 		
 		assertEquals("N100 G90 G54 G0 X0 Z0 ",function);
 	}
@@ -537,7 +537,7 @@ public class TestFunctionAnalyzeUtilities {
 	{
 		String function = "N100G90G54G0X0Z0(To jest funkcja)";
 		
-		function = FunctionAnalyzeUtilities.separateFunctions(function);
+		function = FunctionUtilities.separateFunctions(function);
 		
 		assertEquals("N100 G90 G54 G0 X0 Z0 (To jest funkcja)",function);
 	}
@@ -547,7 +547,7 @@ public class TestFunctionAnalyzeUtilities {
 	{
 		String function = "N100G56HADA";
 		
-		function = FunctionAnalyzeUtilities.separateFunctions(function);
+		function = FunctionUtilities.separateFunctions(function);
 		
 		assertEquals("N100 G56 HADA ",function);
 	}

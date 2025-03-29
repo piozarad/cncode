@@ -1,6 +1,6 @@
 package instruction;
 
-import CordConverter.FunctionAnalyzeUtilities;
+import CordConverter.FunctionUtilities;
 
 public class ChangeTo extends Instruction {
 
@@ -17,7 +17,7 @@ public class ChangeTo extends Instruction {
 	public String applyChanges(String line) {
 		updateToolNumber(line);
 		
-		line =FunctionAnalyzeUtilities.separateFunctions(line);	
+		line =FunctionUtilities.separateFunctions(line);	
 			
 		
 		if(getTrigger().contains("%l"))

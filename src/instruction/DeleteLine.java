@@ -1,6 +1,6 @@
 package instruction;
 
-import CordConverter.FunctionAnalyzeUtilities;
+import CordConverter.FunctionUtilities;
 
 public class DeleteLine extends Instruction{
 
@@ -23,7 +23,7 @@ public class DeleteLine extends Instruction{
 	@Override
 	public String applyChanges(String line) {
 		updateToolNumber(line);
-		line =FunctionAnalyzeUtilities.separateFunctions(line);	
+		line =FunctionUtilities.separateFunctions(line);	
 		
 		if(getTrigger().contains("%l"))
 		{

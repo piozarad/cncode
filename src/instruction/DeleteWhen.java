@@ -3,7 +3,7 @@ package instruction;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import CordConverter.FunctionAnalyzeUtilities;
+import CordConverter.FunctionUtilities;
 
 public class DeleteWhen extends Instruction {
 	
@@ -27,7 +27,7 @@ public class DeleteWhen extends Instruction {
 	@Override
 	public String applyChanges(String line) {
 		updateToolNumber(line);
-		line =FunctionAnalyzeUtilities.separateFunctions(line);	
+		line =FunctionUtilities.separateFunctions(line);	
 
 		if(line.contains(getTrigger()))
 		{

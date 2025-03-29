@@ -3,7 +3,7 @@ package instruction;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import CordConverter.FunctionAnalyzeUtilities;
+import CordConverter.FunctionUtilities;
 
 
 public abstract class Instruction {
@@ -32,7 +32,7 @@ public abstract class Instruction {
 	
 	public Instruction(String trigger)
 	{
-		this.trigger= FunctionAnalyzeUtilities.removeComment(trigger)+ " ";	
+		this.trigger= FunctionUtilities.removeComment(trigger)+ " ";	
 	}
 	public Instruction(String trigger,String changeTo)
 	{
@@ -54,7 +54,7 @@ public abstract class Instruction {
 	{
 		if(line.contains("T") || line.contains("M6"))
 		{
-		CordConverter.FunctionAnalyzeUtilities.removeComment(line);
+		CordConverter.FunctionUtilities.removeComment(line);
 		Pattern p = Pattern.compile("T\\d+");
 		Matcher m =p.matcher(line);
 		

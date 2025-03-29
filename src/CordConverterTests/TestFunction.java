@@ -11,7 +11,7 @@ import java.util.Arrays;
 import CordConverter.Point;
 import CordConverter.TYPE;
 import CordConverter.Function;
-import CordConverter.FunctionAnalyzeUtilities;
+import CordConverter.FunctionUtilities;
 public class TestFunction {
 
 	
@@ -514,7 +514,7 @@ public class TestFunction {
 		
 		Function function = new Function(block);
 
-		assertEquals(0,FunctionAnalyzeUtilities.characterCountDifference(block, function.toString()));
+		assertEquals(0,FunctionUtilities.characterCountDifference(block, function.toString()));
 	}
 	
 	

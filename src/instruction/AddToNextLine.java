@@ -3,7 +3,7 @@ package instruction;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import CordConverter.FunctionAnalyzeUtilities;
+import CordConverter.FunctionUtilities;
 
 public class AddToNextLine extends Instruction{
 
@@ -19,7 +19,7 @@ public class AddToNextLine extends Instruction{
 	@Override
 	public String applyChanges(String line) {
 		updateToolNumber(line);
-		line =FunctionAnalyzeUtilities.separateFunctions(line);	
+		line =FunctionUtilities.separateFunctions(line);	
 		
 		if(getTrigger().contains("%l"))
 		{

@@ -3,7 +3,7 @@ package instruction;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import CordConverter.FunctionAnalyzeUtilities;
+import CordConverter.FunctionUtilities;
 
 public class Limit extends Instruction{
 
@@ -22,7 +22,7 @@ public class Limit extends Instruction{
 		updateToolNumber(line);
 		
 		
-		line =FunctionAnalyzeUtilities.separateFunctions(line);	
+		line =FunctionUtilities.separateFunctions(line);	
 		
 		String trigger = super.getTrigger().substring(0,super.getTrigger().length()-1);
 		String regex = trigger+"\\d+\\.?\\d*";

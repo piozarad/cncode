@@ -9,6 +9,7 @@ import org.junit.Test;
 import CordConverter.Point;
 import CordConverter.Function;
 import Mathematic.TMatrix;
+import Mathematic.TMatrix.AXIS;
 
 public class TestTMatrix {
 	
@@ -116,21 +117,21 @@ public class TestTMatrix {
 	@Test
 	public void testRotateZInFixedCycleXRotated()
 	{
-		Function f = new Function("N10 G81 R10 Z5.2 F200.");
+		Function f = new Function("N10 X10 Y20 G81 R10 Z5.2 F200.");
 		
 		TMatrix.rotateGCodeBlock(f, 10, TMatrix.AXIS.X);
 		
-		Assert.assertEquals(4.218f, f.getPoint().getZ(),0.001);
+		Assert.assertEquals(8.593f, f.getPoint().getZ(),0.001);
 	}
 	
 	@Test
 	public void testRotateZInFixedCycleYRotated()
 	{
-		Function f = new Function("N10 G81 R10 Z5.2 F200.");
+		Function f = new Function("N10 X10 Y20 G81 R10 Z5.2 F200.");
 		
 		TMatrix.rotateGCodeBlock(f, -10, TMatrix.AXIS.Y);
 		
-		Assert.assertEquals(4.218f, f.getPoint().getZ(),0.001);
+		Assert.assertEquals(6.857f, f.getPoint().getZ(),0.001);
 	}
 	
 	@Test
@@ -146,22 +147,36 @@ public class TestTMatrix {
 	@Test
 	public void testRotateRParamInFixedCycleXRotated()
 	{
-		Function f = new Function("N10 G81 R10 Z5.2 F200.");
+		Function f = new Function("N10 X10. Y20. G81 R10 Z5.2 F200.");
 		
 		TMatrix.rotateGCodeBlock(f, 10, TMatrix.AXIS.X);
 		
-		Assert.assertEquals(8.111f, f.getCircle().get('R'), 0.01);
+		Assert.assertEquals(13.321f, f.getCircle().get('R'), 0.01);
 		
 	}
 	@Test
 	public void testRotateRParamInFixedCycleYRotated()
 	{
-		Function f = new Function("N10 G81 R10 Z5.2 F200.");
-		
+		Function f = new Function("N10 X10. Y20. G81 R10 Z5.2 F200.");
+	
 		TMatrix.rotateGCodeBlock(f, 10, TMatrix.AXIS.Y);
-		
-		Assert.assertEquals(11.584f, f.getCircle().get('R'), 0.01);	
+	
+		Assert.assertEquals(8.111f, f.getCircle().get('R'), 0.01);	
 	}
+	
+	@Test
+	public void testCircXZleRoZttation()
+	{
+		Function f = new Function("G3 X10 Y0 I-10 J0.");
+		
+		TMatrix.rotateGCodeBlock(f, 45, AXIS.Z);
+		
+		Assert.assertEquals(7.07f, f.getPoint().getX(), 0.01);	
+		Assert.assertEquals(7.07f, f.getPoint().getY(), 0.01);	
+	}
+	
+	
+	
 	
 	
 	

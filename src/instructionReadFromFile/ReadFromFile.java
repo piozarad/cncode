@@ -18,7 +18,7 @@ import java.util.stream.Stream;
 import javax.swing.JOptionPane;
 
 import CordConverter.Edytor;
-import CordConverter.FunctionAnalyzeUtilities;
+import CordConverter.FunctionUtilities;
 import CordConverter.Wind;
 import instruction.Instruction;
 

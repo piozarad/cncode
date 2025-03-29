@@ -1,25 +1,25 @@
 package CordConverter;
 
-import static CordConverter.FunctionAnalyzeUtilities.fixedCycleParameters;
-import static CordConverter.FunctionAnalyzeUtilities.gFunctions;
-import static CordConverter.FunctionAnalyzeUtilities.getCircleParam;
-import static CordConverter.FunctionAnalyzeUtilities.getFloatResult;
-import static CordConverter.FunctionAnalyzeUtilities.getIntResult;
-import static CordConverter.FunctionAnalyzeUtilities.getStringResult;
-import static CordConverter.FunctionAnalyzeUtilities.hasARotation;
-import static CordConverter.FunctionAnalyzeUtilities.hasBRotation;
-import static CordConverter.FunctionAnalyzeUtilities.hasBlockNumber;
-import static CordConverter.FunctionAnalyzeUtilities.hasCRotation;
-import static CordConverter.FunctionAnalyzeUtilities.hasComment;
-import static CordConverter.FunctionAnalyzeUtilities.hasFeed;
-import static CordConverter.FunctionAnalyzeUtilities.hasH;
-import static CordConverter.FunctionAnalyzeUtilities.hasMFunction;
-import static CordConverter.FunctionAnalyzeUtilities.hasMacro;
-import static CordConverter.FunctionAnalyzeUtilities.hasP;
-import static CordConverter.FunctionAnalyzeUtilities.hasQ;
-import static CordConverter.FunctionAnalyzeUtilities.hasS;
-import static CordConverter.FunctionAnalyzeUtilities.hasToolNumber;
-import static CordConverter.FunctionAnalyzeUtilities.parsePoint;
+import static CordConverter.FunctionUtilities.fixedCycleParameters;
+import static CordConverter.FunctionUtilities.gFunctions;
+import static CordConverter.FunctionUtilities.getCircleParam;
+import static CordConverter.FunctionUtilities.getFloatResult;
+import static CordConverter.FunctionUtilities.getIntResult;
+import static CordConverter.FunctionUtilities.getStringResult;
+import static CordConverter.FunctionUtilities.hasARotation;
+import static CordConverter.FunctionUtilities.hasBRotation;
+import static CordConverter.FunctionUtilities.hasBlockNumber;
+import static CordConverter.FunctionUtilities.hasCRotation;
+import static CordConverter.FunctionUtilities.hasComment;
+import static CordConverter.FunctionUtilities.hasFeed;
+import static CordConverter.FunctionUtilities.hasH;
+import static CordConverter.FunctionUtilities.hasMFunction;
+import static CordConverter.FunctionUtilities.hasMacro;
+import static CordConverter.FunctionUtilities.hasP;
+import static CordConverter.FunctionUtilities.hasQ;
+import static CordConverter.FunctionUtilities.hasS;
+import static CordConverter.FunctionUtilities.hasToolNumber;
+import static CordConverter.FunctionUtilities.parsePoint;
 
 import java.util.Comparator;
 import java.util.HashMap;
@@ -279,7 +279,7 @@ public class Function {
 		if(positionInList!=-1)
 		{
 			functionType.remove(positionInList);
-			functionType.add(positionInList,(-FunctionAnalyzeUtilities.getSubvalue(newFunction)));
+			functionType.add(positionInList,(-FunctionUtilities.getSubvalue(newFunction)));
 			functionType.add(positionInList,(int) newFunction);
 			
 		}	
@@ -300,7 +300,7 @@ public class Function {
 		{
 			if(functionType.get(i)==(int)oldFunction && (i< functionType.size()-1))
 			{
-				if(-functionType.get(i+1)==FunctionAnalyzeUtilities.getSubvalue(oldFunction))
+				if(-functionType.get(i+1)==FunctionUtilities.getSubvalue(oldFunction))
 					positionInList = i;
 			}
 		}
@@ -329,7 +329,7 @@ public class Function {
 		{
 			if(functionType.get(i)==(int)oldFunction && (i< functionType.size()-1))
 			{
-				if(-functionType.get(i+1)==FunctionAnalyzeUtilities.getSubvalue(oldFunction))
+				if(-functionType.get(i+1)==FunctionUtilities.getSubvalue(oldFunction))
 					positionInList = i;
 			}
 		}
@@ -338,7 +338,7 @@ public class Function {
 		{
 			functionType.remove(positionInList+1);
 			functionType.remove(positionInList);
-			functionType.add(positionInList,-FunctionAnalyzeUtilities.getSubvalue(newFunction));
+			functionType.add(positionInList,-FunctionUtilities.getSubvalue(newFunction));
 			functionType.add(positionInList,(int)newFunction);
 			
 		}	
@@ -493,7 +493,7 @@ public class Function {
 	public boolean containsFunction(float function)
 	{
 		int first = (int) function;
-		int second = -FunctionAnalyzeUtilities.getSubvalue(function);
+		int second = -FunctionUtilities.getSubvalue(function);
 
 		for(int i=0; i<functionType.size()-1;i++)
 		{
@@ -699,7 +699,7 @@ public class Function {
 	private void fillComment(String block)
 	{
 		if(hasComment(block))
-			this.comment = block.substring(FunctionAnalyzeUtilities.getStartIndex(), FunctionAnalyzeUtilities.getLastIndex());
+			this.comment = block.substring(FunctionUtilities.getStartIndex(), FunctionUtilities.getLastIndex());
 	}
 	
 	private void fillCRotation(String block)
@@ -735,7 +735,7 @@ public class Function {
 
 	private void fillD(String block)
 	{
-		if(FunctionAnalyzeUtilities.hasD(block))
+		if(FunctionUtilities.hasD(block))
 			this.D=getStringResult();
 	}
 	private void fillToolNumber(String block)

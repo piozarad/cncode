@@ -29,7 +29,7 @@ import javax.swing.event.ListSelectionListener;
 import org.junit.rules.TemporaryFolder;
 
 import CordConverter.Edytor;
-import CordConverter.FunctionAnalyzeUtilities;
+import CordConverter.FunctionUtilities;
 import CordConverter.NcState;
 import CordConverter.Wind;
 import InvalidFunctionsError.InvalidFunctionError;
@@ -204,7 +204,7 @@ public class ErrorProgressWindow extends JDialog {
 									for(SyntaxError err : progress.getErrorDatabase().getSyntaxErrorList())
 									{
 
-										if(err.checkError(FunctionAnalyzeUtilities.removeComment(analyzedTextList.get(i))))
+										if(err.checkError(FunctionUtilities.removeComment(analyzedTextList.get(i))))
 												{
 													syntaxErrorNumber++;
 													ErrorProgressWindow.this.programErrorList.add(new ProgramError(i,err));

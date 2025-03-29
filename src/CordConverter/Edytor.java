@@ -1006,9 +1006,9 @@ public class Edytor extends JPanel implements ActionListener {
 		{
 			if(input[i].contains(changeFrom))
 			{
-				if(FunctionAnalyzeUtilities.hasBlockNumber(input[i]))
+				if(FunctionUtilities.hasBlockNumber(input[i]))
 				{
-					blocks.add(FunctionAnalyzeUtilities.getIntResult());
+					blocks.add(FunctionUtilities.getIntResult());
 					temp = input[i].replace(changeFrom, changeTo);
 					f.add(new Function(temp,sterowanie));
 				}
@@ -1050,10 +1050,10 @@ public class Edytor extends JPanel implements ActionListener {
 			if(fun.getBlock() >= startingBlock)
 			{
 				temp= fun.toString();
-				if(temp.contains(changeFrom) && FunctionAnalyzeUtilities.hasBlockNumber(temp))
+				if(temp.contains(changeFrom) && FunctionUtilities.hasBlockNumber(temp))
 				{
 					
-						blocks.add(FunctionAnalyzeUtilities.getIntResult());
+						blocks.add(FunctionUtilities.getIntResult());
 						temp=temp.replace(changeFrom,changeTo);
 				
 						f.remove(i);

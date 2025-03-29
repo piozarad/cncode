@@ -3,7 +3,7 @@ package instruction;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import CordConverter.FunctionAnalyzeUtilities;
+import CordConverter.FunctionUtilities;
 
 public class SeparateWhen extends Instruction {
 
@@ -59,7 +59,7 @@ public class SeparateWhen extends Instruction {
 	public String applyChanges(String line) {
 		
 		updateToolNumber(line);
-		line =FunctionAnalyzeUtilities.separateFunctions(line);	
+		line =FunctionUtilities.separateFunctions(line);	
 		String changeTo = getChangeTo() ;
 		
 		
