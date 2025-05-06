@@ -386,7 +386,7 @@ import DrawFunction.DrawTool;
 				System.out.println("N10 G0 X" + (leftX-5 -1 ) + " Y"+ y + " S" + sp_speed + " M3");
 				System.out.println("N15 G1 Z"+ (start+5) + " F10000. M8");
 				if(parent.getControls().isType(ControlTypes.OKUMA))
-					System.out.println("N20 G1 G41 " + toolNumber+" X"+ (leftX-5) +" F2000.");
+					System.out.println("N20 G1 G41 X"+ (leftX-5) +" F2000.");
 				else
 					System.out.println("N20 G1 G41 "+ "D" + toolNumber+" X"+ (leftX-5) +" F2000.");
 				
@@ -404,11 +404,11 @@ import DrawFunction.DrawTool;
 					n+=5;
 					System.out.printf(Locale.CANADA,"N%d G3 X%.3f Y%.3f I2.5 J0. F%.1f %n",n,leftX,y,feed );
 					n+=5;
-					System.out.printf(Locale.CANADA,"N%d G2 X%.2f Y%.2f I%.2f J0. %n", n, -leftX, y,  i );
+					System.out.printf(Locale.CANADA,"N%d G2 X%.2f Y%.2f I%.2f J0. %n", n, leftX + 2*i, y, i);
 					n+=5;
-					System.out.printf(Locale.CANADA,"N%d G2 X%.2f Y%.2f I%.2f J0. %n", n, leftX, y,  -i );
+					System.out.printf(Locale.CANADA,"N%d G2 X%.2f Y%.2f I%.2f J0. %n", n, leftX, y, -i);
 					n+=5;
-					System.out.printf(Locale.CANADA,"N%d G3 X%.2f Y%.2f I%.2f J0. %n", n, leftX-5, y, -2.5 );
+					System.out.printf(Locale.CANADA,"N%d G3 X%.2f Y%.2f I%.2f J0. %n", n, leftX-5, y, -2.5);
 				}
 				
 					//last pass
@@ -417,9 +417,9 @@ import DrawFunction.DrawTool;
 					n+=5;
 					System.out.printf(Locale.CANADA,"N%d G3 X%.3f  Y%.3f I2.5 J0. F%.1f %n",n,leftX,y,feed );
 					n+=5;
-					System.out.printf(Locale.CANADA,"N%d G2 X%.2f Y%.2f I%.2f J0. %n", n, -leftX, y,  i );
+					System.out.printf(Locale.CANADA,"N%d G2 X%.2f Y%.2f I%.2f J0. %n", n, leftX + 2*i, y,  i );
 					n+=5;
-					System.out.printf(Locale.CANADA,"N%d G2 X%.2f Y%.2f I%.2f J0. %n", n, leftX, y,  -i );
+					System.out.printf(Locale.CANADA,"N%d G2 X%.2f Y%.2f I%.2f J0. %n", n, leftX, y, -i );
 					n+=5;
 					System.out.printf(Locale.CANADA,"N%d G3 X%.2f Y%.2f I%.2f J0. %n", n, leftX-5, y, -2.5 );
 
